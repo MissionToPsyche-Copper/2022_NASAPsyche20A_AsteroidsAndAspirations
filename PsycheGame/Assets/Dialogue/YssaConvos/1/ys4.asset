@@ -10,9 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b3e36f6b69caa0f4ea3eaf83976994f7, type: 3}
-  m_Name: s1
+  m_Name: ys4
   m_EditorClassIdentifier: 
   from: {fileID: 11400000, guid: a25919187ecb9f041b53d58244f95da0, type: 2}
-  text: test sentence
-  nextSentence: {fileID: 11400000, guid: c72845e2ea708d846872ae8db97c1400, type: 2}
+  text: "Just tightening up the bolts on this spectrometer. If you\u2019re satisfied
+    with my work, I got a lot of stuff to do. You know how it is, day of a mechanic."
+  nextSentence: {fileID: 0}
   options: []

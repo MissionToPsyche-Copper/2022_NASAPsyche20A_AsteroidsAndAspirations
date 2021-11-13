@@ -15,9 +15,14 @@ public class Interactable : MonoBehaviour
 
     public float radius = 7; // within this radius, the item can be interacted with
     public Transform player; // a reference to the player object
+    public Transform npc;
     public int currentConvo = 0; // a number which identifies which conversation to load when interacted with
     public bool convoStarted = false;
     public bool convoEnded = false;
+
+    // for score updater
+    public GameEvent TalkedToNPC;
+    public bool talkedTo = false;
 
     public ConversationList conversationList;
 
@@ -35,8 +40,17 @@ public class Interactable : MonoBehaviour
             {
                 if ( !convoStarted ) 
                 {
+                    Vector3 facingPlayer = new Vector3( player.position.x, 
+                                        npc.position.y, 
+                                        player.position.z );
+                    npc.LookAt( facingPlayer );
                     GetComponent<DialogueTrigger>().StartDialogue();
                     currentConvo++;
+                    if (!talkedTo)
+                    {
+                        talkedTo = true;
+                        TalkedToNPC.Raise();
+                    }
                 }
                 else  if ( !convoEnded ) dialogueManager.GoToNextSentence();
             }

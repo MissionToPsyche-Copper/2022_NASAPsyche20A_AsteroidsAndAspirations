@@ -5,37 +5,29 @@ using UnityEngine.UI;
 
 public class ScoreUpdater : MonoBehaviour
 {
-    public int pets = 0;
+    public int talkedTo = 0;
     public int goodEnd = 0;
     public int badEnd = 0;
 
-    public Text petText;
-    public Text goodText;
-    public Text badText;
-
-    void Start()
+    //public Text petText;
+    //public Text goodText;
+    //public Text badText;
+    public void AddtoConversationsHad()
     {
-        petText.text = "pets: " + pets;
-        goodText.text = "points to good end: " + goodEnd;
-        badText.text = "points to bad end: " + badEnd;
-    }
-
-    public void AddPets()
-    {
-        pets++;
-        petText.text = "pets: " + pets;
+        talkedTo++;
+        //petText.text = "pets: " + pets;
     }
 
     public void AddGoodEnd()
     {
         goodEnd++;
-        goodText.text = "points to good end: " + goodEnd;
+        //goodText.text = "points to good end: " + goodEnd;
     }
 
        public void AddBadEnd()
     {
         badEnd++;
-        badText.text = "points to bad end: " + badEnd;
+        //badText.text = "points to bad end: " + badEnd;
     }
 
 

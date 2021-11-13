@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b3e36f6b69caa0f4ea3eaf83976994f7, type: 3}
+  m_Name: js2
+  m_EditorClassIdentifier: 
+  from: {fileID: 11400000, guid: 3e5dc96ecf34cee43b28f7899dc6a83b, type: 2}
+  text: 
+  nextSentence: {fileID: 0}
+  options:
+  - text: "Good to meet you too! I\u2019m just as excited as I was for my first space
+      flight. I don\u2019t believe I\u2019ve met you before, what\u2019s your name?"
+    nextSentence: {fileID: 11400000, guid: b289e57cf2d3fff48af04cc4d6b0dfef, type: 2}
+    consequence: {fileID: 11400000, guid: 50f99c42145185b4798bba2a0f8814bf, type: 2}
+  - text: " It\u2019s nice to meet you too. What is your name?"
+    nextSentence: {fileID: 11400000, guid: ba48beca1d2c6ac47a06768b1b78ce43, type: 2}
+    consequence: {fileID: 0}
+  - text: 'You can address me as Captain or Captain [Name]. State your name and role
+      on this ship. '
+    nextSentence: {fileID: 11400000, guid: 415539ae9a0488f4c9ef48217ad0cc8a, type: 2}
+    consequence: {fileID: 11400000, guid: 3f3b2b19639ffbd48bbbfd0fa00c1968, type: 2}

@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b3e36f6b69caa0f4ea3eaf83976994f7, type: 3}
+  m_Name: ns4
+  m_EditorClassIdentifier: 
+  from: {fileID: 11400000, guid: 4378beab768ae6d4f9c8413468019646, type: 2}
+  text: "I apologize, I was checking on Ixel\u2019s stuff. You know, checking how
+    many bandages we have, checking if the water is running, all that fun stuff!"
+  nextSentence: {fileID: 11400000, guid: 86b52583199c8174c9727fcda6d5b0b5, type: 2}
+  options: []

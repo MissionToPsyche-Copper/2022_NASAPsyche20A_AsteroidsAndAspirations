@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b3e36f6b69caa0f4ea3eaf83976994f7, type: 3}
+  m_Name: ns6
+  m_EditorClassIdentifier: 
+  from: {fileID: 11400000, guid: 3e5dc96ecf34cee43b28f7899dc6a83b, type: 2}
+  text: text
+  nextSentence: {fileID: 0}
+  options:
+  - text: "> Just checking up on everything, wanted to make sure you didn\u2019t
+      need help."
+    nextSentence: {fileID: 11400000, guid: d31e35cd28563e048bbfbcf64c0b8595, type: 2}
+    consequence: {fileID: 11400000, guid: 50f99c42145185b4798bba2a0f8814bf, type: 2}
+  - text: "> I\u2019m here to make sure everything is doing okay."
+    nextSentence: {fileID: 11400000, guid: 9a97c16aa505a0141a0d295c080a9bb7, type: 2}
+    consequence: {fileID: 0}
+  - text: "> Of course, everything is fine with N\u2019Mosa around!"
+    nextSentence: {fileID: 11400000, guid: f710b52080d487b4e9e1ca6dd3fdaddb, type: 2}
+    consequence: {fileID: 11400000, guid: 3f3b2b19639ffbd48bbbfd0fa00c1968, type: 2}

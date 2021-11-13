@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 902e140bde944a343b61f4b3510168b0, type: 3}
-  m_Name: YssaConversationList
+  m_Name: NmosaConversationList
   m_EditorClassIdentifier: 
   conversations:
-  - {fileID: 11400000, guid: fcbc617a24ea6174782afa427497fa1a, type: 2}
-  - {fileID: 11400000, guid: deab3f56d29831a468cefe571d187f8a, type: 2}
-  - {fileID: 11400000, guid: 966536efb00acf24d953593c703f7102, type: 2}
+  - {fileID: 11400000, guid: b9cd323dcc846e944bbd40486ff2d143, type: 2}
+  - {fileID: 11400000, guid: 5f4c3a89508021c4a94662946670e474, type: 2}
+  - {fileID: 11400000, guid: 0ec729b99a2996247a00ce55c395e35a, type: 2}
