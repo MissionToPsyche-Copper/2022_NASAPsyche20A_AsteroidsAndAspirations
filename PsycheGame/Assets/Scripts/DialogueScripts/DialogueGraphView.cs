@@ -200,13 +200,13 @@ public class DialogueGraphView : GraphView
 
     
 
-    private Port GeneratePort(DialogueNode node, Direction portDirection, Port.Capacity capacity = Port.Capacity.Single)
-    {
-        // generate a port on the node
-        // we dont care about the type of variable passes between the nodes too much
-        // because we focus on the connection
-        return node.InstantiatePort(Orientation.Horizontal, portDirection, capacity, typeof(float));
-    }
+    //private Port GeneratePort(DialogueNode node, Direction portDirection, Port.Capacity capacity = Port.Capacity.Single)
+    //{
+    //    // generate a port on the node
+    //    // we dont care about the type of variable passes between the nodes too much
+    //    // because we focus on the connection
+    //    return node.InstantiatePort(Orientation.Horizontal, portDirection, capacity, typeof(float));
+    //}
 
     private void AddChoicePort(DialogueNode node)
     {
