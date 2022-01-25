@@ -15,5 +15,5 @@ MonoBehaviour:
   from: {fileID: 11400000, guid: bb1c4cfe6dbf97b41b2a0364bc919919, type: 2}
   text: "N\u2019Mosa should be checking my work now in the MedBay. You can talk to
     him if you haven\u2019t already."
-  nextSentence: {fileID: 0}
+  nextSentence: {fileID: 11400000, guid: 792bf83f5b27dc9418c6186f0ae25cdf, type: 2}
   options: []

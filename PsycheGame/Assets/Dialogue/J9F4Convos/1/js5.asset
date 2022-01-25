@@ -16,5 +16,5 @@ MonoBehaviour:
   text: "My internal navigation system was a lot more intricate than the engineers
     were expecting. Even now, they\u2019re not sure if I am perfected. So this is
     my test run!"
-  nextSentence: {fileID: 0}
+  nextSentence: {fileID: 11400000, guid: 5144f42e6a5e68642bf2674255bb986f, type: 2}
   options: []

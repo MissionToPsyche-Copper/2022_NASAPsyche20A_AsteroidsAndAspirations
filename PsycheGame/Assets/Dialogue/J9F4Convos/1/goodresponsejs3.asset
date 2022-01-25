@@ -15,5 +15,5 @@ MonoBehaviour:
   from: {fileID: 11400000, guid: 0c6472cd862470043ae3138fc8dba90c, type: 2}
   text: "The name\u2019s J9F4, and I\u2019m the navigator, but that\u2019s not important.
     Your first space flight? Wow! Must have been exciting!"
-  nextSentence: {fileID: 0}
+  nextSentence: {fileID: 11400000, guid: 1e4e635ead1114e4ca231aff76ac4d99, type: 2}
   options: []

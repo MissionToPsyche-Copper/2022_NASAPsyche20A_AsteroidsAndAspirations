@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   from: {fileID: 11400000, guid: bb1c4cfe6dbf97b41b2a0364bc919919, type: 2}
   text: Doing good Captain. No help needed.
-  nextSentence: {fileID: 0}
+  nextSentence: {fileID: 11400000, guid: a5558e870a8af9f4e96972697aa751c3, type: 2}
   options: []

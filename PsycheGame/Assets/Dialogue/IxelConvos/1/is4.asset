@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   from: {fileID: 11400000, guid: bb1c4cfe6dbf97b41b2a0364bc919919, type: 2}
   text: The medicine supply is fully stocked, and all my equipment is set up.
-  nextSentence: {fileID: 0}
+  nextSentence: {fileID: 11400000, guid: 6eeee7b0d179f50408a34dbc714544e2, type: 2}
   options: []

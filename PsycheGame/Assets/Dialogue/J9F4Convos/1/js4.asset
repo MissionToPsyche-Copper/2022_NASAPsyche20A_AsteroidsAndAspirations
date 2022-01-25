@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: js4
   m_EditorClassIdentifier: 
   from: {fileID: 11400000, guid: 0c6472cd862470043ae3138fc8dba90c, type: 2}
-  text: text
-  nextSentence: {fileID: 0}
+  text: ' This is my first space flight. NASA only recently approved me for travel.
+    I was created 13 years ago. I know, a lot longer than other AI.'
+  nextSentence: {fileID: 11400000, guid: 07ee89b0235f11240b695ae9b98a4f72, type: 2}
   options: []

@@ -17,11 +17,11 @@ MonoBehaviour:
   nextSentence: {fileID: 0}
   options:
   - text: "> As long as you\u2019re on my team, I\u2019m always ready!"
-    nextSentence: {fileID: 0}
+    nextSentence: {fileID: 11400000, guid: a892b07b3f37e2b4da450ce29dfe0e37, type: 2}
     consequence: {fileID: 11400000, guid: 50f99c42145185b4798bba2a0f8814bf, type: 2}
   - text: '> Good to see you too. How are you doing?'
-    nextSentence: {fileID: 0}
+    nextSentence: {fileID: 11400000, guid: a6f834ed3d03baa43b098ef5d7987f9e, type: 2}
     consequence: {fileID: 0}
   - text: '> That depends, have you completed all the preparations?'
-    nextSentence: {fileID: 0}
+    nextSentence: {fileID: 11400000, guid: 8e54a6c35423634439862ce8a0781c20, type: 2}
     consequence: {fileID: 11400000, guid: 3f3b2b19639ffbd48bbbfd0fa00c1968, type: 2}

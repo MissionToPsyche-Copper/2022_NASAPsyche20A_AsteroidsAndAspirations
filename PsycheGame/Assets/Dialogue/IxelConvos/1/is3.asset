@@ -17,11 +17,11 @@ MonoBehaviour:
   nextSentence: {fileID: 0}
   options:
   - text: Good morning Ixel! How are you doing? Do you need any help?
-    nextSentence: {fileID: 0}
+    nextSentence: {fileID: 11400000, guid: e38094aaa3f6f15478d48205a223fbe1, type: 2}
     consequence: {fileID: 11400000, guid: 50f99c42145185b4798bba2a0f8814bf, type: 2}
   - text: Good morning Doctor. How is your work going so far?
-    nextSentence: {fileID: 0}
+    nextSentence: {fileID: 11400000, guid: 451a6450270ce4442b0a28412d319041, type: 2}
     consequence: {fileID: 0}
   - text: Doctor. How are preparations?
-    nextSentence: {fileID: 0}
+    nextSentence: {fileID: 11400000, guid: 1f7d051c72aa1db4aa58057befe605c1, type: 2}
     consequence: {fileID: 11400000, guid: 3f3b2b19639ffbd48bbbfd0fa00c1968, type: 2}
