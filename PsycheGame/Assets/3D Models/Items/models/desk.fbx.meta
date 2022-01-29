@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 1216341f1b3034e4497b31017c520633
+guid: f767f355f47b16740b15139ca6fda3ab
 ModelImporter:
   serializedVersion: 19301
   internalIDToNameTable: []
@@ -7,8 +7,8 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: Material
-    second: {fileID: 2100000, guid: d4d2cbc29a4f0194aa3ca617983783fe, type: 2}
+      name: DeskMat
+    second: {fileID: 2100000, guid: 8a4d65f38c2cec0409b495fcbdb376bc, type: 2}
   materials:
     materialImportMode: 1
     materialName: 0

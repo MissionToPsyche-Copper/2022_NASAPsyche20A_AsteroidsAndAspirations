@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 1216341f1b3034e4497b31017c520633
+guid: dafa1866dbd457644a4b9ed5ef85c3c4
 ModelImporter:
   serializedVersion: 19301
   internalIDToNameTable: []
@@ -7,8 +7,8 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: Material
-    second: {fileID: 2100000, guid: d4d2cbc29a4f0194aa3ca617983783fe, type: 2}
+      name: ShelfMat
+    second: {fileID: 2100000, guid: 5e3eef24f3606e3449addb23489ba90e, type: 2}
   materials:
     materialImportMode: 1
     materialName: 0

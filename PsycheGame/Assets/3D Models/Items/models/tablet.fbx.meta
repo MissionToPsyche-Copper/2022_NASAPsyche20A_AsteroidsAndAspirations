@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 1216341f1b3034e4497b31017c520633
+guid: 6d7c0aabee0f30a4eb9533daa19b780d
 ModelImporter:
   serializedVersion: 19301
   internalIDToNameTable: []
@@ -7,8 +7,8 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: Material
-    second: {fileID: 2100000, guid: d4d2cbc29a4f0194aa3ca617983783fe, type: 2}
+      name: TabletMat
+    second: {fileID: 2100000, guid: 089860eab66fd1a47940f0583c0cf8f0, type: 2}
   materials:
     materialImportMode: 1
     materialName: 0

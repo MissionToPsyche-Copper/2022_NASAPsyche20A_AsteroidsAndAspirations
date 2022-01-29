@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 1216341f1b3034e4497b31017c520633
+guid: ec7d01545eaf09f4db8a8d619dab53ed
 ModelImporter:
   serializedVersion: 19301
   internalIDToNameTable: []
@@ -7,8 +7,8 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: Material
-    second: {fileID: 2100000, guid: d4d2cbc29a4f0194aa3ca617983783fe, type: 2}
+      name: MonitorMat
+    second: {fileID: 2100000, guid: ff844c7b74dd5df4aaae401eccca0d2f, type: 2}
   materials:
     materialImportMode: 1
     materialName: 0

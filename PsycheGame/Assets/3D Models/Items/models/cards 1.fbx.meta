@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 1216341f1b3034e4497b31017c520633
+guid: 5c6fe5cd2021149479d0b747bf460004
 ModelImporter:
   serializedVersion: 19301
   internalIDToNameTable: []
@@ -7,8 +7,8 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: Material
-    second: {fileID: 2100000, guid: d4d2cbc29a4f0194aa3ca617983783fe, type: 2}
+      name: CardMat
+    second: {fileID: 2100000, guid: 2083427d1093a5b4e8f58aff5da3c200, type: 2}
   materials:
     materialImportMode: 1
     materialName: 0

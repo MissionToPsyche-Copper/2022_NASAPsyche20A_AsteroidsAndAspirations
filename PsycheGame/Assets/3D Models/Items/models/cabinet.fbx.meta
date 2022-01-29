@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 1216341f1b3034e4497b31017c520633
+guid: 80850435f3890734191249d7025564fc
 ModelImporter:
   serializedVersion: 19301
   internalIDToNameTable: []
@@ -7,8 +7,8 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: Material
-    second: {fileID: 2100000, guid: d4d2cbc29a4f0194aa3ca617983783fe, type: 2}
+      name: CabinetMat
+    second: {fileID: 2100000, guid: 053f7495bb4b03e4f9b38102042d10be, type: 2}
   materials:
     materialImportMode: 1
     materialName: 0

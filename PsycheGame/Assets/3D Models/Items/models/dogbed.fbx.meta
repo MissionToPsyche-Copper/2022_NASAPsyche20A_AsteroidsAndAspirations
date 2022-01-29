@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 1216341f1b3034e4497b31017c520633
+guid: fab4978e4d4ac9f43a881938a5548513
 ModelImporter:
   serializedVersion: 19301
   internalIDToNameTable: []
@@ -7,8 +7,8 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: Material
-    second: {fileID: 2100000, guid: d4d2cbc29a4f0194aa3ca617983783fe, type: 2}
+      name: DogBedMat
+    second: {fileID: 2100000, guid: e1996e29a8727184699d071eec51fcfa, type: 2}
   materials:
     materialImportMode: 1
     materialName: 0
