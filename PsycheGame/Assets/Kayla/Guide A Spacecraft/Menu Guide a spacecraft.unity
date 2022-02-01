@@ -524,7 +524,7 @@ MonoBehaviour:
   m_Text: "While you are in the middle of the asteroid belt the ship\u2019s dog accidentally
     let out important mission related items, oh no! \n\nFloat in space and collect
     items that got sent out. \nWhile dodging asteroids, collect all items before
-    the oxygen tank runs out in 3 minutes! \n\nYou will lose time if they don\u2019t
+    the oxygen tank runs out in 3 minutes! \n\nYou will lose time if you don\u2019t
     grab the correct items. \nIf all the items are not collected or if you lose 5
     health points you are taken back into the ship and will have to start over again.\r\n\nCompleting
     this mission will guide the spacecraft out of the asteroid field with all the
@@ -569,7 +569,7 @@ RectTransform:
   m_Children:
   - {fileID: 601315943}
   m_Father: {fileID: 825321149}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -597,8 +597,8 @@ MonoBehaviour:
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 0.1882353, g: 0.12941177, b: 0.26666668, a: 1}
-    m_HighlightedColor: {r: 0.34901962, g: 0.14901961, b: 0.31764707, a: 1}
-    m_PressedColor: {r: 0.64705884, g: 0.24705882, b: 0.35686275, a: 1}
+    m_HighlightedColor: {r: 0.64705884, g: 0.24705882, b: 0.35686275, a: 1}
+    m_PressedColor: {r: 0.95686275, g: 0.4862745, b: 0.2, a: 1}
     m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
@@ -759,8 +759,8 @@ RectTransform:
   m_Children:
   - {fileID: 1580227324}
   - {fileID: 1981254049}
-  - {fileID: 1274121979}
   - {fileID: 806505517}
+  - {fileID: 1274121979}
   - {fileID: 682423316}
   m_Father: {fileID: 0}
   m_RootOrder: 2
@@ -801,11 +801,11 @@ RectTransform:
   m_LocalScale: {x: 0.2017, y: 0.2017, z: 0.2017}
   m_Children: []
   m_Father: {fileID: 825321149}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 0, y: -38.4}
+  m_AnchoredPosition: {x: 0, y: -53.9}
   m_SizeDelta: {x: 200, y: 42}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1274121980
@@ -1107,8 +1107,8 @@ MonoBehaviour:
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 0.1882353, g: 0.12941177, b: 0.26666668, a: 1}
-    m_HighlightedColor: {r: 0.34901962, g: 0.14901961, b: 0.31764707, a: 1}
-    m_PressedColor: {r: 0.64705884, g: 0.24705882, b: 0.35686275, a: 1}
+    m_HighlightedColor: {r: 0.64705884, g: 0.24705882, b: 0.35686275, a: 1}
+    m_PressedColor: {r: 0.95686275, g: 0.4862745, b: 0.2, a: 1}
     m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1

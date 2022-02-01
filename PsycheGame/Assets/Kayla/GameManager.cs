@@ -89,7 +89,7 @@ public class GameManager : MonoBehaviour
             matchText.text = "Number of Matches: " + _matches;
             if (_matches == 0)
             {
-                SceneManager.LoadScene("Menu");
+                //SceneManager.LoadScene("Menu");
             }
             for (int i = 0; i < c.Count; i++)
             {
