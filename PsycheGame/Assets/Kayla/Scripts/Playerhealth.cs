@@ -9,10 +9,14 @@ public class Playerhealth : MonoBehaviour
     public Slider slider;
     public Text gameOverText;
 
+    public Text youWinText;
+    public int itemsRemaining;
+    public Text itemsLeft;
     // Start is called before the first frame update
     void Start()
     {
         gameOverText.gameObject.SetActive(false);
+        youWinText.gameObject.SetActive(false);
     }
 
     // Update is called once per frame
@@ -28,13 +32,23 @@ public class Playerhealth : MonoBehaviour
             health = health - 20f;
 
         }
-       
+        if (obj.gameObject.tag == "PickUp")
+        {
+            Destroy(obj.gameObject);
+            itemsRemaining = itemsRemaining - 1;
+            itemsLeft.text = itemsRemaining.ToString();
+        }
+
         if (health == 0)
         {
             Debug.Log("Health is 0");
             gameOverText.gameObject.SetActive(true);
         }
-        
+        if (itemsRemaining == 0)
+        {
+            youWinText.gameObject.SetActive(true);
+        }
+
     }
     
 }
