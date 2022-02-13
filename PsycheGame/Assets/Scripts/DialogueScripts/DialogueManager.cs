@@ -27,7 +27,7 @@ public class DialogueManager : MonoBehaviour
     public GameObject firstButton;
 
     DialogueSO dialogue;
-    Sentence currentSentence;
+    public Sentence currentSentence;
 
 
     public void StartDialogue(DialogueSO dialogueSO)

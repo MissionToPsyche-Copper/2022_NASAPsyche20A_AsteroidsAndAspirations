@@ -52,7 +52,8 @@ public class Interactable : MonoBehaviour
                         TalkedToNPC.Raise();
                     }
                 }
-                else  if ( !convoEnded ) dialogueManager.GoToNextSentence();
+                else if ( dialogueManager.currentSentence.HasOptions() ) { return; }
+                else if ( !convoEnded ) dialogueManager.GoToNextSentence();
             }
         }
     }
