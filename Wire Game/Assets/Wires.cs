@@ -16,12 +16,6 @@ public class Wires : MonoBehaviour
         startPosition = transform.position;
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
     private void OnMouseDrag()
     {
         Vector3 newPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
@@ -36,7 +30,6 @@ public class Wires : MonoBehaviour
 
                 if (transform.parent.name.Equals(collider.transform.parent.name))
                 {
-
                     //see if all matched
                     Main.Instance.match(1);
 
@@ -67,13 +60,12 @@ public class Wires : MonoBehaviour
     {
         //update wire to move here
         transform.position = newPosition;
-
-
+        
         //direction
         Vector3 direction = newPosition - startPoint;
         transform.right = direction * (transform.lossyScale.x);
 
-        //update
+        //update size
         float dist = Vector2.Distance((startPoint), newPosition);
         wireEnd.size = new Vector2(dist, wireEnd.size.y);
     }
