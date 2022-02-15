@@ -8,6 +8,7 @@ public class Playerhealth : MonoBehaviour
     public float health;
     public Slider slider;
     public Text gameOverText;
+    public GameObject ship;
 
     public Text youWinText;
     public int itemsRemaining;
@@ -24,12 +25,25 @@ public class Playerhealth : MonoBehaviour
     {
         slider.value = health;
     }
+    void setVisibleFalse() {
+        ship.SetActive(false); // false to hide, true to show
+        Debug.Log("Will hide ship");
+    }
+    void setVisibleTrue() {
+        ship.SetActive(true); // false to hide, true to show
+
+    }
+
     void OnCollisionEnter(Collision obj)
     {
         if (obj.gameObject.tag == "Asteroid")
         {
             Destroy(obj.gameObject);
             health = health - 20f;
+            Invoke("setVisibleFalse", 0.1f);
+            Invoke("setVisibleTrue", 0.5f);
+           
+
 
         }
         if (obj.gameObject.tag == "PickUp")
