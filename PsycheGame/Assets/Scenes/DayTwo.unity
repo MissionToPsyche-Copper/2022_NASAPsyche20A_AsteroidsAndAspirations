@@ -17239,7 +17239,6 @@ MonoBehaviour:
   alarmController: {fileID: 1624252602}
   monitorOn: 0
   monitorViewed: 0
-  shipDecision: 0
   dialogueManager: {fileID: 545663579}
   monitorText: {fileID: 1571022806}
   monitorText2: {fileID: 1348843797}
@@ -23195,20 +23194,12 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Good morning Captain.
+  m_Text: 'The items necessary to fix the research facility have been sent to your
+    internal devices. Please refer to your device as necessary.
 
 
-    TIME: 7:00AM
-
-
-    DESTINATION: Psyche Asteroid
-
-
-    ESTIMATED
-    ARRIVAL TIME:  2 days, 14 hours
-
-
-    SHIP STATUS: Good'
+    (You now have
+    access to the quest list.)'
 --- !u!222 &1571022807
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -24956,7 +24947,7 @@ PrefabInstance:
         type: 3}
       propertyPath: dialogue
       value: 
-      objectReference: {fileID: 11400000, guid: 3411d05083210594696446184b68d387,
+      objectReference: {fileID: 11400000, guid: 6674898e1f7078b4ca022329ecb95d66,
         type: 2}
     - target: {fileID: 8873525720639903014, guid: 695efdcf5e7e832409836f4833d876ae,
         type: 3}
@@ -24988,7 +24979,7 @@ PrefabInstance:
         type: 3}
       propertyPath: conversationList
       value: 
-      objectReference: {fileID: 11400000, guid: 77ba9ab671ebffc48b70d5511178e59f,
+      objectReference: {fileID: 11400000, guid: e7baf1aac401c4a45ac8838137cb566d,
         type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 695efdcf5e7e832409836f4833d876ae, type: 3}

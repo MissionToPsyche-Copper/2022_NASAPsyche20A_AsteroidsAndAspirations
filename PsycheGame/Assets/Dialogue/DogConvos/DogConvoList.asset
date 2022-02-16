@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 902e140bde944a343b61f4b3510168b0, type: 3}
+  m_Name: DogConvoList
+  m_EditorClassIdentifier: 
+  conversations:
+  - {fileID: 11400000, guid: ac833379cd6d79843b46ee673260da8c, type: 2}
+  - {fileID: 11400000, guid: a5d919d2beba18f4d84d5269b2b8bde2, type: 2}
+  - {fileID: 11400000, guid: a187cfcbca237a74d823b6957f9688f3, type: 2}
+  - {fileID: 11400000, guid: c160357766b5746469f3a02629bab87e, type: 2}
