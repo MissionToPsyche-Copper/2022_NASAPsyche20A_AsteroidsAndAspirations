@@ -1,0 +1,23 @@
+fileFormatVersion: 2
+guid: fd28a6501173992449e2a5c60c742926
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Sofachrome
+  fontNames:
+  - Sofachrome
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 2d3b8d235e9bfae4a97b5e6bebc20528, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
