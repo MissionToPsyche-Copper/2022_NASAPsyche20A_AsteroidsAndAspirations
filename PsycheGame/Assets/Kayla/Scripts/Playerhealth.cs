@@ -36,7 +36,7 @@ public class Playerhealth : MonoBehaviour
 
     void OnCollisionEnter(Collision obj)
     {
-        if (obj.gameObject.tag == "Asteroid")
+        if (obj.gameObject.tag == "Meteoroid")
         {
             Destroy(obj.gameObject);
             health = health - 20f;
