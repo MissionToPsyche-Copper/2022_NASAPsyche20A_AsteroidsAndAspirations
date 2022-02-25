@@ -16,5 +16,5 @@ MonoBehaviour:
   text: "I guess my main hope that this mission will be the most exciting mission
     yet! I mean, we\u2019re heading to the Psyche asteroid, the metal core of a long
     lost planet."
-  nextSentence: {fileID: 0}
+  nextSentence: {fileID: 11400000, guid: ebf911bb2c89a2b4d950196de8fd6346, type: 2}
   options: []

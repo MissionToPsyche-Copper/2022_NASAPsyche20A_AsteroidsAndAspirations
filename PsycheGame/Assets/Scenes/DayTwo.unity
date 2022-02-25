@@ -1981,6 +1981,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8873525720639903014, guid: 695efdcf5e7e832409836f4833d876ae,
         type: 3}
+      propertyPath: dialogue
+      value: 
+      objectReference: {fileID: 11400000, guid: 091fd0a1036529c49af5805a211d5f1b,
+        type: 2}
+    - target: {fileID: 8873525720639903014, guid: 695efdcf5e7e832409836f4833d876ae,
+        type: 3}
       propertyPath: dialogueManager
       value: 
       objectReference: {fileID: 545663579}
@@ -2009,7 +2015,7 @@ PrefabInstance:
         type: 3}
       propertyPath: conversationList
       value: 
-      objectReference: {fileID: 11400000, guid: 721e0b36796334543b98deafb2c9cbbd,
+      objectReference: {fileID: 11400000, guid: ddce646a2c23b404294fa892af0caecd,
         type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 695efdcf5e7e832409836f4833d876ae, type: 3}
@@ -5169,7 +5175,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 72d942e5b8810f545bc84cb3f68067d6,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 49.34
+      value: -7.83
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 72d942e5b8810f545bc84cb3f68067d6,
         type: 3}
@@ -5179,7 +5185,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 72d942e5b8810f545bc84cb3f68067d6,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 21.537
+      value: -26.53
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 72d942e5b8810f545bc84cb3f68067d6,
         type: 3}
@@ -6718,7 +6724,7 @@ PrefabInstance:
         type: 3}
       propertyPath: dialogue
       value: 
-      objectReference: {fileID: 11400000, guid: b9cd323dcc846e944bbd40486ff2d143,
+      objectReference: {fileID: 11400000, guid: 89e47949043251048903993107daec26,
         type: 2}
     - target: {fileID: 8873525720639903014, guid: 695efdcf5e7e832409836f4833d876ae,
         type: 3}
@@ -6750,7 +6756,7 @@ PrefabInstance:
         type: 3}
       propertyPath: conversationList
       value: 
-      objectReference: {fileID: 11400000, guid: 4298ebd3d442c274a936c43a7e2ab2b3,
+      objectReference: {fileID: 11400000, guid: f6806012caca4a241800c8164f8176b0,
         type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 695efdcf5e7e832409836f4833d876ae, type: 3}
@@ -11248,7 +11254,7 @@ PrefabInstance:
         type: 3}
       propertyPath: dialogue
       value: 
-      objectReference: {fileID: 11400000, guid: f0485f24b5c81714d8b5b27a5cf14723,
+      objectReference: {fileID: 11400000, guid: 00a3e6dacd1ed7048896048826763334,
         type: 2}
     - target: {fileID: 8873525720639903014, guid: 695efdcf5e7e832409836f4833d876ae,
         type: 3}
@@ -11280,7 +11286,7 @@ PrefabInstance:
         type: 3}
       propertyPath: conversationList
       value: 
-      objectReference: {fileID: 11400000, guid: 4b7a452951a9ee042b114962ffaf208e,
+      objectReference: {fileID: 11400000, guid: f6806012caca4a241800c8164f8176b0,
         type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 695efdcf5e7e832409836f4833d876ae, type: 3}

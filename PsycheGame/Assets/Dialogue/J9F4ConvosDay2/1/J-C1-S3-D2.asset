@@ -15,5 +15,5 @@ MonoBehaviour:
   from: {fileID: 11400000, guid: 0c6472cd862470043ae3138fc8dba90c, type: 2}
   text: "Like I said, this is my first space mission, and I\u2019m a little nervous.
     But you Captain, you\u2019ve been on a lot of missions!"
-  nextSentence: {fileID: 0}
+  nextSentence: {fileID: 11400000, guid: 25228741a829e1f4993c94d00e4c4494, type: 2}
   options: []

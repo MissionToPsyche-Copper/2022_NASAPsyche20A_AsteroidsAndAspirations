@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   from: {fileID: 11400000, guid: 0c6472cd862470043ae3138fc8dba90c, type: 2}
   text: ' Can you tell me about them? Oh, what was your favorite mission?'
-  nextSentence: {fileID: 0}
+  nextSentence: {fileID: 11400000, guid: 0a93ba378aefc3a4dadc4da388f94019, type: 2}
   options: []

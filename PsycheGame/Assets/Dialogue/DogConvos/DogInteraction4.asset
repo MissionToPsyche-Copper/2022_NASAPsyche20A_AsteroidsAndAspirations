@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fb7ed1e446ca55847a66c0c3a25691bd, type: 3}
   m_Name: DogInteraction4
   m_EditorClassIdentifier: 
-  startingSentence: {fileID: 0}
+  startingSentence: {fileID: 11400000, guid: f5841d2cf8e2af6438b07743a76b91e1, type: 2}
   isAvailable: 1

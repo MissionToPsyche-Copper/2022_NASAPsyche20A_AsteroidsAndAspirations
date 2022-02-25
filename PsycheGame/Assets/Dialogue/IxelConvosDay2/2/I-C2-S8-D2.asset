@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b3e36f6b69caa0f4ea3eaf83976994f7, type: 3}
+  m_Name: I-C2-S8-D2
+  m_EditorClassIdentifier: 
+  from: {fileID: 11400000, guid: bb1c4cfe6dbf97b41b2a0364bc919919, type: 2}
+  text: "Oh hmm, I suppose you raise a good point. I guess I don\u2019t really know\u2026
+    I\u2019ll have to think about it then."
+  nextSentence: {fileID: 11400000, guid: e70d0175dee3b944c88580e9c9c0b1e7, type: 2}
+  options: []

@@ -15,5 +15,5 @@ MonoBehaviour:
   from: {fileID: 11400000, guid: 0c6472cd862470043ae3138fc8dba90c, type: 2}
   text: The second camera is my favorite - that camera is to help us with optical
     navigation. I mean, could this thing be any more cool?
-  nextSentence: {fileID: 0}
+  nextSentence: {fileID: 11400000, guid: 129066f9fe62def4fa67175628132682, type: 2}
   options: []

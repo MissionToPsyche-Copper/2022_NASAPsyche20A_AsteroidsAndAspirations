@@ -15,5 +15,5 @@ MonoBehaviour:
   from: {fileID: 11400000, guid: 0c6472cd862470043ae3138fc8dba90c, type: 2}
   text: There are two cameras used to complete these tasks. The first camera is used
     to acquire geological and topographical information.
-  nextSentence: {fileID: 0}
+  nextSentence: {fileID: 11400000, guid: 9be8a08660216524c81d5b7b708da663, type: 2}
   options: []

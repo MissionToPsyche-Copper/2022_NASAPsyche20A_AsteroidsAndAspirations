@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b3e36f6b69caa0f4ea3eaf83976994f7, type: 3}
+  m_Name: N-C1-S17-D2
+  m_EditorClassIdentifier: 
+  from: {fileID: 11400000, guid: 4378beab768ae6d4f9c8413468019646, type: 2}
+  text: "(He gives a lovesick sigh.) Aren\u2019t they dreamy? Those eyes that sparkle!
+    The way they smirk when I do something stupid! Which is a lot, ironically."
+  nextSentence: {fileID: 11400000, guid: 354802d8b3a27474cb2b7b6c3cb0f57e, type: 2}
+  options: []

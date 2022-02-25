@@ -17,7 +17,7 @@ MonoBehaviour:
   nextSentence: {fileID: 0}
   options:
   - text: '> Pet'
-    nextSentence: {fileID: 0}
+    nextSentence: {fileID: 11400000, guid: bd4047aa4e586a74298588ba5c47e999, type: 2}
     consequence: {fileID: 11400000, guid: 50f99c42145185b4798bba2a0f8814bf, type: 2}
   - text: '> Do not pet'
     nextSentence: {fileID: 11400000, guid: 9eed72709c6cbaa43bc8cd37d098bc7d, type: 2}

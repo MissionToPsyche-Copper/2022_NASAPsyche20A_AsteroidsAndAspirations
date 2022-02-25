@@ -15,5 +15,5 @@ MonoBehaviour:
   from: {fileID: 11400000, guid: 0c6472cd862470043ae3138fc8dba90c, type: 2}
   text: "Oh, Captain! Just the person I was looking for! Sorry to bother you, I just\u2026.I
     couldn\u2019t stop thinking about what you said yesterday! "
-  nextSentence: {fileID: 0}
+  nextSentence: {fileID: 11400000, guid: 1e23aea5c15d6c84ea079e240fe359ca, type: 2}
   options: []

@@ -15,5 +15,5 @@ MonoBehaviour:
   from: {fileID: 11400000, guid: d4f8a8e948e45394bbfcdac3066ab39a, type: 2}
   text: "You approach the dog. It seems happy to be here. Inspecting the dog\u2019s
     collar, you realize that there is no dog tag to be found. Strange.)"
-  nextSentence: {fileID: 0}
+  nextSentence: {fileID: 11400000, guid: 2afe17c33bf016e4b929f49771fe7a81, type: 2}
   options: []

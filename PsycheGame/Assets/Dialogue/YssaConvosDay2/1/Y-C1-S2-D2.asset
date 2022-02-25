@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b3e36f6b69caa0f4ea3eaf83976994f7, type: 3}
-  m_Name: New Sentence
+  m_Name: Y-C1-S2-D2
   m_EditorClassIdentifier: 
-  from: {fileID: 0}
-  text: text
-  nextSentence: {fileID: 0}
+  from: {fileID: 11400000, guid: d4f8a8e948e45394bbfcdac3066ab39a, type: 2}
+  text: (Yssa is in the room, angry as she coughs and stumbles out of the room.)
+  nextSentence: {fileID: 11400000, guid: 757b4650a7af89f42b9e108bb8b97f70, type: 2}
   options: []

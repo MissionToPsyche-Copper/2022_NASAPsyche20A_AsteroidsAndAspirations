@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b3e36f6b69caa0f4ea3eaf83976994f7, type: 3}
+  m_Name: Y-C1-S1-D2
+  m_EditorClassIdentifier: 
+  from: {fileID: 11400000, guid: d4f8a8e948e45394bbfcdac3066ab39a, type: 2}
+  text: (You run towards the engine room, where the room has become foggy with steam
+    and a pipe has been broken.)
+  nextSentence: {fileID: 11400000, guid: e3cfb9e92b732b94d949b27b132fdc76, type: 2}
+  options: []

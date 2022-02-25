@@ -15,5 +15,5 @@ MonoBehaviour:
   from: {fileID: 11400000, guid: d4f8a8e948e45394bbfcdac3066ab39a, type: 2}
   text: (J9F4 pauses and looks at you. If robots could blush, he would be doing that
     now.)
-  nextSentence: {fileID: 0}
+  nextSentence: {fileID: 11400000, guid: 6b08d7f0dd47649469218d8cdbf6e3f9, type: 2}
   options: []
