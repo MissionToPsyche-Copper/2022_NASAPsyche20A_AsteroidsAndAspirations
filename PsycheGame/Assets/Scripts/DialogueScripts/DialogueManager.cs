@@ -141,7 +141,7 @@ public class DialogueManager : MonoBehaviour
     {
         //Debug.Log(currentSentence.options.Count);
         DialogueUI.SetActive(false);
-        EventSystem.current.SetSelectedGameObject(firstButton);
+        //EventSystem.current.SetSelectedGameObject(firstButton);
         //OptionsUI.SetActive(true);
         if (currentSentence.from.Value == playerName.Value)
         {
@@ -159,6 +159,7 @@ public class DialogueManager : MonoBehaviour
                 Debug.Log(currentSentence.options[i].text);
                 optionsUI[i].text = currentSentence.options[i].text;
                 optionsUI[i].gameObject.SetActive(true);
+                EventSystem.current.SetSelectedGameObject(firstButton);
             }
         }
     }

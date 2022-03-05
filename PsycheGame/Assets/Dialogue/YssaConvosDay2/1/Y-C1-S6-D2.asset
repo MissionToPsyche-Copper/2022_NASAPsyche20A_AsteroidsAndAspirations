@@ -12,8 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b3e36f6b69caa0f4ea3eaf83976994f7, type: 3}
   m_Name: Y-C1-S6-D2
   m_EditorClassIdentifier: 
-  from: {fileID: 11400000, guid: d4f8a8e948e45394bbfcdac3066ab39a, type: 2}
-  text: "(You both rush into the medical room. N\u2019Mosa is lying on the medical
-    bed. His face is red and festered like Yssa\u2019s but worse.)"
-  nextSentence: {fileID: 11400000, guid: 771e8f2a8495c4142a650adc7811f3b9, type: 2}
+  from: {fileID: 11400000, guid: a25919187ecb9f041b53d58244f95da0, type: 2}
+  text: He should be in the Medical Room with Ixel right now.
+  nextSentence: {fileID: 0}
   options: []

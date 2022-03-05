@@ -15,5 +15,5 @@ MonoBehaviour:
   from: {fileID: 11400000, guid: a25919187ecb9f041b53d58244f95da0, type: 2}
   text: " I\u2019m fine. Just leave it. We have more pressing issues. N\u2019Mosa
     got hurt, badly."
-  nextSentence: {fileID: 11400000, guid: 0a99319546999d0449e64ba2b5292a55, type: 2}
+  nextSentence: {fileID: 11400000, guid: 5ada6f40d742f6e469df17b2c25ed7b9, type: 2}
   options: []

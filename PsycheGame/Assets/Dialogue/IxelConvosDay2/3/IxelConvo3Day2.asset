@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fb7ed1e446ca55847a66c0c3a25691bd, type: 3}
-  m_Name: YssaConvo2Day2
+  m_Name: IxelConvo3Day2
   m_EditorClassIdentifier: 
-  startingSentence: {fileID: 11400000, guid: df3b4cd0f86e2c744a16af60c44d8f55, type: 2}
+  startingSentence: {fileID: 11400000, guid: 20f6f5d6f63ebd04b9bc1a7baf510aeb, type: 2}
   isAvailable: 0

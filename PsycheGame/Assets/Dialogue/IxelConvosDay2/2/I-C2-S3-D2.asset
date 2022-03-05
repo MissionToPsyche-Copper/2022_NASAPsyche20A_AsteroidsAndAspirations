@@ -12,10 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b3e36f6b69caa0f4ea3eaf83976994f7, type: 3}
   m_Name: I-C2-S3-D2
   m_EditorClassIdentifier: 
-  from: {fileID: 11400000, guid: 3e5dc96ecf34cee43b28f7899dc6a83b, type: 2}
-  text: text
-  nextSentence: {fileID: 0}
-  options:
-  - text: '> How are you feeling?'
-    nextSentence: {fileID: 11400000, guid: ce83d72313010aa45bc1d9c15df5e233, type: 2}
-    consequence: {fileID: 0}
+  from: {fileID: 11400000, guid: d4f8a8e948e45394bbfcdac3066ab39a, type: 2}
+  text: "(Ixel is standing over N\u2019Mosa, trying to get him to lay still. Ixel
+    hears you enter and turns at you with wide eyes.)"
+  nextSentence: {fileID: 11400000, guid: a9157e75ba45c8e47a7cde839774c880, type: 2}
+  options: []

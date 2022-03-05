@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: NConvo2Day2
   m_EditorClassIdentifier: 
   startingSentence: {fileID: 11400000, guid: eebd425cf465e554d8e31bddcbb927f7, type: 2}
-  isAvailable: 1
+  isAvailable: 0

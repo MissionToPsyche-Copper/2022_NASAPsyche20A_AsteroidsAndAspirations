@@ -13,7 +13,6 @@ MonoBehaviour:
   m_Name: I-C2-S4-D2
   m_EditorClassIdentifier: 
   from: {fileID: 11400000, guid: bb1c4cfe6dbf97b41b2a0364bc919919, type: 2}
-  text: "I feel...fine now. I think now that everything\u2019s calmed down, I\u2019m
-    able to think a lot clearer now."
-  nextSentence: {fileID: 11400000, guid: 3a03acefad0ebb547b083661ce36618b, type: 2}
+  text: Help me, please. Help him. We need to relieve the burns before they get worse.
+  nextSentence: {fileID: 11400000, guid: e299e22afa0962d4cbed351fab2d4f91, type: 2}
   options: []

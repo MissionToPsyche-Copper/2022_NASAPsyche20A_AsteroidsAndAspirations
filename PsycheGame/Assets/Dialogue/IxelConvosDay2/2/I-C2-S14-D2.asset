@@ -10,9 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b3e36f6b69caa0f4ea3eaf83976994f7, type: 3}
-  m_Name: I-C2-S9-D2
+  m_Name: I-C2-S14-D2
   m_EditorClassIdentifier: 
-  from: {fileID: 11400000, guid: 4378beab768ae6d4f9c8413468019646, type: 2}
-  text: That feels good.
-  nextSentence: {fileID: 11400000, guid: 4658add061ed2b245b2b9d6dd7dd0b09, type: 2}
+  from: {fileID: 11400000, guid: d4f8a8e948e45394bbfcdac3066ab39a, type: 2}
+  text: "(Ixel puts some clean and damp towels on N\u2019Mosa\u2019s face, and you
+    put the ice packs on top. N\u2019Mosa flinches and moans when you put the ice
+    packs on.)"
+  nextSentence: {fileID: 11400000, guid: dbca2e41cad30d145afd9de5b3b4402b, type: 2}
   options: []

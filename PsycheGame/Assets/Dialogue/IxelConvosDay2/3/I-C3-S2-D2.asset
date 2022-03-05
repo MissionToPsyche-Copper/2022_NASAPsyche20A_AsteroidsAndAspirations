@@ -10,9 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b3e36f6b69caa0f4ea3eaf83976994f7, type: 3}
-  m_Name: I-C2-S9-D2
+  m_Name: I-C3-S2-D2
   m_EditorClassIdentifier: 
-  from: {fileID: 11400000, guid: 4378beab768ae6d4f9c8413468019646, type: 2}
-  text: That feels good.
-  nextSentence: {fileID: 11400000, guid: 4658add061ed2b245b2b9d6dd7dd0b09, type: 2}
+  from: {fileID: 11400000, guid: bb1c4cfe6dbf97b41b2a0364bc919919, type: 2}
+  text: "Oh, hello Captain. Yes, I wanted to have a quick conversation with you and
+    now that N\u2019Mosa is all settled, we can finally chat."
+  nextSentence: {fileID: 11400000, guid: 39427739f7c08ff4fb69b94da34d22eb, type: 2}
   options: []

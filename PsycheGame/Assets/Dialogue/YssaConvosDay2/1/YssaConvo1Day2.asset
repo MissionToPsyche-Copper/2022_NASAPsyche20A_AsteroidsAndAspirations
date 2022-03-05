@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: YssaConvo1Day2
   m_EditorClassIdentifier: 
   startingSentence: {fileID: 11400000, guid: 113187fe939b08d408ccac6271117086, type: 2}
-  isAvailable: 1
+  isAvailable: 0

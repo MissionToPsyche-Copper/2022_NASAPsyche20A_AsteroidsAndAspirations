@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b3e36f6b69caa0f4ea3eaf83976994f7, type: 3}
   m_Name: I-C2-S2-D2
   m_EditorClassIdentifier: 
-  from: {fileID: 11400000, guid: bb1c4cfe6dbf97b41b2a0364bc919919, type: 2}
-  text: "Oh, hello Captain. Yes, I wanted to have a quick conversation with you and
-    now that N\u2019Mosa is all settled, we can finally chat."
-  nextSentence: {fileID: 11400000, guid: 39427739f7c08ff4fb69b94da34d22eb, type: 2}
+  from: {fileID: 11400000, guid: d4f8a8e948e45394bbfcdac3066ab39a, type: 2}
+  text: (He groans and moans on the bed. J9F4 is standing in the corner, lights on
+    his body going haywire.)
+  nextSentence: {fileID: 11400000, guid: ff35e6a52048a014a90692909a41e98e, type: 2}
   options: []

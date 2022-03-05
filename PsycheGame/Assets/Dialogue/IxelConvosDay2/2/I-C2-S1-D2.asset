@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: I-C2-S1-D2
   m_EditorClassIdentifier: 
   from: {fileID: 11400000, guid: d4f8a8e948e45394bbfcdac3066ab39a, type: 2}
-  text: (You approach Ixel who is once again deep in thought.)
-  nextSentence: {fileID: 11400000, guid: 1e9129519646bd14ab95a3e0532c806d, type: 2}
+  text: "(N\u2019Mosa is lying on the medical bed. His face is red and festered like
+    Yssa\u2019s but worse.)"
+  nextSentence: {fileID: 11400000, guid: 771e8f2a8495c4142a650adc7811f3b9, type: 2}
   options: []
