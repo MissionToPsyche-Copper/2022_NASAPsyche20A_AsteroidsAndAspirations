@@ -27,7 +27,7 @@ public class Playerhealth : MonoBehaviour
     }
     void setVisibleFalse() {
         ship.SetActive(false); // false to hide, true to show
-        Debug.Log("Will hide ship");
+        //Debug.Log("Will hide ship");
     }
     void setVisibleTrue() {
         ship.SetActive(true); // false to hide, true to show
@@ -42,7 +42,6 @@ public class Playerhealth : MonoBehaviour
             health = health - 20f;
             Invoke("setVisibleFalse", 0.1f);
             Invoke("setVisibleTrue", 0.5f);
-           
 
 
         }
