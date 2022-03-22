@@ -29,6 +29,11 @@ public class Interactable : MonoBehaviour
     void Update()
     {
         checkPlayerDistance();
+
+        if ( currentConvo == conversationList.conversations.Length )
+        {
+            conversationList.conversations[conversationList.conversations.Length - 1].isAvailable = false;
+        }
     }
 
     private void checkPlayerDistance()
@@ -40,12 +45,20 @@ public class Interactable : MonoBehaviour
             {
                 if ( !convoStarted ) 
                 {
-                    Vector3 facingPlayer = new Vector3( player.position.x, 
+                    GetComponent<DialogueTrigger>().StartDialogue();
+
+                    if (currentConvo < conversationList.conversations.Length) 
+                    {
+                        if ( conversationList.conversations[currentConvo].isAvailable )
+                        {
+                            Vector3 facingPlayer = new Vector3( player.position.x, 
                                         npc.position.y, 
                                         player.position.z );
-                    npc.LookAt( facingPlayer );
-                    GetComponent<DialogueTrigger>().StartDialogue();
-                    currentConvo++;
+                            npc.LookAt( facingPlayer );
+                            currentConvo++;
+                        } 
+                    }
+
                     if (!talkedTo)
                     {
                         talkedTo = true;

@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b3e36f6b69caa0f4ea3eaf83976994f7, type: 3}
+  m_Name: I-C3-S2-D2
+  m_EditorClassIdentifier: 
+  from: {fileID: 11400000, guid: bb1c4cfe6dbf97b41b2a0364bc919919, type: 2}
+  text: "Oh, hello Captain. Yes, I wanted to have a quick conversation with you and
+    now that N\u2019Mosa is all settled, we can finally chat."
+  nextSentence: {fileID: 11400000, guid: 39427739f7c08ff4fb69b94da34d22eb, type: 2}
+  options: []

@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b3e36f6b69caa0f4ea3eaf83976994f7, type: 3}
+  m_Name: J-C2-SO5-D2
+  m_EditorClassIdentifier: 
+  from: {fileID: 11400000, guid: 3e5dc96ecf34cee43b28f7899dc6a83b, type: 2}
+  text: text
+  nextSentence: {fileID: 0}
+  options:
+  - text: "> Everybody is good enough. You have unique skills and knowledge the rest
+      of us don\u2019t have."
+    nextSentence: {fileID: 11400000, guid: 73b9ba0abfc9eff4eb1d954d9f3517e4, type: 2}
+    consequence: {fileID: 11400000, guid: 50f99c42145185b4798bba2a0f8814bf, type: 2}
+  - text: "> Everybody has to start somewhere. Now isn\u2019t a bad time."
+    nextSentence: {fileID: 11400000, guid: a17146df9d642c743a1ecdc35a19151e, type: 2}
+    consequence: {fileID: 0}
+  - text: "> You\u2019re young, yes. But that\u2019s why people like Yssa and N\u2019Mosa
+      are here, to help you. "
+    nextSentence: {fileID: 11400000, guid: 5f73c1eb713ca1245b8a09094ccd78e4, type: 2}
+    consequence: {fileID: 11400000, guid: 3f3b2b19639ffbd48bbbfd0fa00c1968, type: 2}

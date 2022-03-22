@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b3e36f6b69caa0f4ea3eaf83976994f7, type: 3}
+  m_Name: Y-C4-S8-D2
+  m_EditorClassIdentifier: 
+  from: {fileID: 11400000, guid: a25919187ecb9f041b53d58244f95da0, type: 2}
+  text: "After fixing the magnetometer, I\u2019ll have to think about how to fix
+    the pipe in the engine room. Not sure how bad the damage is, or how I\u2019m
+    going to get in there safely\u2026."
+  nextSentence: {fileID: 11400000, guid: 62b051f291591434f805774df66a8fe1, type: 2}
+  options: []

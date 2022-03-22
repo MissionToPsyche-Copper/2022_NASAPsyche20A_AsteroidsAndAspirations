@@ -12,6 +12,9 @@ public class MonitorTrigger : MonoBehaviour
     public Animator alarmController;
     public bool monitorOn = false;
     public bool monitorViewed = false;
+    //public bool shipDecision = false;
+
+    public DialogueManager dialogueManager;
 
     public Text monitorText;
     public Text monitorText2;
@@ -34,7 +37,7 @@ public class MonitorTrigger : MonoBehaviour
         if ( Vector3.Distance ( player.position, this.transform.position ) < radius ) 
         {
             // the "z" key acts as the interact button
-            if ( Input.GetKeyDown( "z" ) ) 
+            if ( Input.GetKeyDown( "z" )) 
             {
                 if (scoreUpdater.talkedTo > 3)
                 {
@@ -46,6 +49,11 @@ public class MonitorTrigger : MonoBehaviour
                 {
                     monitorOn = false;
                     monitorController.SetTrigger("MonitorOff");
+                    //if ( type == type2 ) 
+                    //{
+                        //GetComponent<DialogueTrigger>().StartDialogue();
+                        //shipDecision = true;
+                    //}
                 }
                 else
                 {

@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b3e36f6b69caa0f4ea3eaf83976994f7, type: 3}
+  m_Name: N-C2-S4-D2-O
+  m_EditorClassIdentifier: 
+  from: {fileID: 11400000, guid: 3e5dc96ecf34cee43b28f7899dc6a83b, type: 2}
+  text: text
+  nextSentence: {fileID: 0}
+  options:
+  - text: "> Hey don\u2019t worry about it. I\u2019m sure they were more worried
+      to see if you were okay than anything else."
+    nextSentence: {fileID: 11400000, guid: fbd90885715473e4cbae6a806dd452a0, type: 2}
+    consequence: {fileID: 11400000, guid: 50f99c42145185b4798bba2a0f8814bf, type: 2}
+  - text: "> I\u2019m sure they\u2019ll forget about it soon."
+    nextSentence: {fileID: 11400000, guid: 09365beb2c05ecb4bbf3ef3c61866542, type: 2}
+    consequence: {fileID: 0}
+  - text: "> I wouldn\u2019t be able to either if I was you."
+    nextSentence: {fileID: 11400000, guid: d38f751e5e4dc9a45a45da9537bda06a, type: 2}
+    consequence: {fileID: 11400000, guid: 3f3b2b19639ffbd48bbbfd0fa00c1968, type: 2}
