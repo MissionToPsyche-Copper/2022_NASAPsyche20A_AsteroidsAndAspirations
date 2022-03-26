@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class QuestManager : MonoBehaviour
 {
+    public Animator loadingscreen;
     [Header("NPC Conversation Tracker")]
     public Interactable jCurrentConvo;
     public DialogueSO jConvo3;
@@ -107,11 +108,7 @@ public class QuestManager : MonoBehaviour
     {
         if ( task1Complete && task2Complete && task3Complete && task4Complete && !alarmWasTriggered )
         {
-            alarm.SetTrigger("WarningOn");
-            alarmWasTriggered = true;
-
             movePositions(1);
-
         }
         else if ( alarmWasTriggered )
         {
@@ -206,9 +203,21 @@ public class QuestManager : MonoBehaviour
     private void movePositions( int placementNumber )
     {
 
+        StartCoroutine(PlayTransition(placementNumber));
+
+    }
+
+    IEnumerator PlayTransition( int placementNumber )
+    {
         switch (placementNumber)
         {
             case 1:
+                loadingscreen.SetTrigger("ShortTimeSkip");
+                yield return new WaitForSeconds(3f);
+
+                alarm.SetTrigger("WarningOn");
+                alarmWasTriggered = true;
+                
                 //move the player in front of the engine room
                 player.position = playerRespawn.position;
                 player.rotation = playerRespawn.rotation;
@@ -231,6 +240,8 @@ public class QuestManager : MonoBehaviour
                 yssa.rotation = yssaPosition3.rotation;
                 break;
             case 3:
+                loadingscreen.SetTrigger("ShortTimeSkip");
+                yield return new WaitForSeconds(3f);
                 //move the player back to the control room
                 player.position = playerRespawn2.position;
                 player.rotation = playerRespawn2.rotation;

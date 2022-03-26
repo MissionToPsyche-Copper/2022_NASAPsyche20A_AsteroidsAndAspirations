@@ -26,6 +26,11 @@ public class Interactable : MonoBehaviour
 
     public ConversationList conversationList;
 
+    void Awake()
+    {
+        conversationList.conversations[conversationList.conversations.Length - 1].isAvailable = true;
+    }
+
     void Update()
     {
         checkPlayerDistance();

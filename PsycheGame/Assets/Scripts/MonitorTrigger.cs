@@ -8,11 +8,13 @@ public class MonitorTrigger : MonoBehaviour
     public float radius = 7; // within this radius, the item can be interacted with
     public Transform player; // a reference to the player object
 
+    public SceneTracker sceneTracker;
+
     public Animator monitorController;
     public Animator alarmController;
+    public bool alarmOn = true;
     public bool monitorOn = false;
     public bool monitorViewed = false;
-    //public bool shipDecision = false;
 
     public DialogueManager dialogueManager;
 
@@ -39,21 +41,19 @@ public class MonitorTrigger : MonoBehaviour
             // the "z" key acts as the interact button
             if ( Input.GetKeyDown( "z" )) 
             {
+                if (!alarmOn) sceneTracker.LoadLevel("DayTwo");
+
                 if (scoreUpdater.talkedTo > 3)
                 {
                     monitorText.text = "";
                     type = type2;
                     monitorViewed = false;
+                    alarmOn = false;
                 }
                 if (monitorOn)
                 {
                     monitorOn = false;
                     monitorController.SetTrigger("MonitorOff");
-                    //if ( type == type2 ) 
-                    //{
-                        //GetComponent<DialogueTrigger>().StartDialogue();
-                        //shipDecision = true;
-                    //}
                 }
                 else
                 {

@@ -6,6 +6,7 @@ public class AlertTrigger : MonoBehaviour
 {
     public Animator AlertAnimator;
     public ScoreUpdater scoreUpdater;
+    public MonitorTrigger monitorTrigger;
 
     // Update is called once per frame
     public void SetOffAlarm()
@@ -15,7 +16,7 @@ public class AlertTrigger : MonoBehaviour
             //scoreUpdater.talkedTo = 0;
 
             Debug.Log("Alarm set off");
-            AlertAnimator.SetTrigger("WarningOn");
+            if (monitorTrigger.alarmOn) AlertAnimator.SetTrigger("WarningOn");
 
         }
         

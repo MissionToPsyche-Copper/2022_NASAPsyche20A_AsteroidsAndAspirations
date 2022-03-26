@@ -23,6 +23,7 @@ MonoBehaviour:
   - text: "> I\u2019m here to make sure everything is doing okay."
     nextSentence: {fileID: 11400000, guid: 9a97c16aa505a0141a0d295c080a9bb7, type: 2}
     consequence: {fileID: 0}
-  - text: "> Of course, everything is fine with N\u2019Mosa around!"
+  - text: "> Just didn\u2019t expect you to be in the medical room, it\u2019s not
+      supposed to be your job."
     nextSentence: {fileID: 11400000, guid: f710b52080d487b4e9e1ca6dd3fdaddb, type: 2}
     consequence: {fileID: 11400000, guid: 3f3b2b19639ffbd48bbbfd0fa00c1968, type: 2}
