@@ -6,7 +6,7 @@ AnimationClip:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: ShowImager
+  m_Name: ShowMagnetometer
   serializedVersion: 6
   m_Legacy: 0
   m_Compressed: 0
@@ -159,7 +159,7 @@ AnimationClip:
   m_PPtrCurves:
   - curve:
     - time: 0
-      value: {fileID: 21300000, guid: 5bd3122613fc45947baf15bed7285389, type: 3}
+      value: {fileID: 21300000, guid: e5520c041c2dfb04ab5b81f2c132e9f2, type: 3}
     attribute: m_Sprite
     path: ImageBox/Image/Image
     classID: 114
@@ -207,7 +207,7 @@ AnimationClip:
       customType: 0
       isPPtrCurve: 1
     pptrCurveMapping:
-    - {fileID: 21300000, guid: 5bd3122613fc45947baf15bed7285389, type: 3}
+    - {fileID: 21300000, guid: e5520c041c2dfb04ab5b81f2c132e9f2, type: 3}
   m_AnimationClipSettings:
     serializedVersion: 2
     m_AdditiveReferencePoseClip: {fileID: 0}

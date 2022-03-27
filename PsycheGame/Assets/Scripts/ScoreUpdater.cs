@@ -5,6 +5,8 @@ using UnityEngine.UI;
 
 public class ScoreUpdater : MonoBehaviour
 {
+    public static ScoreUpdater Instance;
+
     public int talkedTo = 0;
     public int goodEnd = 0;
     public int badEnd = 0;
@@ -12,6 +14,19 @@ public class ScoreUpdater : MonoBehaviour
     //public Text petText;
     //public Text goodText;
     //public Text badText;
+
+    private void Awake()
+    {
+        if (Instance != null)
+        {
+            Destroy(gameObject);
+            return;
+        }
+        
+        Instance = this;
+        DontDestroyOnLoad(gameObject);
+    }
+
     public void AddtoConversationsHad()
     {
         talkedTo++;

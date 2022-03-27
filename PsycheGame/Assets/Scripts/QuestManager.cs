@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class QuestManager : MonoBehaviour
 {
+
     public Animator loadingscreen;
     [Header("NPC Conversation Tracker")]
     public Interactable jCurrentConvo;
@@ -45,12 +46,14 @@ public class QuestManager : MonoBehaviour
 
     [Header("Alarm Tracker")]
     public Animator alarm;
-    public bool alarmWasTriggered = false;
+
+    //public bool alarmWasTriggered = false;
 
     [Header("Task Tracker")]
     public GameObject taskPanel1;
     public GameObject taskPanel2;
 
+    /*
     public bool incident = false;
     public bool task1Complete = false;
     public bool task2Complete = false;
@@ -61,8 +64,7 @@ public class QuestManager : MonoBehaviour
     public bool task7Complete = false;
     public bool task8Complete = false;
     public bool task9Complete = false;
-
-    // more bools for items here
+    */
 
     public Toggle toggletask1;
     public Toggle toggletask2;
@@ -74,50 +76,108 @@ public class QuestManager : MonoBehaviour
     public Toggle toggletask8;
     public Toggle toggletask9;
 
+    // more bools for items here
+    /*
+    public bool hasFuel = false;
+    public bool hasBatteries = false;
+    public bool hasToolbox = false;
+    */
+
     // more toggles for items here
+    public Toggle fuel;
+    public Toggle batteries;
+    public Toggle toolbox;
 
     void Start()
     {
-        jConvo3.isAvailable = false;
+        loadingscreen = FindObjectOfType<SceneTracker>().transition;
 
-        ixelConvo2.isAvailable = false;
-        ixelConvo3.isAvailable = false;
+        jCurrentConvo.currentConvo = QuestTracker.Instance.jCurrentConvo;
+        iCurrentConvo.currentConvo = QuestTracker.Instance.iCurrentConvo;
+        nCurrentConvo.currentConvo = QuestTracker.Instance.nCurrentConvo;
+        yCurrentConvo.currentConvo = QuestTracker.Instance.yCurrentConvo;
 
-        nmosaConvo2.isAvailable = false;
+        jConvo3.isAvailable = QuestTracker.Instance.jConvo3isAvailable;
 
-        yssaConvo1.isAvailable = false;
-        yssaConvo2.isAvailable = false;
+        ixelConvo2.isAvailable = QuestTracker.Instance.ixelConvo2isAvailable;
+        ixelConvo3.isAvailable = QuestTracker.Instance.ixelConvo3isAvailable;
+
+        nmosaConvo2.isAvailable = QuestTracker.Instance.nmosaConvo2isAvailable;
+
+        yssaConvo1.isAvailable = QuestTracker.Instance.yssaConvo1isAvailable;
+        yssaConvo2.isAvailable = QuestTracker.Instance.yssaConvo2isAvailable;
+
+        if (QuestTracker.Instance.positions1) movePositions(1);
+        if (QuestTracker.Instance.positions2) movePositions(2);
+        if (QuestTracker.Instance.positions3) movePositions(3);
+        if ( QuestTracker.Instance.alarmWasTriggered ) 
+        {
+            taskPanel1.SetActive(false);
+            taskPanel2.SetActive(true);
+        }
+
+        toggletask1.isOn = QuestTracker.Instance.task1Complete;
+        toggletask2.isOn = QuestTracker.Instance.task2Complete;
+        toggletask3.isOn = QuestTracker.Instance.task3Complete;
+        toggletask4.isOn = QuestTracker.Instance.task4Complete;
+        toggletask5.isOn = QuestTracker.Instance.task5Complete;
+        toggletask6.isOn = QuestTracker.Instance.task6Complete;
+        toggletask7.isOn = QuestTracker.Instance.task7Complete;
+        toggletask8.isOn = QuestTracker.Instance.task8Complete;
+        toggletask9.isOn = QuestTracker.Instance.task9Complete;
+
     }
 
     void Update()
     {
-        CheckTasks();
 
-        if ( task1Complete && task2Complete && task3Complete && task4Complete && !incident)
+        CheckTasks();
+        CheckItems();
+
+        jConvo3.isAvailable = QuestTracker.Instance.jConvo3isAvailable;
+
+        ixelConvo2.isAvailable = QuestTracker.Instance.ixelConvo2isAvailable;
+        ixelConvo3.isAvailable = QuestTracker.Instance.ixelConvo3isAvailable;
+
+        nmosaConvo2.isAvailable = QuestTracker.Instance.nmosaConvo2isAvailable;
+
+        yssaConvo1.isAvailable = QuestTracker.Instance.yssaConvo1isAvailable;
+        yssaConvo2.isAvailable = QuestTracker.Instance.yssaConvo2isAvailable;
+
+        if ( QuestTracker.Instance.task1Complete && QuestTracker.Instance.task2Complete 
+            && QuestTracker.Instance.task3Complete && QuestTracker.Instance.task4Complete && !QuestTracker.Instance.incident)
         {
-            incident = true;
+            QuestTracker.Instance.incident = true;
             Debug.Log("First four tasks complete! Alarm should trigger after this conversation");
             // enabling convo1 for yssa
-            yssaConvo1.isAvailable = true;
+            QuestTracker.Instance.yssaConvo1isAvailable = true;
             // enabling convo2 for ixel
-            ixelConvo2.isAvailable = true;
+            QuestTracker.Instance.ixelConvo2isAvailable = true;
         }
     }
 
     public void CheckAlarm()
     {
-        if ( task1Complete && task2Complete && task3Complete && task4Complete && !alarmWasTriggered )
+
+        if ( QuestTracker.Instance.task1Complete && QuestTracker.Instance.task2Complete 
+            && QuestTracker.Instance.task3Complete && QuestTracker.Instance.task4Complete && !QuestTracker.Instance.alarmWasTriggered )
         {
+            QuestTracker.Instance.positions1 = true;
+            QuestTracker.Instance.positions2 = false;
+            QuestTracker.Instance.positions3 = false;
             movePositions(1);
         }
-        else if ( alarmWasTriggered )
+        else if ( QuestTracker.Instance.alarmWasTriggered )
         {
             alarm.SetTrigger("WarningOff");
 
-            if ( iCurrentConvo.currentConvo == 2 && !yssaConvo2.isAvailable )
+            if ( iCurrentConvo.currentConvo == 2 && !QuestTracker.Instance.yssaConvo2isAvailable )
             {
                 // move yssa to the medroom
-                yssaConvo2.isAvailable = true;
+                QuestTracker.Instance.yssaConvo2isAvailable = true;
+                QuestTracker.Instance.positions1 = false;
+                QuestTracker.Instance.positions2 = true;
+                QuestTracker.Instance.positions3 = false;
                 movePositions( 2 );
             }
 
@@ -127,9 +187,12 @@ public class QuestManager : MonoBehaviour
                 taskPanel1.SetActive(false);
                 taskPanel2.SetActive(true);
                 // enable the rest of Day 2 conversations
-                nmosaConvo2.isAvailable = true;
-                ixelConvo3.isAvailable = true;
-                jConvo3.isAvailable = true;
+                QuestTracker.Instance.nmosaConvo2isAvailable = true;
+                QuestTracker.Instance.ixelConvo3isAvailable = true;
+                QuestTracker.Instance.jConvo3isAvailable = true;
+                QuestTracker.Instance.positions1 = false;
+                QuestTracker.Instance.positions2 = false;
+                QuestTracker.Instance.positions3 = true;
                 // update everyone's positions
                 movePositions( 3 );
             }
@@ -137,63 +200,69 @@ public class QuestManager : MonoBehaviour
         }
     }
 
+    public void CheckItems()
+    {
+        fuel.isOn = QuestTracker.Instance.hasFuel;
+        batteries.isOn = QuestTracker.Instance.hasBatteries;
+        toolbox.isOn = QuestTracker.Instance.hasToolbox;
+    }
     public void CheckTasks()
     {
         if ( taskPanel1.activeSelf )
         {
-            if ( !task1Complete && jCurrentConvo.currentConvo > 0 )
+            if ( !QuestTracker.Instance.task1Complete && jCurrentConvo.currentConvo > 0 )
             {
-                task1Complete = true;
+                QuestTracker.Instance.task1Complete = true;
                 toggletask1.isOn = true;
             }
 
-            if ( !task2Complete && iCurrentConvo.currentConvo > 0 )
+            if ( !QuestTracker.Instance.task2Complete && iCurrentConvo.currentConvo > 0 )
             {
-                task2Complete = true;
+                QuestTracker.Instance.task2Complete = true;
                 toggletask2.isOn = true;
             }
 
-            if ( !task3Complete && nCurrentConvo.currentConvo > 0 )
+            if ( !QuestTracker.Instance.task3Complete && nCurrentConvo.currentConvo > 0 )
             {
-                task3Complete = true;
+                QuestTracker.Instance.task3Complete = true;
                 toggletask3.isOn = true;
             }
 
-            if ( !task4Complete && jCurrentConvo.currentConvo > 1 )
+            if ( !QuestTracker.Instance.task4Complete && jCurrentConvo.currentConvo > 1 )
             {
-                task4Complete = true;
+                QuestTracker.Instance.task4Complete = true;
                 toggletask4.isOn = true;
             }
         }
         else
         {
-            if ( !task5Complete && yCurrentConvo.currentConvo > 2 )
+            if ( !QuestTracker.Instance.task5Complete && yCurrentConvo.currentConvo > 2 )
             {
-                task5Complete = true;
+                QuestTracker.Instance.task5Complete = true;
                 toggletask5.isOn = true;
             }
 
-            if ( !task6Complete && jCurrentConvo.currentConvo > 2 )
+            if ( !QuestTracker.Instance.task6Complete && jCurrentConvo.currentConvo > 2 )
             {
-                task6Complete = true;
+                QuestTracker.Instance.task6Complete = true;
                 toggletask6.isOn = true;
             }
 
-            if ( !task7Complete && yCurrentConvo.currentConvo > 4 )
+            if ( !QuestTracker.Instance.task7Complete && yCurrentConvo.currentConvo > 4 )
             {
-                task7Complete = true;
+                QuestTracker.Instance.task7Complete = true;
                 toggletask7.isOn = true;
             }
 
-            if ( !task8Complete && nCurrentConvo.currentConvo > 1 )
+            if ( !QuestTracker.Instance.task8Complete && nCurrentConvo.currentConvo > 1 )
             {
-                task8Complete = true;
+                QuestTracker.Instance.task8Complete = true;
                 toggletask8.isOn = true;
             }
 
-            if ( !task9Complete && iCurrentConvo.currentConvo > 2 )
+            if ( !QuestTracker.Instance.task9Complete && iCurrentConvo.currentConvo > 2 )
             {
-                task9Complete = true;
+                QuestTracker.Instance.task9Complete = true;
                 toggletask9.isOn = true;
             }
         }
@@ -215,8 +284,11 @@ public class QuestManager : MonoBehaviour
                 loadingscreen.SetTrigger("ShortTimeSkip");
                 yield return new WaitForSeconds(3f);
 
-                alarm.SetTrigger("WarningOn");
-                alarmWasTriggered = true;
+                if (!QuestTracker.Instance.alarmWasTriggered)
+                {
+                    alarm.SetTrigger("WarningOn");
+                    QuestTracker.Instance.alarmWasTriggered = true;
+                }
                 
                 //move the player in front of the engine room
                 player.position = playerRespawn.position;

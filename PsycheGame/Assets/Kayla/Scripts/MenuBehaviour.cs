@@ -10,18 +10,21 @@ public class MenuBehaviour : MonoBehaviour
         if (i == 0)
         {
             Debug.Log("Start Button is clicked");
-            SceneManager.LoadScene("Level"); // Card game level
+            //SceneManager.LoadScene("Level"); // Card game level
+            SceneTracker.Instance.LoadLevel("Level");
         }
         if (i == 1)
         {
-            Application.Quit(); // CHANGE To LoadScene
+            //Application.Quit(); // CHANGE To LoadScene
+            SceneTracker.Instance.LoadLevel("DayTwo");
             Debug.Log("Quit Button is clicked");
 
         }
         if (i == 2)
         {
             Debug.Log("Start Button is clicked");
-            SceneManager.LoadScene("Guide a spacecraft");
+            //SceneManager.LoadScene("Guide a spacecraft");
+            SceneTracker.Instance.LoadLevel("Guide a spacecraft");
 
         }
     }

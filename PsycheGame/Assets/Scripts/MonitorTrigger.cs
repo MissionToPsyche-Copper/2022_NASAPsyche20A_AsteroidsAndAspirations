@@ -8,7 +8,10 @@ public class MonitorTrigger : MonoBehaviour
     public float radius = 7; // within this radius, the item can be interacted with
     public Transform player; // a reference to the player object
 
-    public SceneTracker sceneTracker;
+    [SerializeField]
+    SceneTracker sceneTracker;
+    [SerializeField]
+    ScoreUpdater scoreUpdater;
 
     public Animator monitorController;
     public Animator alarmController;
@@ -21,13 +24,14 @@ public class MonitorTrigger : MonoBehaviour
     public Text monitorText;
     public Text monitorText2;
 
-    public ScoreUpdater scoreUpdater;
 
     string type;
     string type2;
 
     void Start()
     {
+        sceneTracker = FindObjectOfType<SceneTracker>();
+        scoreUpdater = FindObjectOfType<ScoreUpdater>();
         type = monitorText.text;
         monitorText.text = "";
         type2 = monitorText2.text;
@@ -41,7 +45,7 @@ public class MonitorTrigger : MonoBehaviour
             // the "z" key acts as the interact button
             if ( Input.GetKeyDown( "z" )) 
             {
-                if (!alarmOn) sceneTracker.LoadLevel("DayTwo");
+                if (!alarmOn) SceneTracker.Instance.LoadLevel("DayTwo");
 
                 if (scoreUpdater.talkedTo > 3)
                 {

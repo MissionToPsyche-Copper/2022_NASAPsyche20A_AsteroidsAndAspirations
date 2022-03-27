@@ -21,6 +21,11 @@ public class MouseLook : MonoBehaviour
 
     void Update()
     {
+        if (Cursor.visible == true)
+        {
+            Cursor.visible = false;
+            Cursor.lockState = CursorLockMode.Locked;
+        }
         // get mouse input from user
         float mouseX = Input.GetAxis("Mouse X") * sensitivity * Time.deltaTime;
         float mouseY = Input.GetAxis("Mouse Y") * sensitivity * Time.deltaTime;

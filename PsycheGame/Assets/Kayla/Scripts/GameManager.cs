@@ -10,10 +10,16 @@ public class GameManager : MonoBehaviour
     public Sprite cardBack;
     public GameObject[] cards;
     public Text matchText;
+    public Animator winScreen;
+    SceneTracker sceneTracker;
 
     private bool _init = false;
     private int _matches = 7;
 
+    void Start()
+    {
+        sceneTracker = FindObjectOfType<SceneTracker>();
+    }
     // Update is called once per frame
     void Update()
     {
@@ -87,15 +93,16 @@ public class GameManager : MonoBehaviour
             x = 2;
             _matches--;
             matchText.text = "Number of Matches: " + _matches;
-            if (_matches == 0)
-            {
-                //SceneManager.LoadScene("Menu");
-            }
             for (int i = 0; i < c.Count; i++)
             {
                 cards[c[i]].GetComponent<Card>().state = x;
                 cards[c[i]].GetComponent<Card>().falseCheck();
             }
+        }
+        if (_matches == 0)
+        {
+            QuestTracker.Instance.hasBatteries = true;
+            winScreen.SetTrigger("ShowWinScreen");
         }
         else if(cards[c[0]].GetComponent<Card>().cardValue != cards[c[1]].GetComponent<Card>().cardValue)
         {
@@ -105,6 +112,11 @@ public class GameManager : MonoBehaviour
                 cards[c[i]].GetComponent<Card>().falseCheck();
             }
         }
+    }
+
+    public void quitButton()
+    {
+        SceneTracker.Instance.LoadLevel("DayTwo");
     }
 
 }
