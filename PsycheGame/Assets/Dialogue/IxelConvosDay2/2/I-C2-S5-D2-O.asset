@@ -18,10 +18,10 @@ MonoBehaviour:
   options:
   - text: '> Grab some wet compresses and put it on his face.'
     nextSentence: {fileID: 11400000, guid: e6d7fac2887373e49918220470a1c04a, type: 2}
-    consequence: {fileID: 11400000, guid: 50f99c42145185b4798bba2a0f8814bf, type: 2}
+    consequence: {fileID: 11400000, guid: cba43ab4db1e2ff4abcae093c5ef1344, type: 2}
   - text: '> Get some gauze and wrap his face.'
     nextSentence: {fileID: 11400000, guid: 2fd6f569d16d4e540ab6732ec62d8a52, type: 2}
-    consequence: {fileID: 0}
+    consequence: {fileID: 11400000, guid: 721ab9a5e4ac6fa4f900fd07497d7607, type: 2}
   - text: '> Grab some ice packs and put them on his face.'
     nextSentence: {fileID: 11400000, guid: 65994d19c4b03d74e91ad0d40afb8607, type: 2}
-    consequence: {fileID: 11400000, guid: 3f3b2b19639ffbd48bbbfd0fa00c1968, type: 2}
+    consequence: {fileID: 0}

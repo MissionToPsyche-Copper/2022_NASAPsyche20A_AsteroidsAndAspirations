@@ -8,12 +8,18 @@ public class ScoreUpdater : MonoBehaviour
     public static ScoreUpdater Instance;
 
     public int talkedTo = 0;
-    public int goodEnd = 0;
-    public int badEnd = 0;
 
-    //public Text petText;
-    //public Text goodText;
-    //public Text badText;
+    //***** J9F4 FRIENDSHIP POINTS
+    public int jfPoints = 0;
+
+    //***** N'IXEL FRIENDSHIP POINTS
+    public int nixelPoints = 0;
+
+    //***** YSSA FRIENDSHIP POINTS
+    public int yssaPoints = 0;
+
+    //***** DOG FRIENDSHIP POINTS
+    public int dogPoints = 0;
 
     private void Awake()
     {
@@ -33,17 +39,11 @@ public class ScoreUpdater : MonoBehaviour
         //petText.text = "pets: " + pets;
     }
 
-    public void AddGoodEnd()
-    {
-        goodEnd++;
-        //goodText.text = "points to good end: " + goodEnd;
-    }
-
-       public void AddBadEnd()
-    {
-        badEnd++;
-        //badText.text = "points to bad end: " + badEnd;
-    }
+    public void AddToJf( int points ) => jfPoints += points;
+    public void AddToNixel( int points ) => nixelPoints += points;
+    public void AddToYssa( int points ) => yssaPoints += points;
+    public void AddToDog( int points ) => dogPoints += points;
+    
 
 
 }

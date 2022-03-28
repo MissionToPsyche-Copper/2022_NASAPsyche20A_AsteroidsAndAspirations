@@ -8645,8 +8645,8 @@ PrefabInstance:
     - target: {fileID: 5161385763562154336, guid: 560f61e4bbfbe63439c60e520b813049,
         type: 3}
       propertyPath: m_Text
-      value: 'Message from NASA: Captain [Name], there has been some reported issues
-        with your destination.
+      value: 'Message from NASA: Captain, there has been some reported issues with
+        your destination.
 
 
         The research facility on the Psyche asteroid
@@ -17290,6 +17290,7 @@ MonoBehaviour:
   radius: 7
   player: {fileID: 930778034}
   sceneTracker: {fileID: 1739418802}
+  scoreUpdater: {fileID: 1116458891}
   monitorController: {fileID: 613272919}
   alarmController: {fileID: 1624252602}
   alarmOn: 1
@@ -17298,7 +17299,6 @@ MonoBehaviour:
   dialogueManager: {fileID: 545663579}
   monitorText: {fileID: 613272921}
   monitorText2: {fileID: 613272920}
-  scoreUpdater: {fileID: 1116458891}
 --- !u!4 &1135030713 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2238258838966464541, guid: e62adbe36afec2946b309520f23a4558,

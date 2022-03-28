@@ -19,10 +19,10 @@ MonoBehaviour:
   - text: '> Yes! I think I have a good feeling about it. After all, you two are
       very good together.'
     nextSentence: {fileID: 11400000, guid: bdf06ced9abbae946be795687c297d2f, type: 2}
-    consequence: {fileID: 11400000, guid: 50f99c42145185b4798bba2a0f8814bf, type: 2}
+    consequence: {fileID: 11400000, guid: cba43ab4db1e2ff4abcae093c5ef1344, type: 2}
   - text: '> Maybe, do you even know that he likes you?'
     nextSentence: {fileID: 11400000, guid: b021538fdc75bbf46a7e2ff7a4b0746e, type: 2}
-    consequence: {fileID: 0}
+    consequence: {fileID: 11400000, guid: 721ab9a5e4ac6fa4f900fd07497d7607, type: 2}
   - text: "> No, I don\u2019t think that\u2019d be a good idea."
     nextSentence: {fileID: 11400000, guid: 9eb6518913791514c9ebfb450ca4e624, type: 2}
-    consequence: {fileID: 11400000, guid: 3f3b2b19639ffbd48bbbfd0fa00c1968, type: 2}
+    consequence: {fileID: 0}

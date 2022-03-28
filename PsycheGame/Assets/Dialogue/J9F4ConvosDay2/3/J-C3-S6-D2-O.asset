@@ -19,11 +19,11 @@ MonoBehaviour:
   - text: "> I believe in you J9F4. You\u2019ve done a fantastic job all the way
       up till now, we all believe in you."
     nextSentence: {fileID: 11400000, guid: 1b5313c12371b1b429ec162ad2950bd2, type: 2}
-    consequence: {fileID: 11400000, guid: 50f99c42145185b4798bba2a0f8814bf, type: 2}
+    consequence: {fileID: 11400000, guid: d9364229f5d04af4dbb994f435dbbed4, type: 2}
   - text: '> I think you can, but you should bring Yssa just in case.'
     nextSentence: {fileID: 11400000, guid: e2960c4dd83426549991372ed0a6a840, type: 2}
-    consequence: {fileID: 0}
+    consequence: {fileID: 11400000, guid: fbb63ae0bd9b512488427792785fc269, type: 2}
   - text: ">  It\u2019s far too dangerous, don\u2019t do it and let someone else
       take care of it."
     nextSentence: {fileID: 11400000, guid: 37effe494faf20540959f4820c47692e, type: 2}
-    consequence: {fileID: 11400000, guid: 3f3b2b19639ffbd48bbbfd0fa00c1968, type: 2}
+    consequence: {fileID: 0}

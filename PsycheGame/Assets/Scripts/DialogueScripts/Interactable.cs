@@ -35,7 +35,7 @@ public class Interactable : MonoBehaviour
     {
         checkPlayerDistance();
 
-        if ( currentConvo == conversationList.conversations.Length )
+        if ( currentConvo >= conversationList.conversations.Length )
         {
             conversationList.conversations[conversationList.conversations.Length - 1].isAvailable = false;
         }

@@ -16,13 +16,13 @@ MonoBehaviour:
   text: text
   nextSentence: {fileID: 0}
   options:
-  - text: "> Hey don\u2019t worry about it. I\u2019m sure they were more worried
+  - text: "> Hey, don\u2019t worry about it. I\u2019m sure they were more worried
       to see if you were okay than anything else."
     nextSentence: {fileID: 11400000, guid: fbd90885715473e4cbae6a806dd452a0, type: 2}
-    consequence: {fileID: 11400000, guid: 50f99c42145185b4798bba2a0f8814bf, type: 2}
+    consequence: {fileID: 11400000, guid: cba43ab4db1e2ff4abcae093c5ef1344, type: 2}
   - text: "> I\u2019m sure they\u2019ll forget about it soon."
     nextSentence: {fileID: 11400000, guid: 09365beb2c05ecb4bbf3ef3c61866542, type: 2}
-    consequence: {fileID: 0}
+    consequence: {fileID: 11400000, guid: 721ab9a5e4ac6fa4f900fd07497d7607, type: 2}
   - text: "> I wouldn\u2019t be able to either if I was you."
     nextSentence: {fileID: 11400000, guid: d38f751e5e4dc9a45a45da9537bda06a, type: 2}
-    consequence: {fileID: 11400000, guid: 3f3b2b19639ffbd48bbbfd0fa00c1968, type: 2}
+    consequence: {fileID: 0}

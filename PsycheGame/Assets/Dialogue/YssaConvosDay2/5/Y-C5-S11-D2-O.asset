@@ -19,10 +19,10 @@ MonoBehaviour:
   - text: '> Think about your family, about your daughter. As long as you put as
       much effort into them as you do here, it will all work out.'
     nextSentence: {fileID: 11400000, guid: 0c7cdc42ae36e2d49aecc7fdd76ea2f8, type: 2}
-    consequence: {fileID: 11400000, guid: 50f99c42145185b4798bba2a0f8814bf, type: 2}
+    consequence: {fileID: 11400000, guid: d9362463a4382d9419be0b37f9d8e08f, type: 2}
   - text: "> At the end of the day, this is your decision. It\u2019s a big life step."
     nextSentence: {fileID: 11400000, guid: cc65ff63aa716294284c6464633f8812, type: 2}
-    consequence: {fileID: 0}
+    consequence: {fileID: 11400000, guid: 58f8819f256eb5b45b8a7650292e7122, type: 2}
   - text: '> I think you should. It seems like life in space suits you better.'
     nextSentence: {fileID: 11400000, guid: d8a6050bdc82e2d41a375bb77294bf84, type: 2}
-    consequence: {fileID: 11400000, guid: 3f3b2b19639ffbd48bbbfd0fa00c1968, type: 2}
+    consequence: {fileID: 0}

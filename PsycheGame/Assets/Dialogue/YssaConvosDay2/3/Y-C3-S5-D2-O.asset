@@ -19,10 +19,10 @@ MonoBehaviour:
   - text: "> Don\u2019t be so hard on yourself. There\u2019s no way you would have
       known the pipe was going to burst."
     nextSentence: {fileID: 11400000, guid: c3ec369103902874f8e66ec1b29d50cc, type: 2}
-    consequence: {fileID: 11400000, guid: 50f99c42145185b4798bba2a0f8814bf, type: 2}
+    consequence: {fileID: 11400000, guid: d9362463a4382d9419be0b37f9d8e08f, type: 2}
   - text: "> What has happened, happened. There\u2019s no point in spreading blame."
     nextSentence: {fileID: 11400000, guid: b8327d67fc6f08f46bff12d7073a10b8, type: 2}
-    consequence: {fileID: 0}
+    consequence: {fileID: 11400000, guid: 58f8819f256eb5b45b8a7650292e7122, type: 2}
   - text: '> I expect you to be more aware of the state of our ship from now on.'
     nextSentence: {fileID: 11400000, guid: 177dc3ad164a5624a8d277d5f1e1aae5, type: 2}
-    consequence: {fileID: 11400000, guid: 3f3b2b19639ffbd48bbbfd0fa00c1968, type: 2}
+    consequence: {fileID: 0}

@@ -19,11 +19,11 @@ MonoBehaviour:
   - text: "> Everybody is good enough. You have unique skills and knowledge the rest
       of us don\u2019t have."
     nextSentence: {fileID: 11400000, guid: 73b9ba0abfc9eff4eb1d954d9f3517e4, type: 2}
-    consequence: {fileID: 11400000, guid: 50f99c42145185b4798bba2a0f8814bf, type: 2}
+    consequence: {fileID: 11400000, guid: d9364229f5d04af4dbb994f435dbbed4, type: 2}
   - text: "> Everybody has to start somewhere. Now isn\u2019t a bad time."
     nextSentence: {fileID: 11400000, guid: a17146df9d642c743a1ecdc35a19151e, type: 2}
-    consequence: {fileID: 0}
+    consequence: {fileID: 11400000, guid: fbb63ae0bd9b512488427792785fc269, type: 2}
   - text: "> You\u2019re young, yes. But that\u2019s why people like Yssa and N\u2019Mosa
       are here, to help you. "
     nextSentence: {fileID: 11400000, guid: 5f73c1eb713ca1245b8a09094ccd78e4, type: 2}
-    consequence: {fileID: 11400000, guid: 3f3b2b19639ffbd48bbbfd0fa00c1968, type: 2}
+    consequence: {fileID: 0}

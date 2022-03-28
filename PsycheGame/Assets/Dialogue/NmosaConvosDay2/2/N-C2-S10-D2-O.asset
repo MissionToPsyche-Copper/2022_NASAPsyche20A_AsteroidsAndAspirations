@@ -19,10 +19,10 @@ MonoBehaviour:
   - text: "> Of course you should! There\u2019s no two people I see that are better
       together."
     nextSentence: {fileID: 11400000, guid: cd1c5eb76752db9429d991c5f8868281, type: 2}
-    consequence: {fileID: 11400000, guid: 50f99c42145185b4798bba2a0f8814bf, type: 2}
+    consequence: {fileID: 11400000, guid: cba43ab4db1e2ff4abcae093c5ef1344, type: 2}
   - text: '> That depends, do you think they like you back?'
     nextSentence: {fileID: 11400000, guid: 7d4cd8fee44c7344b82c649689b6d10f, type: 2}
-    consequence: {fileID: 0}
+    consequence: {fileID: 11400000, guid: 721ab9a5e4ac6fa4f900fd07497d7607, type: 2}
   - text: "> I don\u2019t think that\u2019s a good idea N\u2019Mosa."
     nextSentence: {fileID: 11400000, guid: 25a2d038f6fdc974b9690d76c1b4a97b, type: 2}
-    consequence: {fileID: 11400000, guid: 3f3b2b19639ffbd48bbbfd0fa00c1968, type: 2}
+    consequence: {fileID: 0}

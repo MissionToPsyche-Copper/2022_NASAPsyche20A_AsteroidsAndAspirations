@@ -19,11 +19,11 @@ MonoBehaviour:
   - text: "> Hello, Ixel. It\u2019s good to see you. How are you feeling? Penny for
       your thoughts?"
     nextSentence: {fileID: 11400000, guid: b26345b1a05029d4cb1225fa63747fe7, type: 2}
-    consequence: {fileID: 11400000, guid: 50f99c42145185b4798bba2a0f8814bf, type: 2}
+    consequence: {fileID: 11400000, guid: cba43ab4db1e2ff4abcae093c5ef1344, type: 2}
   - text: '> Good morning, Ixel. Just checking in with you.'
     nextSentence: {fileID: 11400000, guid: 63ec4ec755a7e4740afbce3282a1b5b1, type: 2}
-    consequence: {fileID: 0}
+    consequence: {fileID: 11400000, guid: 721ab9a5e4ac6fa4f900fd07497d7607, type: 2}
   - text: "> What are you spacing out here in the main control room for? Aren\u2019t
       you supposed to be in the MedBay?"
     nextSentence: {fileID: 11400000, guid: ebce0274c86ebf243b8e2c2ea8f38b02, type: 2}
-    consequence: {fileID: 11400000, guid: 3f3b2b19639ffbd48bbbfd0fa00c1968, type: 2}
+    consequence: {fileID: 0}

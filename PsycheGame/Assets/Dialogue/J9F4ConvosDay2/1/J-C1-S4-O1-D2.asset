@@ -19,11 +19,11 @@ MonoBehaviour:
   - text: '> Back in Year 2XXX I was on a small satellite with Yssa, my first mission
       with her. We got caught in a violent asteroid storm!'
     nextSentence: {fileID: 11400000, guid: 1c670035634630c4b82265439b43431e, type: 2}
-    consequence: {fileID: 11400000, guid: 50f99c42145185b4798bba2a0f8814bf, type: 2}
+    consequence: {fileID: 11400000, guid: d9364229f5d04af4dbb994f435dbbed4, type: 2}
   - text: '> This mission.'
     nextSentence: {fileID: 11400000, guid: 267a7d9ed17ab6545ad247afa5cb47de, type: 2}
-    consequence: {fileID: 0}
+    consequence: {fileID: 11400000, guid: fbb63ae0bd9b512488427792785fc269, type: 2}
   - text: "> They\u2019re all really boring. You are just floating in darkness for
       days without any real food or entertainment."
     nextSentence: {fileID: 11400000, guid: 3596b25887eaa6c40ac13f76afc437af, type: 2}
-    consequence: {fileID: 11400000, guid: 3f3b2b19639ffbd48bbbfd0fa00c1968, type: 2}
+    consequence: {fileID: 0}

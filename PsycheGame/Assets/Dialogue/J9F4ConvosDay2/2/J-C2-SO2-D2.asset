@@ -18,4 +18,4 @@ MonoBehaviour:
   options:
   - text: "> Of course J9F4. Tell me, what\u2019s bothering you?"
     nextSentence: {fileID: 11400000, guid: 19b1f7df1b019cf44a30e5dc881cbca7, type: 2}
-    consequence: {fileID: 11400000, guid: 50f99c42145185b4798bba2a0f8814bf, type: 2}
+    consequence: {fileID: 11400000, guid: fbb63ae0bd9b512488427792785fc269, type: 2}

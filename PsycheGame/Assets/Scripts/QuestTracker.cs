@@ -50,7 +50,6 @@ public class QuestTracker : MonoBehaviour
             Destroy(gameObject);
             return;
         }
-        
         Instance = this;
         DontDestroyOnLoad(gameObject);
     }

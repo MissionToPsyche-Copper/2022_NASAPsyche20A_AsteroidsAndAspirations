@@ -19,11 +19,11 @@ MonoBehaviour:
   - text: "> Just checking up on everything, wanted to make sure you didn\u2019t
       need help."
     nextSentence: {fileID: 11400000, guid: d31e35cd28563e048bbfbcf64c0b8595, type: 2}
-    consequence: {fileID: 11400000, guid: 50f99c42145185b4798bba2a0f8814bf, type: 2}
+    consequence: {fileID: 0}
   - text: "> I\u2019m here to make sure everything is doing okay."
     nextSentence: {fileID: 11400000, guid: 9a97c16aa505a0141a0d295c080a9bb7, type: 2}
     consequence: {fileID: 0}
   - text: "> Just didn\u2019t expect you to be in the medical room, it\u2019s not
       supposed to be your job."
     nextSentence: {fileID: 11400000, guid: f710b52080d487b4e9e1ca6dd3fdaddb, type: 2}
-    consequence: {fileID: 11400000, guid: 3f3b2b19639ffbd48bbbfd0fa00c1968, type: 2}
+    consequence: {fileID: 0}

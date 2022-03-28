@@ -13,7 +13,6 @@ MonoBehaviour:
   m_Name: jc2s1
   m_EditorClassIdentifier: 
   from: {fileID: 11400000, guid: 0c6472cd862470043ae3138fc8dba90c, type: 2}
-  text: "[Name]! I mean Captain! If there\u2019s anything I can do to help, let me
-    know!"
+  text: "Captain! If there\u2019s anything I can do to help, let me know!"
   nextSentence: {fileID: 0}
   options: []

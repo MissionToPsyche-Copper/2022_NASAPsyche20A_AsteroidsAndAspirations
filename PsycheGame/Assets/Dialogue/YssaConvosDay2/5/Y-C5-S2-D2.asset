@@ -18,4 +18,4 @@ MonoBehaviour:
   options:
   - text: '> Yssa? Are you okay?'
     nextSentence: {fileID: 11400000, guid: f540ccaf866ddb14b8251aa078274f41, type: 2}
-    consequence: {fileID: 0}
+    consequence: {fileID: 11400000, guid: 58f8819f256eb5b45b8a7650292e7122, type: 2}

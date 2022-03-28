@@ -18,11 +18,11 @@ MonoBehaviour:
   options:
   - text: "> It can be scary, but there\u2019s also so much good and love to discover."
     nextSentence: {fileID: 11400000, guid: b25fda2cb5f7a4f4ea9ff111a8342c62, type: 2}
-    consequence: {fileID: 11400000, guid: 50f99c42145185b4798bba2a0f8814bf, type: 2}
+    consequence: {fileID: 11400000, guid: d9362463a4382d9419be0b37f9d8e08f, type: 2}
   - text: "> It can\u2019t be worse than living up here with us."
     nextSentence: {fileID: 11400000, guid: f642f529759dc664fa9a1a615f0fb3cd, type: 2}
-    consequence: {fileID: 0}
+    consequence: {fileID: 11400000, guid: 58f8819f256eb5b45b8a7650292e7122, type: 2}
   - text: "> But you\u2019re from Earth, you should already know how to live there,
       right?"
     nextSentence: {fileID: 11400000, guid: e049f223c7d879249b344dc216a20f9a, type: 2}
-    consequence: {fileID: 11400000, guid: 3f3b2b19639ffbd48bbbfd0fa00c1968, type: 2}
+    consequence: {fileID: 0}
