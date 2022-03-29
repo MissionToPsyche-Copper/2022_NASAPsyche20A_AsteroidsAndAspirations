@@ -7,6 +7,9 @@ public class QuestTracker : MonoBehaviour
 {
     public static QuestTracker Instance;
 
+    public bool canEndDayThree = false;
+    public bool onDayThree = false;
+
     public int jCurrentConvo = 0;
     public bool jConvo3isAvailable = false;
 
@@ -37,6 +40,7 @@ public class QuestTracker : MonoBehaviour
     public bool task7Complete = false;
     public bool task8Complete = false;
     public bool task9Complete = false;
+    public bool tasksDone = false;
 
     // more bools for items here
     public bool hasFuel = false;

@@ -116,7 +116,8 @@ public class GameManager : MonoBehaviour
 
     public void quitButton()
     {
-        SceneTracker.Instance.LoadLevel("DayTwo");
+        if (QuestTracker.Instance.onDayThree) SceneTracker.Instance.LoadLevel("DayThree");
+        else SceneTracker.Instance.LoadLevel("DayTwo");
     }
 
 }

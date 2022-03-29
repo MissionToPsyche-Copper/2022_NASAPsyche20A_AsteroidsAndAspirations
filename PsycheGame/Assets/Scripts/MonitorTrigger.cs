@@ -7,6 +7,7 @@ public class MonitorTrigger : MonoBehaviour
 {
     public float radius = 7; // within this radius, the item can be interacted with
     public Transform player; // a reference to the player object
+    public bool isTyping = false;
 
     [SerializeField]
     SceneTracker sceneTracker;
@@ -20,6 +21,7 @@ public class MonitorTrigger : MonoBehaviour
     public bool monitorViewed = false;
 
     public DialogueManager dialogueManager;
+    public GameObject bed;
 
     public Text monitorText;
     public Text monitorText2;
@@ -32,6 +34,8 @@ public class MonitorTrigger : MonoBehaviour
     {
         sceneTracker = FindObjectOfType<SceneTracker>();
         scoreUpdater = FindObjectOfType<ScoreUpdater>();
+        bed.GetComponent<ShowInteractPrompt>().promptText = ">> Not time for bed yet. <<";
+        bed.GetComponent<LoadLevel>().enabled = false;
         type = monitorText.text;
         monitorText.text = "";
         type2 = monitorText2.text;
@@ -43,12 +47,13 @@ public class MonitorTrigger : MonoBehaviour
         if ( Vector3.Distance ( player.position, this.transform.position ) < radius ) 
         {
             // the "z" key acts as the interact button
-            if ( Input.GetKeyDown( "z" )) 
+            if ( Input.GetKeyDown( "z" ) && !isTyping) 
             {
-                if (!alarmOn) SceneTracker.Instance.LoadLevel("DayTwo");
 
                 if (scoreUpdater.talkedTo > 3)
                 {
+                    bed.GetComponent<ShowInteractPrompt>().promptText = ">> Go to Bed <<";
+                    bed.GetComponent<LoadLevel>().enabled = true;
                     monitorText.text = "";
                     type = type2;
                     monitorViewed = false;
@@ -77,10 +82,12 @@ public class MonitorTrigger : MonoBehaviour
     IEnumerator StartTyping()
     {
         Debug.Log("started letterboxing");
+        isTyping = true;
         foreach( char c in type )
         {
             monitorText.text += c;
             yield return new WaitForSeconds(0.05f);
         }
+        isTyping = false;
     }
 }

@@ -7,6 +7,7 @@ public class QuestManager : MonoBehaviour
 {
 
     public Animator loadingscreen;
+    public GameObject bed;
     [Header("NPC Conversation Tracker")]
     public Interactable jCurrentConvo;
     public DialogueSO jConvo3;
@@ -52,6 +53,7 @@ public class QuestManager : MonoBehaviour
     [Header("Task Tracker")]
     public GameObject taskPanel1;
     public GameObject taskPanel2;
+    public GameObject taskPanel3;
 
     /*
     public bool incident = false;
@@ -163,6 +165,21 @@ public class QuestManager : MonoBehaviour
         {
             taskPanel1.SetActive(false);
             taskPanel2.SetActive(true);
+            taskPanel3.SetActive(false);
+        }
+
+        if ( QuestTracker.Instance.tasksDone ) 
+        {
+            taskPanel1.SetActive(false);
+            taskPanel2.SetActive(false);
+            taskPanel3.SetActive(true);
+            bed.GetComponent<ShowInteractPrompt>().promptText = ">> Go to Bed. <<";
+            bed.GetComponent<LoadLevel>().enabled = true;
+        }
+        else
+        {
+            bed.GetComponent<ShowInteractPrompt>().promptText = ">> Not time for bed yet. <<";
+            bed.GetComponent<LoadLevel>().enabled = false;
         }
 
         toggletask1.isOn = QuestTracker.Instance.task1Complete;
@@ -181,6 +198,7 @@ public class QuestManager : MonoBehaviour
     {
 
         CheckTasks();
+        if (!QuestTracker.Instance.tasksDone) CheckTasksDone();
         CheckItems();
 
         if (jCurrentConvo.currentConvo > 0)
@@ -360,6 +378,29 @@ public class QuestManager : MonoBehaviour
             }
         }
 
+    }
+
+    private void CheckTasksDone()
+    {
+        if (
+            QuestTracker.Instance.task1Complete &&
+            QuestTracker.Instance.task2Complete &&
+            QuestTracker.Instance.task3Complete &&
+            QuestTracker.Instance.task4Complete &&
+            QuestTracker.Instance.task5Complete &&
+            QuestTracker.Instance.task6Complete &&
+            QuestTracker.Instance.task7Complete &&
+            QuestTracker.Instance.task8Complete &&
+            QuestTracker.Instance.task9Complete
+        )
+        {
+            QuestTracker.Instance.tasksDone = true;
+            taskPanel1.SetActive(false);
+            taskPanel2.SetActive(false);
+            taskPanel3.SetActive(true);
+            bed.GetComponent<ShowInteractPrompt>().promptText = ">> Go to Bed. <<";
+            bed.GetComponent<LoadLevel>().enabled = true;
+        } 
     }
 
     private void movePositions( int placementNumber )

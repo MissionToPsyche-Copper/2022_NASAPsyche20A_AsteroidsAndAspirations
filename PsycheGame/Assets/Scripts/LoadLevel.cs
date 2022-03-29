@@ -3,11 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class StartMiniGame : MonoBehaviour
+public class LoadLevel : MonoBehaviour
 {
     // Start is called before the first frame update
     public float radius = 7; // within this radius, the item can be interacted with
     public Transform player; // a reference to the player object
+    public string levelName; // the name of the level to be loaded
 
     // Update is called once per frame
     void Update()
@@ -17,7 +18,7 @@ public class StartMiniGame : MonoBehaviour
             // the "z" key acts as the interact button
             if ( Input.GetKeyDown( "z" )) 
             {
-                SceneTracker.Instance.LoadLevel("Menu");
+                SceneTracker.Instance.LoadLevel( levelName );
             }
         }
     }

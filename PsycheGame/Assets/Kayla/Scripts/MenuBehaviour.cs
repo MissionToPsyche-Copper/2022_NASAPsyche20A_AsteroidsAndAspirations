@@ -16,7 +16,9 @@ public class MenuBehaviour : MonoBehaviour
         if (i == 1)
         {
             //Application.Quit(); // CHANGE To LoadScene
-            SceneTracker.Instance.LoadLevel("DayTwo");
+            if (QuestTracker.Instance.onDayThree) SceneTracker.Instance.LoadLevel("DayThree");
+            else SceneTracker.Instance.LoadLevel("DayTwo");
+            
             Debug.Log("Quit Button is clicked");
 
         }

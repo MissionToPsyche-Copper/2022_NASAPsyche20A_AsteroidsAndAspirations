@@ -12,6 +12,12 @@ EditorBuildSettings:
     path: Assets/Scenes/DayTwo.unity
     guid: ac7451ceb605d5842a47eca755de1fa5
   - enabled: 1
+    path: Assets/Scenes/DayThree.unity
+    guid: b64986412351e6c45a1e024a75018b31
+  - enabled: 1
+    path: Assets/Scenes/EndScene.unity
+    guid: e95e7c5716b085a44a9228394aec1111
+  - enabled: 1
     path: Assets/Kayla/Flip A Card/Menu.unity
     guid: 98453743f88b29f4b82f27dbbe422e56
   - enabled: 1
