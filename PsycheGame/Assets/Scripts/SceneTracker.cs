@@ -22,6 +22,16 @@ public class SceneTracker : MonoBehaviour
         DontDestroyOnLoad(gameObject);
     }
 
+    //*** DEBUG COMMAND DELETE LATER ***//
+    void Update()
+    {
+        if (Input.GetKeyDown("l"))
+        {
+            Debug.Log("SKIPPED TO DAY TWO");
+            LoadLevel("DayTwo");
+        }
+    }
+
     public void LoadLevel( string levelName )
     {
         StartCoroutine( LoadingNextScene( levelName ) );
