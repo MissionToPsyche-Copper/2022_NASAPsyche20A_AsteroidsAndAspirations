@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 902e140bde944a343b61f4b3510168b0, type: 3}
+  m_Name: NmosaConversationList
+  m_EditorClassIdentifier: 
+  conversations:
+  - {fileID: 11400000, guid: b9cd323dcc846e944bbd40486ff2d143, type: 2}
+  - {fileID: 11400000, guid: 5f4c3a89508021c4a94662946670e474, type: 2}
+  - {fileID: 11400000, guid: 0ec729b99a2996247a00ce55c395e35a, type: 2}

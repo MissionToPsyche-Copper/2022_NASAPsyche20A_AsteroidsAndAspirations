@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b3e36f6b69caa0f4ea3eaf83976994f7, type: 3}
+  m_Name: Y-C5-S11-D2-O
+  m_EditorClassIdentifier: 
+  from: {fileID: 11400000, guid: 3e5dc96ecf34cee43b28f7899dc6a83b, type: 2}
+  text: text
+  nextSentence: {fileID: 0}
+  options:
+  - text: '> Think about your family, about your daughter. As long as you put as
+      much effort into them as you do here, it will all work out.'
+    nextSentence: {fileID: 11400000, guid: 0c7cdc42ae36e2d49aecc7fdd76ea2f8, type: 2}
+    consequence: {fileID: 11400000, guid: d9362463a4382d9419be0b37f9d8e08f, type: 2}
+  - text: "> At the end of the day, this is your decision. It\u2019s a big life step."
+    nextSentence: {fileID: 11400000, guid: cc65ff63aa716294284c6464633f8812, type: 2}
+    consequence: {fileID: 11400000, guid: 58f8819f256eb5b45b8a7650292e7122, type: 2}
+  - text: '> I think you should. It seems like life in space suits you better.'
+    nextSentence: {fileID: 11400000, guid: d8a6050bdc82e2d41a375bb77294bf84, type: 2}
+    consequence: {fileID: 0}

@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b3e36f6b69caa0f4ea3eaf83976994f7, type: 3}
+  m_Name: Y-C4-S7-D2
+  m_EditorClassIdentifier: 
+  from: {fileID: 11400000, guid: a25919187ecb9f041b53d58244f95da0, type: 2}
+  text: If the theory is true that Psyche is a core for an early planet, this machine
+    should help us to see if the asteroid had any magnetic fields at all in its past.
+  nextSentence: {fileID: 11400000, guid: 65d88c111fecf75418971c5be00b8115, type: 2}
+  options: []

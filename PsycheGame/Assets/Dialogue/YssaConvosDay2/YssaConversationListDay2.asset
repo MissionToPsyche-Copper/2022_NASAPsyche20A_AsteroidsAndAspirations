@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 902e140bde944a343b61f4b3510168b0, type: 3}
+  m_Name: YssaConversationListDay2
+  m_EditorClassIdentifier: 
+  conversations:
+  - {fileID: 11400000, guid: 091fd0a1036529c49af5805a211d5f1b, type: 2}
+  - {fileID: 11400000, guid: 689e9f93c1622df44b2697efd5661178, type: 2}
+  - {fileID: 11400000, guid: 3d71ed50e5c029d499af9cffc6eeb4e4, type: 2}
+  - {fileID: 11400000, guid: 06e8b5d103f3130479e5b5a5b0e632e5, type: 2}
+  - {fileID: 11400000, guid: f57a46c7d657cde46aae627ba21181de, type: 2}

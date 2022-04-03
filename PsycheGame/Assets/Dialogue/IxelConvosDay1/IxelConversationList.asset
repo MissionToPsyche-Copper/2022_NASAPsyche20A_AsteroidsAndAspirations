@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 902e140bde944a343b61f4b3510168b0, type: 3}
+  m_Name: IxelConversationList
+  m_EditorClassIdentifier: 
+  conversations:
+  - {fileID: 11400000, guid: f0485f24b5c81714d8b5b27a5cf14723, type: 2}
+  - {fileID: 11400000, guid: c9535fa6e2f98474e88b23ef58d6e8f5, type: 2}
+  - {fileID: 11400000, guid: f0563a55213eff84d862dc826284e47a, type: 2}

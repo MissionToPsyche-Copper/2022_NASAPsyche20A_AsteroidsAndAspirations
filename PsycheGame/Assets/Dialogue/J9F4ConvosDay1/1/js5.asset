@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b3e36f6b69caa0f4ea3eaf83976994f7, type: 3}
+  m_Name: js5
+  m_EditorClassIdentifier: 
+  from: {fileID: 11400000, guid: 0c6472cd862470043ae3138fc8dba90c, type: 2}
+  text: "My internal navigation system was a lot more intricate than the engineers
+    were expecting. Even now, they\u2019re not sure if I am perfected. So this is
+    my test run!"
+  nextSentence: {fileID: 11400000, guid: 5144f42e6a5e68642bf2674255bb986f, type: 2}
+  options: []

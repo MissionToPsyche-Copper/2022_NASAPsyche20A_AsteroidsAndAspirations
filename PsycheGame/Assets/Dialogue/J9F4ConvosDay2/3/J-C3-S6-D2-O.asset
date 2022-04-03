@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b3e36f6b69caa0f4ea3eaf83976994f7, type: 3}
+  m_Name: J-C3-S6-D2-O
+  m_EditorClassIdentifier: 
+  from: {fileID: 11400000, guid: 3e5dc96ecf34cee43b28f7899dc6a83b, type: 2}
+  text: text
+  nextSentence: {fileID: 0}
+  options:
+  - text: "> I believe in you J9F4. You\u2019ve done a fantastic job all the way
+      up till now, we all believe in you."
+    nextSentence: {fileID: 11400000, guid: 1b5313c12371b1b429ec162ad2950bd2, type: 2}
+    consequence: {fileID: 11400000, guid: d9364229f5d04af4dbb994f435dbbed4, type: 2}
+  - text: '> I think you can, but you should bring Yssa just in case.'
+    nextSentence: {fileID: 11400000, guid: e2960c4dd83426549991372ed0a6a840, type: 2}
+    consequence: {fileID: 11400000, guid: fbb63ae0bd9b512488427792785fc269, type: 2}
+  - text: ">  It\u2019s far too dangerous, don\u2019t do it and let someone else
+      take care of it."
+    nextSentence: {fileID: 11400000, guid: 37effe494faf20540959f4820c47692e, type: 2}
+    consequence: {fileID: 0}

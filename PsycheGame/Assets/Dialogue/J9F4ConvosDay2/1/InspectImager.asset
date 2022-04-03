@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b3e36f6b69caa0f4ea3eaf83976994f7, type: 3}
+  m_Name: InspectImager
+  m_EditorClassIdentifier: 
+  from: {fileID: 11400000, guid: 3e5dc96ecf34cee43b28f7899dc6a83b, type: 2}
+  text: text
+  nextSentence: {fileID: 11400000, guid: 85784980f2b008c45971daac1e4fa41a, type: 2}
+  options:
+  - text: '> Inspect Multispectral Imager'
+    nextSentence: {fileID: 11400000, guid: 85784980f2b008c45971daac1e4fa41a, type: 2}
+    consequence: {fileID: 11400000, guid: 1197c559cd176014a8627b3decb5f227, type: 2}

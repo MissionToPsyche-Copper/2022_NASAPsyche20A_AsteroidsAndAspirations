@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b3e36f6b69caa0f4ea3eaf83976994f7, type: 3}
+  m_Name: Y-C5-S5-D2-O
+  m_EditorClassIdentifier: 
+  from: {fileID: 11400000, guid: 3e5dc96ecf34cee43b28f7899dc6a83b, type: 2}
+  text: text
+  nextSentence: {fileID: 0}
+  options:
+  - text: "> It can be scary, but there\u2019s also so much good and love to discover."
+    nextSentence: {fileID: 11400000, guid: b25fda2cb5f7a4f4ea9ff111a8342c62, type: 2}
+    consequence: {fileID: 11400000, guid: d9362463a4382d9419be0b37f9d8e08f, type: 2}
+  - text: "> It can\u2019t be worse than living up here with us."
+    nextSentence: {fileID: 11400000, guid: f642f529759dc664fa9a1a615f0fb3cd, type: 2}
+    consequence: {fileID: 11400000, guid: 58f8819f256eb5b45b8a7650292e7122, type: 2}
+  - text: "> But you\u2019re from Earth, you should already know how to live there,
+      right?"
+    nextSentence: {fileID: 11400000, guid: e049f223c7d879249b344dc216a20f9a, type: 2}
+    consequence: {fileID: 0}
