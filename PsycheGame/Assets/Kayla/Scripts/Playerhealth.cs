@@ -7,18 +7,13 @@ public class Playerhealth : MonoBehaviour
 {
     public float health;
     public Slider slider;
-    public Text gameOverText;
     public GameObject ship;
+    public GameObject timer;
 
-    public Text youWinText;
+    public GameObject GameOverScreen;
+    public GameObject WinScreen;
     public int itemsRemaining;
     public Text itemsLeft;
-    // Start is called before the first frame update
-    void Start()
-    {
-        gameOverText.gameObject.SetActive(false);
-        youWinText.gameObject.SetActive(false);
-    }
 
     // Update is called once per frame
     void Update()
@@ -55,11 +50,18 @@ public class Playerhealth : MonoBehaviour
         if (health == 0)
         {
             Debug.Log("Health is 0");
-            gameOverText.gameObject.SetActive(true);
+            GameOverScreen.SetActive(true);
+            GameOverScreen.GetComponent<Animator>().SetTrigger("ShowWinScreen");
+            Destroy( timer );
+            Destroy( gameObject );
         }
         if (itemsRemaining == 0)
         {
-            youWinText.gameObject.SetActive(true);
+            WinScreen.SetActive(true);
+            QuestTracker.Instance.hasFuel = true;
+            WinScreen.GetComponent<Animator>().SetTrigger("ShowWinScreen");
+            Destroy( timer );
+            Destroy( gameObject );
         }
 
     }

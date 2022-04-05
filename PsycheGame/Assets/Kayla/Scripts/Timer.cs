@@ -8,7 +8,9 @@ public class Timer : MonoBehaviour
 {
     public float timeValue = 90;
     public Text timerText;
-    public Text gameOverText;
+    public GameObject GameOverScreen;
+    private bool gameWon = false;
+    public GameObject ship;
 
     // Update is called once per frame
     void Update()
@@ -21,18 +23,22 @@ public class Timer : MonoBehaviour
         {
             timeValue += 0;
         }
-        DisplayTime(timeValue);
+        if ( !gameWon ) DisplayTime(timeValue);
     }
     void DisplayTime(float timeToDisplay)
     {
         if (timeToDisplay < 0)
         {
             timeToDisplay = 0;
-            gameOverText.gameObject.SetActive(true);
+            GameOverScreen.SetActive(true);
+            GameOverScreen.GetComponent<Animator>().SetTrigger("ShowWinScreen");  
+            gameWon = true;
+            Destroy( ship );
+            Destroy( gameObject );
         }
         else
         {
-            gameOverText.gameObject.SetActive(false);
+            GameOverScreen.SetActive(false);
 
             float minutes = Mathf.FloorToInt(timeToDisplay / 60);
             float seconds = Mathf.FloorToInt(timeToDisplay % 60);

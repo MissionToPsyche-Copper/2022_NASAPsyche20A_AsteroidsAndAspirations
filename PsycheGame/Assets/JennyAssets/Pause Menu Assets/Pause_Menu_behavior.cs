@@ -4,10 +4,14 @@ using UnityEngine;
 
 public class Pause_Menu_behavior : MonoBehaviour
 {
-    public static bool gamePaused = false;
+    public bool gamePaused = false;
+    public GameObject player;
+    private Interactable[] interactables;
 
-    public GameObject pauseMenuUI;
-
+    void Start()
+    {
+        interactables = FindObjectsOfType<Interactable>();
+    }
     // Update is called once per frame
     void Update()
     {
@@ -25,27 +29,32 @@ public class Pause_Menu_behavior : MonoBehaviour
     }
     public void Resume()
     {
-        pauseMenuUI.SetActive(false);
-        Time.timeScale = 1f;
+        GetComponent<Animator>().SetTrigger("FadeOut");
+        setEnableObjects(true);
         gamePaused = false;
     }
     void Pause()
     {
-        pauseMenuUI.SetActive(true);
-        Time.timeScale = 0f;
+        
         gamePaused = true;
+        GetComponent<Animator>().SetTrigger("FadeIn");
+        setEnableObjects(false);
+        Cursor.visible = true;
+        Cursor.lockState = CursorLockMode.Confined;
     }
     public void loadMainMenu()
     {
         Time.timeScale = 1f;
-        //SceneManager.LoadScene("");
+        //SceneTracker.Instance.LoadLevel("");
     }
-    public void howToPlay()
+
+    private void setEnableObjects( bool paused )
     {
-        //SceneManager.LoadScene("");
-    }
-    public void QuitGame()
-    {
-        Application.Quit();
+        player.GetComponent<PlayerMovement>().enabled = paused;
+        player.GetComponentInChildren<MouseLook>().enabled = paused;
+        foreach (Interactable i in interactables)
+        {
+            i.enabled = paused;
+        }
     }
 }
