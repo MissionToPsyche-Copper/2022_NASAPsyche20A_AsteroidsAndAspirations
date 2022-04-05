@@ -42,10 +42,10 @@ public class Pause_Menu_behavior : MonoBehaviour
         Cursor.visible = true;
         Cursor.lockState = CursorLockMode.Confined;
     }
-    public void loadMainMenu()
+
+    public void quitButton()
     {
-        Time.timeScale = 1f;
-        //SceneTracker.Instance.LoadLevel("");
+        Application.Quit();
     }
 
     private void setEnableObjects( bool paused )
