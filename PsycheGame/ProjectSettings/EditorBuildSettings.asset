@@ -29,4 +29,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Kayla/Guide A Spacecraft/Guide a spacecraft.unity
     guid: 12fb8cf0217707043a4af74f10e91f03
+  - enabled: 1
+    path: Assets/JennyAssets/Scenes/WireGame.unity
+    guid: ffcbe3deee9084c4d9cbee039bf37419
   m_configObjects: {}

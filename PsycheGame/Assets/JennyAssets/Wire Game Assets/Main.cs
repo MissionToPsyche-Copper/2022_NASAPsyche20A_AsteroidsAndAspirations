@@ -7,7 +7,7 @@ public class Main : MonoBehaviour
 
     static public Main Instance;
     public int wireCount;
-    public GameObject winText;
+    public Animator winScreen;
     private int matchedCount = 0;
 
     public void Awake()
@@ -20,7 +20,14 @@ public class Main : MonoBehaviour
 
         if(matchedCount == wireCount)
         {
-            winText.SetActive(true);
+            QuestTracker.Instance.hasToolbox = true;
+            winScreen.SetTrigger("ShowWinScreen");
         }
+    }
+
+    public void quitButton()
+    {
+        if (QuestTracker.Instance.onDayThree) SceneTracker.Instance.LoadLevel("DayThree");
+        else SceneTracker.Instance.LoadLevel("DayTwo");
     }
 }

@@ -32567,6 +32567,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 457237d26692a034db58ecb5e6983537, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  canEndDayThree: 0
+  onDayThree: 0
   jCurrentConvo: 0
   jConvo3isAvailable: 0
   iCurrentConvo: 0
@@ -34612,6 +34614,16 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 930778034}
+    - target: {fileID: 8001413524702004500, guid: eeb3e6a4d69eb3640a2348204e366b0d,
+        type: 3}
+      propertyPath: radius
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 8001413524702004500, guid: eeb3e6a4d69eb3640a2348204e366b0d,
+        type: 3}
+      propertyPath: levelName
+      value: WireGame
+      objectReference: {fileID: 0}
     - target: {fileID: 8001413524702004501, guid: eeb3e6a4d69eb3640a2348204e366b0d,
         type: 3}
       propertyPath: m_RootOrder
