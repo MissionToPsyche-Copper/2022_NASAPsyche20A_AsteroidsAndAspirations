@@ -17,5 +17,5 @@ MonoBehaviour:
   nextSentence: {fileID: 0}
   options:
   - text: '> How are you feeling?'
-    nextSentence: {fileID: 11400000, guid: ce83d72313010aa45bc1d9c15df5e233, type: 2}
+    nextSentence: {fileID: 11400000, guid: a4d946ba379c6414dad4b5eb3efd3130, type: 2}
     consequence: {fileID: 11400000, guid: 721ab9a5e4ac6fa4f900fd07497d7607, type: 2}

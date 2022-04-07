@@ -23,6 +23,7 @@ public class QuestTracker : MonoBehaviour
     public int yCurrentConvo = 0;
     public bool yssaConvo1isAvailable = false;
     public bool yssaConvo2isAvailable = false;
+    public bool yssaConvo3isAvailable = false;
 
     public bool positions1 = false;
     public bool positions2 = false;

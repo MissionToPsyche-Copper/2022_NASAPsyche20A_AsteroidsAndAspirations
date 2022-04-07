@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: J-C2-S6-D2
   m_EditorClassIdentifier: 
   from: {fileID: 11400000, guid: 0c6472cd862470043ae3138fc8dba90c, type: 2}
-  text: hanks, Captain! That really makes me feel better about my place here on the
-    ship. (J9F4 grins widely, obviously having shifted moods.)
+  text: Thanks, Captain! That really makes me feel better about my place here on
+    the ship. (J9F4 grins widely, obviously having shifted moods.)
   nextSentence: {fileID: 11400000, guid: 190141846b3edd4488e0d74450bd1d20, type: 2}
   options: []

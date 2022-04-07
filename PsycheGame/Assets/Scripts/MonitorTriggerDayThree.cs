@@ -49,6 +49,14 @@ public class MonitorTriggerDayThree : MonoBehaviour
                 }
                 else
                 {
+                    FindObjectOfType<AudioManager>().Play("OpenMonitor");
+                    
+                    if ( QuestTracker.Instance.canEndDayThree )
+                    {
+                        type = monitorText2.text;
+                        monitorText.text = "";
+                    }
+                    
                     monitorOn = true;
                     monitorController.SetTrigger("MonitorOn");
                     StartCoroutine(StartTyping());

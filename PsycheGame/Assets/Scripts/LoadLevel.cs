@@ -18,6 +18,7 @@ public class LoadLevel : MonoBehaviour
             // the "z" key acts as the interact button
             if ( Input.GetKeyDown( "z" )) 
             {
+                FindObjectOfType<AudioManager>().Play("OpenMonitor");
                 SceneTracker.Instance.LoadLevel( levelName );
             }
         }

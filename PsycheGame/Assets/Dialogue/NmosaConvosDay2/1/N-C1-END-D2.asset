@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: N-C1-END-D2
   m_EditorClassIdentifier: 
   from: {fileID: 11400000, guid: 4378beab768ae6d4f9c8413468019646, type: 2}
-  text: Thanks for chatting with me, Captain
+  text: Thanks for chatting with me, Captain.
   nextSentence: {fileID: 0}
   options: []

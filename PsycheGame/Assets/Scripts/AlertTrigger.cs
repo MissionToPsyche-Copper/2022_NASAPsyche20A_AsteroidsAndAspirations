@@ -16,7 +16,14 @@ public class AlertTrigger : MonoBehaviour
             //scoreUpdater.talkedTo = 0;
 
             Debug.Log("Alarm set off");
-            if (monitorTrigger.alarmOn) AlertAnimator.SetTrigger("WarningOn");
+            if (monitorTrigger.alarmOn)
+            {
+                AlertAnimator.SetTrigger("WarningOn");
+                FindObjectOfType<AudioManager>().Stop("ChillAmbient");
+                FindObjectOfType<AudioManager>().Play("NightCityThriller");
+                FindObjectOfType<AudioManager>().Play("Alarm");
+
+            }
 
         }
         

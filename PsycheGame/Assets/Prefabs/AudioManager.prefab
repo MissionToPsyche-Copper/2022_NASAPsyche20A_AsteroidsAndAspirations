@@ -1,0 +1,106 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &6786597594493065196
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6786597594493065197}
+  - component: {fileID: 6786597594493065198}
+  m_Layer: 0
+  m_Name: AudioManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6786597594493065197
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6786597594493065196}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1144.0725, y: 529.53876, z: -472.14523}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6786597594493065198
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6786597594493065196}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a78b0900d6a36542b47ad7615195ef1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds:
+  - name: ChillAmbient
+    clip: {fileID: 8300000, guid: d804a11e8876f604cb6916c7aef7aa41, type: 3}
+    loop: 1
+    volume: 0.5
+    source: {fileID: 0}
+  - name: CosmicGlow
+    clip: {fileID: 8300000, guid: fe35d13dbdb05d240a040809d821eca4, type: 3}
+    loop: 1
+    volume: 0.5
+    source: {fileID: 0}
+  - name: Dunes
+    clip: {fileID: 8300000, guid: e70a51006e882fe489bd0e546c36833a, type: 3}
+    loop: 1
+    volume: 0.5
+    source: {fileID: 0}
+  - name: NightCityThriller
+    clip: {fileID: 8300000, guid: 0e171584fc3e2b948988d0e3d3ff1c9e, type: 3}
+    loop: 1
+    volume: 0.5
+    source: {fileID: 0}
+  - name: SpaceChillout
+    clip: {fileID: 8300000, guid: d772e7ea5831ff048b9cf796b1e36ed6, type: 3}
+    loop: 1
+    volume: 0.5
+    source: {fileID: 0}
+  - name: OpenQuestList
+    clip: {fileID: 8300000, guid: 7b0b01cc25413e3439139084b49700c0, type: 3}
+    loop: 0
+    volume: 0.6
+    source: {fileID: 0}
+  - name: OpenMonitor
+    clip: {fileID: 8300000, guid: a8330fd58c97aeb44b4dc8ce5f8db367, type: 3}
+    loop: 0
+    volume: 0.6
+    source: {fileID: 0}
+  - name: Alarm
+    clip: {fileID: 8300000, guid: 79d763bb85a01064bbc7a0acc64f89c0, type: 3}
+    loop: 1
+    volume: 0.4
+    source: {fileID: 0}
+  - name: Click
+    clip: {fileID: 8300000, guid: 829ab063e6c39a8459cb84a506ad2ac0, type: 3}
+    loop: 0
+    volume: 0.5
+    source: {fileID: 0}
+  - name: Hit
+    clip: {fileID: 8300000, guid: 0bdb05288b041aa4fb4fa6b9ec174a09, type: 3}
+    loop: 0
+    volume: 0.5
+    source: {fileID: 0}
+  - name: Wire
+    clip: {fileID: 8300000, guid: cd6b301eca1a5624b9827a682db53465, type: 3}
+    loop: 0
+    volume: 0.5
+    source: {fileID: 0}
+  loadingMainMenu: 0
+  loadingShipScene: 0
+  loadingCardGame: 0
+  loadingSaveStuff: 0
+  loadingWireGame: 0

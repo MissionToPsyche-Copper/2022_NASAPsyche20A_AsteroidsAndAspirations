@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   from: {fileID: 11400000, guid: bb1c4cfe6dbf97b41b2a0364bc919919, type: 2}
   text: Good morning Captain.
-  nextSentence: {fileID: 11400000, guid: 35ffeba7a295ab94eb8b4c4f695102b4, type: 2}
+  nextSentence: {fileID: 11400000, guid: 5862e7d1a0a82d24ea781c0ab5d4e6bc, type: 2}
   options: []

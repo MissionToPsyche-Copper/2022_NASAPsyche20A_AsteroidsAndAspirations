@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: J-C1-S5-D2
   m_EditorClassIdentifier: 
   from: {fileID: 11400000, guid: 0c6472cd862470043ae3138fc8dba90c, type: 2}
-  text: "I guess my main hope that this mission will be the most exciting mission
-    yet! I mean, we\u2019re heading to the Psyche asteroid, the metal core of a long
-    lost planet."
+  text: I guess my main hope is that this mission will be the most exciting mission
+    yet! I mean, we're heading to the Psyche asteroid, the metal core of a long lost
+    planet.
   nextSentence: {fileID: 11400000, guid: ebf911bb2c89a2b4d950196de8fd6346, type: 2}
   options: []

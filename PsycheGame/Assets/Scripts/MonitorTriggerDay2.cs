@@ -40,6 +40,7 @@ public class MonitorTriggerDay2 : MonoBehaviour
                 else
                 {
                     monitorOn = true;
+                    FindObjectOfType<AudioManager>().Play("OpenMonitor");
                     monitorController.SetTrigger("MonitorOn");
                     StartCoroutine(StartTyping());
                 }

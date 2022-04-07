@@ -25,7 +25,6 @@ public class EndingSceneManager : MonoBehaviour
 
     void Start()
     {
-        background = FindObjectOfType<Image>();
 
         if (ScoreUpdater.Instance != null)
         {
@@ -71,7 +70,8 @@ public class EndingSceneManager : MonoBehaviour
         if (Input.GetKeyDown("z") && !isTyping && (current >= PlayList.Count))
         {
             Debug.Log("Transition to end credits");
-            //SceneTracker.Instance.LoadLevel("");
+            // switch to end credits
+            Application.Quit();
         }
     }
 
@@ -111,6 +111,8 @@ public class EndingSceneManager : MonoBehaviour
         if ( hasFuel ) numItems++;
         if ( hasBatteries ) numItems++;
         if ( hasToolbox ) numItems++;
+
+        if (numItems < 1) numItems = 1;
 
         if ( numItems == 3 )
         {
@@ -161,8 +163,8 @@ public class EndingSceneManager : MonoBehaviour
         foreach( char c in type )
         {
             text.text += c;
-            //yield return new WaitForSeconds(0.05f);
-            yield return new WaitForSeconds(0.01f);
+            yield return new WaitForSeconds(0.03f);
+            //yield return new WaitForSeconds(0.01f);
         }
         
         isTyping = false;

@@ -18,6 +18,7 @@ public class QuestListAnimation : MonoBehaviour
             else
             {
                 open = true;
+                FindObjectOfType<AudioManager>().Play("OpenQuestList");
                 QuestListAnimator.SetTrigger("OpenQuestList");
             }
         }

@@ -52,6 +52,7 @@ public class Wires : MonoBehaviour
 
     void Done()
     {
+        FindObjectOfType<AudioManager>().Play("Wire");
         lightOn.SetActive(true);
 
         Destroy(this);

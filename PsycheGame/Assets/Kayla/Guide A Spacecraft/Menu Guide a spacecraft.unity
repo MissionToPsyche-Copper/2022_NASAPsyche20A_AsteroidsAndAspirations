@@ -590,14 +590,14 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "While you are in the middle of the asteroid belt the ship\u2019s dog accidentally
-    let out important mission related items, oh no! \n\nFloat in space and collect
-    items that got sent out. \nWhile dodging asteroids, collect all items before
-    the oxygen tank runs out in 3 minutes! \n\nYou will lose time if you don\u2019t
-    grab the correct items. \nIf all the items are not collected or if you lose 5
-    health points you are taken back into the ship and will have to start over again.\r\n\nCompleting
-    this mission will guide the spacecraft out of the asteroid field with all the
-    required items!\r\n"
+  m_Text: "While you are in the middle of a meteoroid field the ship\u2019s dog accidentally
+    let out important mission related items, oh no! \n\nUse WASD to move our ship
+    and collect items that got sent out. \nWhile dodging meteoroids, collect all
+    items before the oxygen tank runs out in 3 minutes! \n\nYou will lose time if
+    you don\u2019t grab the correct items. \nIf all the items are not collected or
+    if you lose 5 health points you are taken back into the ship and will have to
+    start over again.\r\n\nCompleting this mission will guide the spacecraft out
+    of the meteoroid  field with all the required items!\r\n"
 --- !u!222 &682423318
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -606,6 +606,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 682423315}
   m_CullTransparentMesh: 0
+--- !u!114 &783279529 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6786597594493065198, guid: 753b5dd9c8927c14caf1039cfcfb5281,
+    type: 3}
+  m_PrefabInstance: {fileID: 1467804824}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a78b0900d6a36542b47ad7615195ef1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &806505516
 GameObject:
   m_ObjectHideFlags: 0
@@ -697,6 +709,17 @@ MonoBehaviour:
           m_IntArgument: 1
           m_FloatArgument: 0
           m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 783279529}
+        m_MethodName: Play
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Click
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &806505519
@@ -933,6 +956,85 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1274121978}
   m_CullTransparentMesh: 1
+--- !u!1001 &1467804824
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 6786597594493065196, guid: 753b5dd9c8927c14caf1039cfcfb5281,
+        type: 3}
+      propertyPath: m_Name
+      value: AudioManager
+      objectReference: {fileID: 0}
+    - target: {fileID: 6786597594493065197, guid: 753b5dd9c8927c14caf1039cfcfb5281,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 6786597594493065197, guid: 753b5dd9c8927c14caf1039cfcfb5281,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 1144.0725
+      objectReference: {fileID: 0}
+    - target: {fileID: 6786597594493065197, guid: 753b5dd9c8927c14caf1039cfcfb5281,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 529.53876
+      objectReference: {fileID: 0}
+    - target: {fileID: 6786597594493065197, guid: 753b5dd9c8927c14caf1039cfcfb5281,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -472.14523
+      objectReference: {fileID: 0}
+    - target: {fileID: 6786597594493065197, guid: 753b5dd9c8927c14caf1039cfcfb5281,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6786597594493065197, guid: 753b5dd9c8927c14caf1039cfcfb5281,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6786597594493065197, guid: 753b5dd9c8927c14caf1039cfcfb5281,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6786597594493065197, guid: 753b5dd9c8927c14caf1039cfcfb5281,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6786597594493065197, guid: 753b5dd9c8927c14caf1039cfcfb5281,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6786597594493065197, guid: 753b5dd9c8927c14caf1039cfcfb5281,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6786597594493065197, guid: 753b5dd9c8927c14caf1039cfcfb5281,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6786597594493065198, guid: 753b5dd9c8927c14caf1039cfcfb5281,
+        type: 3}
+      propertyPath: loadingSaveStuff
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6786597594493065198, guid: 753b5dd9c8927c14caf1039cfcfb5281,
+        type: 3}
+      propertyPath: loadingShipScene
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 753b5dd9c8927c14caf1039cfcfb5281, type: 3}
 --- !u!1 &1580227323
 GameObject:
   m_ObjectHideFlags: 0
@@ -967,7 +1069,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -1.7999878}
+  m_AnchoredPosition: {x: 0, y: -1.7999268}
   m_SizeDelta: {x: 26.281982, y: 18.531372}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1580227325
@@ -1207,6 +1309,17 @@ MonoBehaviour:
           m_IntArgument: 2
           m_FloatArgument: 0
           m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 783279529}
+        m_MethodName: Play
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Click
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1981254052

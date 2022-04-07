@@ -57,6 +57,9 @@ public class MonitorTrigger : MonoBehaviour
                     monitorText.text = "";
                     type = type2;
                     monitorViewed = false;
+                    FindObjectOfType<AudioManager>().Stop("Alarm");
+                    FindObjectOfType<AudioManager>().Stop("NightCityThriller");
+                    FindObjectOfType<AudioManager>().Play("ChillAmbient");
                     alarmOn = false;
                 }
                 if (monitorOn)
@@ -68,6 +71,7 @@ public class MonitorTrigger : MonoBehaviour
                 {
                     monitorOn = true;
                     monitorController.SetTrigger("MonitorOn");
+                    FindObjectOfType<AudioManager>().Play("OpenMonitor");
                     if (!monitorViewed)
                     {
                         alarmController.SetTrigger("WarningOff");

@@ -15,5 +15,5 @@ MonoBehaviour:
   from: {fileID: 11400000, guid: bb1c4cfe6dbf97b41b2a0364bc919919, type: 2}
   text: "Oh, hello Captain. Yes, I wanted to have a quick conversation with you and
     now that N\u2019Mosa is all settled, we can finally chat."
-  nextSentence: {fileID: 11400000, guid: 39427739f7c08ff4fb69b94da34d22eb, type: 2}
+  nextSentence: {fileID: 11400000, guid: 236d6e903adcba24893f7598771819ec, type: 2}
   options: []

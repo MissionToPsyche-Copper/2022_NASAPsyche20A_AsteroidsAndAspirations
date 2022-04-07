@@ -22,6 +22,7 @@ public class QuestManager : MonoBehaviour
     public Interactable yCurrentConvo;
     public DialogueSO yssaConvo1;
     public DialogueSO yssaConvo2;
+    public DialogueSO yssaConvo3;
 
     [Header("NPC Position Tracker")]
     public Transform player;
@@ -157,6 +158,7 @@ public class QuestManager : MonoBehaviour
 
         yssaConvo1.isAvailable = QuestTracker.Instance.yssaConvo1isAvailable;
         yssaConvo2.isAvailable = QuestTracker.Instance.yssaConvo2isAvailable;
+        yssaConvo3.isAvailable = QuestTracker.Instance.yssaConvo3isAvailable;
 
         if (QuestTracker.Instance.positions1) movePositions(1);
         if (QuestTracker.Instance.positions2) movePositions(2);
@@ -239,6 +241,7 @@ public class QuestManager : MonoBehaviour
 
         yssaConvo1.isAvailable = QuestTracker.Instance.yssaConvo1isAvailable;
         yssaConvo2.isAvailable = QuestTracker.Instance.yssaConvo2isAvailable;
+        yssaConvo3.isAvailable = QuestTracker.Instance.yssaConvo3isAvailable;
 
         if ( QuestTracker.Instance.task1Complete && QuestTracker.Instance.task2Complete 
             && QuestTracker.Instance.task3Complete && QuestTracker.Instance.task4Complete && !QuestTracker.Instance.incident)
@@ -270,6 +273,7 @@ public class QuestManager : MonoBehaviour
         else if ( QuestTracker.Instance.alarmWasTriggered )
         {
             alarm.SetTrigger("WarningOff");
+            FindObjectOfType<AudioManager>().Stop("Alarm");
 
             if ( iCurrentConvo.currentConvo == 2 && !QuestTracker.Instance.yssaConvo2isAvailable )
             {
@@ -294,14 +298,14 @@ public class QuestManager : MonoBehaviour
                     taskPanel2.SetActive(true);
                 }
                 // enable the rest of Day 2 conversations
-                QuestTracker.Instance.nmosaConvo2isAvailable = true;
-                QuestTracker.Instance.ixelConvo3isAvailable = true;
-                QuestTracker.Instance.jConvo3isAvailable = true;
                 // update everyone's positions
                 Debug.Log("move positions part 3");
                 if( !QuestTracker.Instance.positions3 )
                 {
+                    FindObjectOfType<AudioManager>().Stop("NightCityThriller");
+                    FindObjectOfType<AudioManager>().Play("ChillAmbient");
                     movePositions( 3 );
+                    
                     QuestTracker.Instance.positions1 = false;
                     QuestTracker.Instance.positions2 = false;
                     QuestTracker.Instance.positions3 = true;
@@ -421,6 +425,9 @@ public class QuestManager : MonoBehaviour
 
                 if (!QuestTracker.Instance.alarmWasTriggered)
                 {
+                    FindObjectOfType<AudioManager>().Stop("ChillAmbient");
+                    FindObjectOfType<AudioManager>().Play("NightCityThriller");
+                    FindObjectOfType<AudioManager>().Play("Alarm");
                     alarm.SetTrigger("WarningOn");
                     QuestTracker.Instance.alarmWasTriggered = true;
                 }
@@ -448,8 +455,6 @@ public class QuestManager : MonoBehaviour
                 break;
             case 3:
                 loadingscreen.SetTrigger("ShortTimeSkip");
-                yield return new WaitForSeconds(3f);
-                //move the player back to the control room
                 player.position = playerRespawn2.position;
                 player.rotation = playerRespawn2.rotation;
 
@@ -464,6 +469,12 @@ public class QuestManager : MonoBehaviour
 
                 ixel.position = ixelPosition3.position;
                 ixel.rotation = ixelPosition3.rotation;
+                yield return new WaitForSeconds(3f);
+                QuestTracker.Instance.nmosaConvo2isAvailable = true;
+                QuestTracker.Instance.ixelConvo3isAvailable = true;
+                QuestTracker.Instance.jConvo3isAvailable = true;
+                QuestTracker.Instance.yssaConvo3isAvailable = true;
+                //move the player back to the control room
                 break;
         }
         player.gameObject.GetComponent<CharacterController>().enabled = true;

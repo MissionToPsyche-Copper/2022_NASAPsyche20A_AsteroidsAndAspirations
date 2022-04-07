@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: Y-C4-S2-D2
   m_EditorClassIdentifier: 
   from: {fileID: 11400000, guid: a25919187ecb9f041b53d58244f95da0, type: 2}
-  text: "Captain [Name], yes. (She salutes you.) I\u2019ve just been notified that
-    we need to fix a few things on the ship in order to fix the damages and put us
-    back on track."
+  text: "Captain, yes. (She salutes you.) I\u2019ve just been notified that we need
+    to fix a few things on the ship in order to fix the damages and put us back on
+    track."
   nextSentence: {fileID: 11400000, guid: 47206d80bb6e102468261c3fedc9632d, type: 2}
   options: []

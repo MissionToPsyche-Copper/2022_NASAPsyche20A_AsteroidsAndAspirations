@@ -33,6 +33,7 @@ public class Playerhealth : MonoBehaviour
     {
         if (obj.gameObject.tag == "Meteoroid")
         {
+            FindObjectOfType<AudioManager>().Play("Hit");
             Destroy(obj.gameObject);
             health = health - 20f;
             Invoke("setVisibleFalse", 0.1f);
@@ -42,6 +43,7 @@ public class Playerhealth : MonoBehaviour
         }
         if (obj.gameObject.tag == "PickUp")
         {
+            FindObjectOfType<AudioManager>().Play("OpenQuestList");
             Destroy(obj.gameObject);
             itemsRemaining = itemsRemaining - 1;
             itemsLeft.text = itemsRemaining.ToString();

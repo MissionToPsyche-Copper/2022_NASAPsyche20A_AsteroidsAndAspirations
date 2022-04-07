@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   from: {fileID: 11400000, guid: d4f8a8e948e45394bbfcdac3066ab39a, type: 2}
   text: (You approach Ixel who is once again deep in thought.)
-  nextSentence: {fileID: 11400000, guid: 1e9129519646bd14ab95a3e0532c806d, type: 2}
+  nextSentence: {fileID: 11400000, guid: 9cae5410a5b5a0b47ba1cbf7ee6f8bb7, type: 2}
   options: []

@@ -15,5 +15,5 @@ MonoBehaviour:
   from: {fileID: 11400000, guid: d4f8a8e948e45394bbfcdac3066ab39a, type: 2}
   text: (You instruct Ixel to grab some wet compresses and place them on his face.
     He flinches initially, but soon starts to sigh with relief.)
-  nextSentence: {fileID: 11400000, guid: bdcf468d18e88ec4db91f3d927d9462f, type: 2}
+  nextSentence: {fileID: 11400000, guid: 76e0bf5591fcd40409f3fa6bfc99abe1, type: 2}
   options: []

@@ -25,5 +25,5 @@ MonoBehaviour:
     consequence: {fileID: 0}
   - text: "> Just didn\u2019t expect you to be in the medical room, it\u2019s not
       supposed to be your job."
-    nextSentence: {fileID: 11400000, guid: f710b52080d487b4e9e1ca6dd3fdaddb, type: 2}
+    nextSentence: {fileID: 11400000, guid: 719ac1c04582c974694cdecdcb6d390b, type: 2}
     consequence: {fileID: 0}

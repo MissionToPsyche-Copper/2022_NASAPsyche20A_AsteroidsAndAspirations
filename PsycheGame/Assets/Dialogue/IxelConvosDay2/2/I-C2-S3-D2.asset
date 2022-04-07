@@ -15,5 +15,5 @@ MonoBehaviour:
   from: {fileID: 11400000, guid: d4f8a8e948e45394bbfcdac3066ab39a, type: 2}
   text: "(Ixel is standing over N\u2019Mosa, trying to get him to lay still. Ixel
     hears you enter and turns at you with wide eyes.)"
-  nextSentence: {fileID: 11400000, guid: a9157e75ba45c8e47a7cde839774c880, type: 2}
+  nextSentence: {fileID: 11400000, guid: 8d8e1df9f31624f479cd9499a4d76032, type: 2}
   options: []

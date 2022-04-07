@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: badresponsejs3
   m_EditorClassIdentifier: 
   from: {fileID: 11400000, guid: 0c6472cd862470043ae3138fc8dba90c, type: 2}
-  text: "My apologies [Name].....I mean Captain! My name is J9F4, and I am the navigator
-    for the ship. I don\u2019t think you have to call me Navigator, not sure. "
+  text: "My apologies Captain! My name is J9F4, and I am the navigator for the ship.
+    I don\u2019t think you have to call me Navigator, not sure."
   nextSentence: {fileID: 11400000, guid: 1e4e635ead1114e4ca231aff76ac4d99, type: 2}
   options: []

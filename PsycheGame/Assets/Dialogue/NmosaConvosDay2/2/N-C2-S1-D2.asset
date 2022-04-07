@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b3e36f6b69caa0f4ea3eaf83976994f7, type: 3}
   m_Name: N-C2-S1-D2
   m_EditorClassIdentifier: 
-  from: {fileID: 11400000, guid: d4f8a8e948e45394bbfcdac3066ab39a, type: 2}
-  text: "(N\u2019Mosa is laying on one of the sickbeds in the Medbay. He already
-    looks better thanks to the quick medical attention he\u2019s received.)"
+  from: {fileID: 11400000, guid: 4378beab768ae6d4f9c8413468019646, type: 2}
+  text: "(N\u2019Mosa already looks better thanks to the quick medical attention
+    he\u2019s received.)"
   nextSentence: {fileID: 11400000, guid: f88e78811aecae3488e87d9d1b2acfb5, type: 2}
   options: []

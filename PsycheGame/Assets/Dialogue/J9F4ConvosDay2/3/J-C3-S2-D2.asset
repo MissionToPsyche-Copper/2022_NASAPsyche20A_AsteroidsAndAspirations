@@ -13,8 +13,7 @@ MonoBehaviour:
   m_Name: J-C3-S2-D2
   m_EditorClassIdentifier: 
   from: {fileID: 11400000, guid: 0c6472cd862470043ae3138fc8dba90c, type: 2}
-  text: " Captain [Name]! There you are, it\u2019s good to see you\u2019re not hurt.
-    I\u2019ve been thinking about what just happened to N\u2019Mosa and I feel so
-    bad. "
+  text: "Captain! There you are, it\u2019s good to see you\u2019re not hurt. I\u2019ve
+    been thinking about what just happened to N\u2019Mosa and I feel so bad."
   nextSentence: {fileID: 11400000, guid: 0152e8ff29c9ab547bda4331ff1f541f, type: 2}
   options: []
