@@ -71,7 +71,7 @@ public class EndingSceneManager : MonoBehaviour
         {
             Debug.Log("Transition to end credits");
             // switch to end credits
-            Application.Quit();
+            SceneTracker.Instance.LoadLevel("Credits Scene");
         }
     }
 
