@@ -13,6 +13,9 @@ public class Interactable : MonoBehaviour
 
     public DialogueManager dialogueManager;
 
+    private float defaultSpeed = 0.01f;
+    private float fastSpeed = 0.0001f;
+
     public float radius = 7; // within this radius, the item can be interacted with
     public Transform player; // a reference to the player object
     public Transform npc;
@@ -35,44 +38,59 @@ public class Interactable : MonoBehaviour
     {
         checkPlayerDistance();
 
+      /*
         if ( currentConvo >= conversationList.conversations.Length )
         {
             conversationList.conversations[conversationList.conversations.Length - 1].isAvailable = false;
-        }
+        } 
+      */
     }
 
     private void checkPlayerDistance()
     {
         if ( Vector3.Distance ( player.position, this.transform.position ) < radius ) 
         {
-            // the "z" key acts as the interact button
-            if ( Input.GetKeyDown( "z" ) ) 
+            // speed up letterboxing
+            if ( Input.GetKeyDown( "z" ) && dialogueManager.isTyping )
             {
-                if ( !convoStarted ) 
+                dialogueManager.timeBetweenChars = fastSpeed;
+            }
+            else
+            {
+                if ( Input.GetKeyDown( "z" ) ) 
                 {
-                    GetComponent<DialogueTrigger>().StartDialogue();
-
-                    if (currentConvo < conversationList.conversations.Length) 
+                    if ( !convoStarted ) 
                     {
-                        if ( conversationList.conversations[currentConvo].isAvailable )
+                        GetComponent<DialogueTrigger>().StartDialogue();
+
+                        if (currentConvo < conversationList.conversations.Length) 
                         {
-                            Vector3 facingPlayer = new Vector3( player.position.x, 
-                                        npc.position.y, 
-                                        player.position.z );
-                            npc.LookAt( facingPlayer );
-                            currentConvo++;
-                        } 
-                    }
+                            if ( conversationList.conversations[currentConvo].isAvailable )
+                            {
+                                Vector3 facingPlayer = new Vector3( player.position.x, 
+                                            npc.position.y, 
+                                            player.position.z );
+                                npc.LookAt( facingPlayer );
+                                currentConvo++;
+                            } 
+                        }
 
-                    if (!talkedTo)
+                        if (!talkedTo)
+                        {
+                            talkedTo = true;
+                            TalkedToNPC.Raise();
+                        }
+                    }
+                    else if ( dialogueManager.currentSentence.HasOptions() ) { return; }
+                    else if ( !convoEnded )
                     {
-                        talkedTo = true;
-                        TalkedToNPC.Raise();
+                        dialogueManager.timeBetweenChars = defaultSpeed;
+                        dialogueManager.GoToNextSentence();
                     }
                 }
-                else if ( dialogueManager.currentSentence.HasOptions() ) { return; }
-                else if ( !convoEnded ) dialogueManager.GoToNextSentence();
             }
+
+            // the "z" key acts as the interact button
         }
     }
 
@@ -84,6 +102,7 @@ public class Interactable : MonoBehaviour
 
     public void setConvoEnded()
     {
+        dialogueManager.timeBetweenChars = defaultSpeed;
         convoEnded = true;
         convoStarted = false;
         //currentConvo++;

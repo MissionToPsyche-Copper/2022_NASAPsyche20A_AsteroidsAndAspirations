@@ -5,6 +5,10 @@ using UnityEngine.UI;
 
 public class MonitorTrigger : MonoBehaviour
 {
+    public float letterSpeed;
+    private float defaultSpeed = 0.02f;
+    private float fastSpeed = 0.001f;
+
     public float radius = 7; // within this radius, the item can be interacted with
     public Transform player; // a reference to the player object
     public bool isTyping = false;
@@ -32,6 +36,7 @@ public class MonitorTrigger : MonoBehaviour
 
     void Start()
     {
+        letterSpeed = defaultSpeed;
         sceneTracker = FindObjectOfType<SceneTracker>();
         scoreUpdater = FindObjectOfType<ScoreUpdater>();
         bed.GetComponent<ShowInteractPrompt>().promptText = ">> Not time for bed yet. <<";
@@ -46,6 +51,9 @@ public class MonitorTrigger : MonoBehaviour
     {
         if ( Vector3.Distance ( player.position, this.transform.position ) < radius ) 
         {
+            // player presses z while still letterboxing
+            if ( Input.GetKeyDown( "z" ) && isTyping) letterSpeed = fastSpeed;
+
             // the "z" key acts as the interact button
             if ( Input.GetKeyDown( "z" ) && !isTyping) 
             {
@@ -66,6 +74,8 @@ public class MonitorTrigger : MonoBehaviour
                 {
                     monitorOn = false;
                     monitorController.SetTrigger("MonitorOff");
+                    //reset letter speed when monitor turns off
+                    letterSpeed = defaultSpeed;
                 }
                 else
                 {
@@ -90,7 +100,7 @@ public class MonitorTrigger : MonoBehaviour
         foreach( char c in type )
         {
             monitorText.text += c;
-            yield return new WaitForSeconds(0.05f);
+            yield return new WaitForSeconds(letterSpeed);
         }
         isTyping = false;
     }

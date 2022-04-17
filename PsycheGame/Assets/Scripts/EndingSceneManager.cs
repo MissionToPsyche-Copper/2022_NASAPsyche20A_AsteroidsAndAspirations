@@ -6,6 +6,10 @@ using UnityEngine.UI;
 
 public class EndingSceneManager : MonoBehaviour
 {
+    public float letterSpeed;
+    private float defaultSpeed = 0.02f;
+    private float fastSpeed = 0.001f;
+
     private bool isTyping = false;
     delegate void EndingFunctions();
     List<EndingFunctions> PlayList;
@@ -25,6 +29,7 @@ public class EndingSceneManager : MonoBehaviour
 
     void Start()
     {
+        letterSpeed = defaultSpeed;
 
         if (ScoreUpdater.Instance != null)
         {
@@ -57,12 +62,15 @@ public class EndingSceneManager : MonoBehaviour
 
     private void HandleInput()
     {
+        if ( Input.GetKeyDown( "z" ) && isTyping) letterSpeed = fastSpeed; 
+        
         if (Input.GetKeyDown("z") && !isTyping && (current < PlayList.Count))
         {
             foreach (GameObject g in endingList)
             {
                 g.SetActive(false);
             }
+            letterSpeed = defaultSpeed;
             PlayList[current]();
             current++;
         }
@@ -163,7 +171,7 @@ public class EndingSceneManager : MonoBehaviour
         foreach( char c in type )
         {
             text.text += c;
-            yield return new WaitForSeconds(0.03f);
+            yield return new WaitForSeconds(letterSpeed);
             //yield return new WaitForSeconds(0.01f);
         }
         

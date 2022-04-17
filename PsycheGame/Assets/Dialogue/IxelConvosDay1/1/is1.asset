@@ -13,8 +13,7 @@ MonoBehaviour:
   m_Name: is1
   m_EditorClassIdentifier: 
   from: {fileID: 11400000, guid: d4f8a8e948e45394bbfcdac3066ab39a, type: 2}
-  text: (You enter the COMMON ROOM. There is someone in the room with you, they are
-    sitting at the table, looking down at a tablet and sipping a cup of coffee. They
-    look up as you approach them.)
+  text: (Ixel is looking down at a tablet and sipping a cup of coffee. They look
+    up as you approach them.)
   nextSentence: {fileID: 11400000, guid: 83b75b2bdd17e7f468e201cf6ba2a355, type: 2}
   options: []

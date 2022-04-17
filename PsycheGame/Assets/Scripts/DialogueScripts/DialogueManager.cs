@@ -13,7 +13,8 @@ public class DialogueManager : MonoBehaviour
     [Space]
     public StringVariable playerName;
     [Tooltip("For the typing animation. Determine how long it takes for each character to appear")]
-    public float timeBetweenChars = 0.05f;
+    public float timeBetweenChars = 0.02f;
+
     [Header("UI")]
     public Text playerNameTxtUI;
     public Text npcNameTextUI;
@@ -28,6 +29,32 @@ public class DialogueManager : MonoBehaviour
 
     DialogueSO dialogue;
     public Sentence currentSentence;
+
+    private Color unselected;
+    private Color highlighted;
+
+    EventSystem evt;
+
+    public bool isTyping = false;
+
+    private void Start()
+    {
+        evt = EventSystem.current;
+
+        unselected = new Color( 0.8313f, 0.7725f, 0.7647f );
+        highlighted = new Color( 0.8962f, 0.4793f, 0.2578f );
+    }
+
+    void Update()
+    {
+        //if (evt.currentSelectedGameObject != null && evt.currentSelectedGameObject != firstButton)
+        //    firstButton = evt.currentSelectedGameObject;
+        //else 
+        if (firstButton != null && evt.currentSelectedGameObject == null) evt.SetSelectedGameObject(firstButton);
+
+        if ( firstButton == evt.currentSelectedGameObject ) firstButton.GetComponent<Text>().color = highlighted;
+        else firstButton.GetComponent<Text>().color = unselected;
+    }
 
 
     public void StartDialogue(DialogueSO dialogueSO)
@@ -114,6 +141,7 @@ public class DialogueManager : MonoBehaviour
 
     IEnumerator Typeout(string sentence, Text textbox)
     {
+        isTyping = true;
         textbox.text = "";
         foreach (var letter in sentence.ToCharArray())
         {
@@ -121,6 +149,7 @@ public class DialogueManager : MonoBehaviour
             yield return new WaitForSeconds(timeBetweenChars);
 
         }
+        isTyping = false;
     }
 
     public void OptionsOnClick(int index)

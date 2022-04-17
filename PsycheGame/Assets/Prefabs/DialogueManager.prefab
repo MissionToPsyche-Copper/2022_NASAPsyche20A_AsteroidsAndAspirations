@@ -46,10 +46,12 @@ MonoBehaviour:
   ConversationEnded: {fileID: 0}
   ConversationStarted: {fileID: 0}
   playerName: {fileID: 0}
-  timeBetweenChars: 0.05
+  timeBetweenChars: 0.02
   playerNameTxtUI: {fileID: 0}
   npcNameTextUI: {fileID: 0}
   playerTextUI: {fileID: 0}
   npcTextUI: {fileID: 0}
   DialogueUI: {fileID: 0}
   optionsUI: []
+  firstButton: {fileID: 0}
+  currentSentence: {fileID: 0}

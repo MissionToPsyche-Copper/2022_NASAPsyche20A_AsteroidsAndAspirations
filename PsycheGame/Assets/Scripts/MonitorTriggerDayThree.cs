@@ -5,6 +5,11 @@ using UnityEngine.UI;
 
 public class MonitorTriggerDayThree : MonoBehaviour
 {
+
+    public float letterSpeed;
+    private float defaultSpeed = 0.02f;
+    private float fastSpeed = 0.001f;
+
     public float radius = 7; // within this radius, the item can be interacted with
     public Transform player; // a reference to the player object
 
@@ -21,6 +26,7 @@ public class MonitorTriggerDayThree : MonoBehaviour
 
     void Start()
     {
+        letterSpeed = defaultSpeed;
         if ( QuestTracker.Instance.canEndDayThree )
         {
             type = monitorText2.text;
@@ -37,6 +43,7 @@ public class MonitorTriggerDayThree : MonoBehaviour
     {
         if ( Vector3.Distance ( player.position, this.transform.position ) < radius ) 
         {
+            if ( Input.GetKeyDown( "z" ) && isTyping) letterSpeed = fastSpeed;
             // the "z" key acts as the interact button
             if ( Input.GetKeyDown( "z" ) && !isTyping) 
             {
@@ -45,6 +52,7 @@ public class MonitorTriggerDayThree : MonoBehaviour
                     monitorOn = false;
                     monitorController.SetTrigger("MonitorOff");
                     monitorText.text = "";
+                    letterSpeed = defaultSpeed;
                     if (QuestTracker.Instance.canEndDayThree) SceneTracker.Instance.LoadLevel("EndScene");
                 }
                 else
@@ -53,6 +61,7 @@ public class MonitorTriggerDayThree : MonoBehaviour
                     
                     if ( QuestTracker.Instance.canEndDayThree )
                     {
+                        letterSpeed = 0.4f;
                         type = monitorText2.text;
                         monitorText.text = "";
                     }
@@ -72,7 +81,7 @@ public class MonitorTriggerDayThree : MonoBehaviour
         foreach( char c in type )
         {
             monitorText.text += c;
-            yield return new WaitForSeconds(0.05f);
+            yield return new WaitForSeconds(letterSpeed);
         }
         isTyping = false;
     }

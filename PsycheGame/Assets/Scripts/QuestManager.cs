@@ -23,6 +23,7 @@ public class QuestManager : MonoBehaviour
     public DialogueSO yssaConvo1;
     public DialogueSO yssaConvo2;
     public DialogueSO yssaConvo3;
+    public GameObject preIncidentDialogue;
 
     [Header("NPC Position Tracker")]
     public Transform player;
@@ -253,6 +254,8 @@ public class QuestManager : MonoBehaviour
             // enabling convo2 for ixel
             QuestTracker.Instance.ixelConvo2isAvailable = true;
         }
+
+        if (QuestTracker.Instance.incident) preIncidentDialogue.SetActive(false);
     }
 
     public void CheckAlarm()
