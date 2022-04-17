@@ -31,15 +31,16 @@ public class MonitorTriggerDay2 : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if ( Input.GetKeyDown( "z" ) && isTyping) letterSpeed = fastSpeed;
+        if ( Input.GetKeyDown( KeyCode.Space ) && isTyping) letterSpeed = fastSpeed;
 
         if ( Vector3.Distance ( player.position, this.transform.position ) < radius ) 
         {
             // the "z" key acts as the interact button
-            if ( Input.GetKeyDown( "z" ) && !isTyping) 
+            if ( Input.GetKeyDown( KeyCode.Space ) && !isTyping) 
             {
                 if (monitorOn)
                 {
+                    player.gameObject.GetComponent<PlayerMovement>().enabled = true;
                     monitorOn = false;
                     monitorController.SetTrigger("MonitorOff");
                     monitorText.text = "";
@@ -47,6 +48,7 @@ public class MonitorTriggerDay2 : MonoBehaviour
                 }
                 else
                 {
+                    player.gameObject.GetComponent<PlayerMovement>().enabled = false;
                     monitorOn = true;
                     FindObjectOfType<AudioManager>().Play("OpenMonitor");
                     monitorController.SetTrigger("MonitorOn");

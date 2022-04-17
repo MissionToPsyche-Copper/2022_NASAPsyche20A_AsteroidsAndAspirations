@@ -8,13 +8,18 @@ public class QuestManagerDayThree : MonoBehaviour
     public Toggle fuel;
     public Toggle batteries;
     public Toggle toolbox;
+    public Animator dayTag;
 
     public DialogueTrigger npc;
 
     // Start is called before the first frame update
     void Start()
     {
-        if (!QuestTracker.Instance.onDayThree) QuestTracker.Instance.onDayThree = true;
+        if (!QuestTracker.Instance.onDayThree)
+        {
+            QuestTracker.Instance.onDayThree = true;
+            dayTag.SetTrigger("ShowDayTag");
+        }
         if (QuestTracker.Instance.canEndDayThree) npc.dialogue.isAvailable = false;
         CheckItems();
     }

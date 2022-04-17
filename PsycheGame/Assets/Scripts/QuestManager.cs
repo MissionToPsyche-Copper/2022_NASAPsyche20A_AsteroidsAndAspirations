@@ -7,7 +7,10 @@ public class QuestManager : MonoBehaviour
 {
 
     public Animator loadingscreen;
+    public Animator questListNotif;
+    public Animator dayTag;
     public GameObject bed;
+
     [Header("NPC Conversation Tracker")]
     public Interactable jCurrentConvo;
     public DialogueSO jConvo3;
@@ -23,13 +26,24 @@ public class QuestManager : MonoBehaviour
     public DialogueSO yssaConvo1;
     public DialogueSO yssaConvo2;
     public DialogueSO yssaConvo3;
-    public GameObject preIncidentDialogue;
 
-    [Header("NPC Position Tracker")]
+    [Header("Incident Tracker")]
+    public GameObject preIncidentDialogue;
+    public GameObject wireRepairStation;
+    public GameObject cardsStation;
+    public GameObject shipStation;
+    public GameObject pointer1; // talk to yssa
+    public GameObject smoke;
+
+    [Header("Player Position Tracker")]
     public Transform player;
     public Transform playerRespawn;
     public Transform playerRespawn2;
+    public Transform respawnWireGame;
+    public Transform respawnCardGame;
+    public Transform respawnShipGame;
 
+    [Header("NPC Position Tracker")]
     public Transform yssa;
     public Transform yssaPosition2;
     public Transform yssaPosition3;
@@ -50,25 +64,10 @@ public class QuestManager : MonoBehaviour
     [Header("Alarm Tracker")]
     public Animator alarm;
 
-    //public bool alarmWasTriggered = false;
-
     [Header("Task Tracker")]
     public GameObject taskPanel1;
     public GameObject taskPanel2;
     public GameObject taskPanel3;
-
-    /*
-    public bool incident = false;
-    public bool task1Complete = false;
-    public bool task2Complete = false;
-    public bool task3Complete = false;
-    public bool task4Complete = false;
-    public bool task5Complete = false;
-    public bool task6Complete = false;
-    public bool task7Complete = false;
-    public bool task8Complete = false;
-    public bool task9Complete = false;
-    */
 
     public Toggle toggletask1;
     public Toggle toggletask2;
@@ -80,109 +79,76 @@ public class QuestManager : MonoBehaviour
     public Toggle toggletask8;
     public Toggle toggletask9;
 
-    // more bools for items here
-    /*
-    public bool hasFuel = false;
-    public bool hasBatteries = false;
-    public bool hasToolbox = false;
-    */
-
-    // more toggles for items here
     public Toggle fuel;
     public Toggle batteries;
     public Toggle toolbox;
 
     void Start()
     {
+        if (!QuestTracker.Instance.onDayTwo)
+        {
+            QuestTracker.Instance.onDayTwo = true;
+            dayTag.SetTrigger("ShowDayTag");
+        }
         Debug.Log("LOADING DAY TWO");
+
         loadingscreen = FindObjectOfType<SceneTracker>().transition;
 
-        jCurrentConvo.currentConvo = QuestTracker.Instance.jCurrentConvo;
-        iCurrentConvo.currentConvo = QuestTracker.Instance.iCurrentConvo;
-        nCurrentConvo.currentConvo = QuestTracker.Instance.nCurrentConvo;
-        yCurrentConvo.currentConvo = QuestTracker.Instance.yCurrentConvo;
+        loadCurrentConversations();
+        loadAvailableConversations();
 
-        Interactable jfObj = jf.gameObject.GetComponentInChildren<Interactable>();
-        if (jCurrentConvo.currentConvo >= jfObj.conversationList.conversations.Length)
+        LoadPlayerPosition();
+
+        if (QuestTracker.Instance.positions1) MovePositionOne();
+        if (QuestTracker.Instance.positions2) MovePositionsTwo();
+        if (QuestTracker.Instance.positions3) MovePositionsThree();
+
+        loadTasks();
+    }
+
+    void Update()
+    {
+        CheckTasks();
+        CheckItems();
+
+        saveCurrentConversations();
+        loadAvailableConversations();
+
+        CheckIncident();
+    }
+
+    private void LoadPlayerPosition()
+    {
+        player.gameObject.GetComponent<CharacterController>().enabled = false;
+        if (QuestTracker.Instance.playedWireGame)
         {
-            jf.gameObject.GetComponentInChildren<DialogueTrigger>().dialogue = 
-            jfObj.conversationList.conversations[jfObj.conversationList.conversations.Length - 1];
+            Debug.Log("In front of wire station.");
+            player.position = respawnWireGame.position;
+            player.rotation = respawnWireGame.rotation;
+            QuestTracker.Instance.playedWireGame = false;
         }
-        else
+        if (QuestTracker.Instance.playedCardGame)
         {
-            jf.gameObject.GetComponentInChildren<DialogueTrigger>().dialogue = 
-                jfObj.conversationList.conversations[jCurrentConvo.currentConvo];
+            player.position = respawnCardGame.position;
+            player.rotation = respawnCardGame.rotation;
+            QuestTracker.Instance.playedCardGame = false;
         }
-
-        Interactable yssaObj = yssa.gameObject.GetComponentInChildren<Interactable>();
-        if (yCurrentConvo.currentConvo >= yssaObj.conversationList.conversations.Length)
+        if (QuestTracker.Instance.playedShipGame)
         {
-            yssa.gameObject.GetComponentInChildren<DialogueTrigger>().dialogue = 
-            yssaObj.conversationList.conversations[yssaObj.conversationList.conversations.Length - 1];
+            player.position = respawnShipGame.position;
+            player.rotation = respawnShipGame.rotation;
+            QuestTracker.Instance.playedShipGame = false;
         }
-        else
-        {
-            yssa.gameObject.GetComponentInChildren<DialogueTrigger>().dialogue = 
-                yssaObj.conversationList.conversations[yCurrentConvo.currentConvo];
-        }
+        player.gameObject.GetComponent<CharacterController>().enabled = true;
+    }
 
-        Interactable nmosaObj = nmosa.GetComponentInChildren<Interactable>();
-        if ( nCurrentConvo.currentConvo >= nmosaObj.conversationList.conversations.Length )
-        {
-            nmosa.gameObject.GetComponentInChildren<DialogueTrigger>().dialogue = 
-                nmosaObj.conversationList.conversations[nmosaObj.conversationList.conversations.Length - 1];
-        }
-        else
-        {
-            nmosa.gameObject.GetComponentInChildren<DialogueTrigger>().dialogue = 
-                nmosaObj.conversationList.conversations[nCurrentConvo.currentConvo];
-        }
-
-        Interactable ixelObj = ixel.gameObject.GetComponentInChildren<Interactable>();
-        if ( iCurrentConvo.currentConvo >= ixelObj.conversationList.conversations.Length )
-        {
-            ixel.gameObject.GetComponentInChildren<DialogueTrigger>().dialogue = 
-                ixelObj.conversationList.conversations[ixelObj.conversationList.conversations.Length - 1];
-        }
-        else
-        {
-            ixel.gameObject.GetComponentInChildren<DialogueTrigger>().dialogue = 
-                ixelObj.conversationList.conversations[iCurrentConvo.currentConvo];
-        }
-
-        jConvo3.isAvailable = QuestTracker.Instance.jConvo3isAvailable;
-
-        ixelConvo2.isAvailable = QuestTracker.Instance.ixelConvo2isAvailable;
-        ixelConvo3.isAvailable = QuestTracker.Instance.ixelConvo3isAvailable;
-
-        nmosaConvo2.isAvailable = QuestTracker.Instance.nmosaConvo2isAvailable;
-
-        yssaConvo1.isAvailable = QuestTracker.Instance.yssaConvo1isAvailable;
-        yssaConvo2.isAvailable = QuestTracker.Instance.yssaConvo2isAvailable;
-        yssaConvo3.isAvailable = QuestTracker.Instance.yssaConvo3isAvailable;
-
-        if (QuestTracker.Instance.positions1) movePositions(1);
-        if (QuestTracker.Instance.positions2) movePositions(2);
-        if (QuestTracker.Instance.positions3) movePositions(3);
-        if ( QuestTracker.Instance.alarmWasTriggered ) 
+    private void loadTasks()
+    {
+        if (QuestTracker.Instance.alarmWasTriggered)
         {
             taskPanel1.SetActive(false);
             taskPanel2.SetActive(true);
             taskPanel3.SetActive(false);
-        }
-
-        if ( QuestTracker.Instance.tasksDone ) 
-        {
-            taskPanel1.SetActive(false);
-            taskPanel2.SetActive(false);
-            taskPanel3.SetActive(true);
-            bed.GetComponent<ShowInteractPrompt>().promptText = ">> Go to Bed. <<";
-            bed.GetComponent<LoadLevel>().enabled = true;
-        }
-        else
-        {
-            bed.GetComponent<ShowInteractPrompt>().promptText = ">> Not time for bed yet. <<";
-            bed.GetComponent<LoadLevel>().enabled = false;
         }
 
         toggletask1.isOn = QuestTracker.Instance.task1Complete;
@@ -195,56 +161,96 @@ public class QuestManager : MonoBehaviour
         toggletask8.isOn = QuestTracker.Instance.task8Complete;
         toggletask9.isOn = QuestTracker.Instance.task9Complete;
 
+        if (QuestTracker.Instance.tasksDone) UpdateTaskPanelThree();
+        else
+        {
+            bed.GetComponent<ShowInteractPrompt>().promptText = ">> Not time for bed yet. <<";
+            bed.GetComponent<LoadLevel>().enabled = false;
+        }
     }
 
-    void Update()
+    private void UpdateTaskPanelThree()
     {
+        taskPanel1.SetActive(false);
+        taskPanel2.SetActive(false);
+        taskPanel3.SetActive(true);
+        bed.GetComponent<ShowInteractPrompt>().promptText = ">> Go to Bed. <<";
+        bed.GetComponent<LoadLevel>().enabled = true;
+    }
 
-        CheckTasks();
-        if (!QuestTracker.Instance.tasksDone) CheckTasksDone();
-        CheckItems();
-
-        if (jCurrentConvo.currentConvo > 0)
-        {
-            QuestTracker.Instance.jCurrentConvo = jCurrentConvo.currentConvo;
-        }
-        if (iCurrentConvo.currentConvo > 0)
-        {
-            QuestTracker.Instance.iCurrentConvo = iCurrentConvo.currentConvo;
-        }
-        if (nCurrentConvo.currentConvo > 0)
-        {
-            QuestTracker.Instance.nCurrentConvo = nCurrentConvo.currentConvo;
-        }
-        if (yCurrentConvo.currentConvo > 0)
-        {
-            QuestTracker.Instance.yCurrentConvo = yCurrentConvo.currentConvo;
-        }
-
-        if ( jCurrentConvo.currentConvo >= jf.gameObject.GetComponentInChildren<Interactable>().conversationList.conversations.Length )
-        {
-            QuestTracker.Instance.jConvo3isAvailable = false;
-        }
+    private void loadAvailableConversations()
+    {
         jConvo3.isAvailable = QuestTracker.Instance.jConvo3isAvailable;
-        ixelConvo2.isAvailable = QuestTracker.Instance.ixelConvo2isAvailable;
 
-        if ( iCurrentConvo.currentConvo >= ixel.gameObject.GetComponentInChildren<Interactable>().conversationList.conversations.Length )
-        {
-            QuestTracker.Instance.ixelConvo3isAvailable = false;
-        }
+        ixelConvo2.isAvailable = QuestTracker.Instance.ixelConvo2isAvailable;
         ixelConvo3.isAvailable = QuestTracker.Instance.ixelConvo3isAvailable;
 
-        if ( nCurrentConvo.currentConvo >= nmosa.gameObject.GetComponentInChildren<Interactable>().conversationList.conversations.Length )
-        {
-            QuestTracker.Instance.nmosaConvo2isAvailable = false;
-        }
         nmosaConvo2.isAvailable = QuestTracker.Instance.nmosaConvo2isAvailable;
 
         yssaConvo1.isAvailable = QuestTracker.Instance.yssaConvo1isAvailable;
         yssaConvo2.isAvailable = QuestTracker.Instance.yssaConvo2isAvailable;
         yssaConvo3.isAvailable = QuestTracker.Instance.yssaConvo3isAvailable;
+    }
 
-        if ( QuestTracker.Instance.task1Complete && QuestTracker.Instance.task2Complete 
+    private void loadCurrentConversations()
+    {
+        jCurrentConvo.currentConvo = QuestTracker.Instance.jCurrentConvo;
+        iCurrentConvo.currentConvo = QuestTracker.Instance.iCurrentConvo;
+        nCurrentConvo.currentConvo = QuestTracker.Instance.nCurrentConvo;
+        yCurrentConvo.currentConvo = QuestTracker.Instance.yCurrentConvo;
+
+        Interactable jfObj = jf.gameObject.GetComponentInChildren<Interactable>();
+        if (jCurrentConvo.currentConvo >= jfObj.conversationList.conversations.Length)
+        {
+            jf.gameObject.GetComponentInChildren<DialogueTrigger>().dialogue =
+            jfObj.conversationList.conversations[jfObj.conversationList.conversations.Length - 1];
+        }
+        else
+        {
+            jf.gameObject.GetComponentInChildren<DialogueTrigger>().dialogue =
+                jfObj.conversationList.conversations[jCurrentConvo.currentConvo];
+        }
+
+        Interactable yssaObj = yssa.gameObject.GetComponentInChildren<Interactable>();
+        if (yCurrentConvo.currentConvo >= yssaObj.conversationList.conversations.Length)
+        {
+            yssa.gameObject.GetComponentInChildren<DialogueTrigger>().dialogue =
+            yssaObj.conversationList.conversations[yssaObj.conversationList.conversations.Length - 1];
+        }
+        else
+        {
+            yssa.gameObject.GetComponentInChildren<DialogueTrigger>().dialogue =
+                yssaObj.conversationList.conversations[yCurrentConvo.currentConvo];
+        }
+
+        Interactable nmosaObj = nmosa.GetComponentInChildren<Interactable>();
+        if (nCurrentConvo.currentConvo >= nmosaObj.conversationList.conversations.Length)
+        {
+            nmosa.gameObject.GetComponentInChildren<DialogueTrigger>().dialogue =
+                nmosaObj.conversationList.conversations[nmosaObj.conversationList.conversations.Length - 1];
+        }
+        else
+        {
+            nmosa.gameObject.GetComponentInChildren<DialogueTrigger>().dialogue =
+                nmosaObj.conversationList.conversations[nCurrentConvo.currentConvo];
+        }
+
+        Interactable ixelObj = ixel.gameObject.GetComponentInChildren<Interactable>();
+        if (iCurrentConvo.currentConvo >= ixelObj.conversationList.conversations.Length)
+        {
+            ixel.gameObject.GetComponentInChildren<DialogueTrigger>().dialogue =
+                ixelObj.conversationList.conversations[ixelObj.conversationList.conversations.Length - 1];
+        }
+        else
+        {
+            ixel.gameObject.GetComponentInChildren<DialogueTrigger>().dialogue =
+                ixelObj.conversationList.conversations[iCurrentConvo.currentConvo];
+        }
+    }
+
+    private void CheckIncident()
+    {
+        if (QuestTracker.Instance.task1Complete && QuestTracker.Instance.task2Complete
             && QuestTracker.Instance.task3Complete && QuestTracker.Instance.task4Complete && !QuestTracker.Instance.incident)
         {
             QuestTracker.Instance.incident = true;
@@ -256,6 +262,14 @@ public class QuestManager : MonoBehaviour
         }
 
         if (QuestTracker.Instance.incident) preIncidentDialogue.SetActive(false);
+    }
+
+    private void saveCurrentConversations()
+    {
+        if (jCurrentConvo.currentConvo > 0) QuestTracker.Instance.jCurrentConvo = jCurrentConvo.currentConvo;
+        if (iCurrentConvo.currentConvo > 0) QuestTracker.Instance.iCurrentConvo = iCurrentConvo.currentConvo;
+        if (nCurrentConvo.currentConvo > 0) QuestTracker.Instance.nCurrentConvo = nCurrentConvo.currentConvo;
+        if (yCurrentConvo.currentConvo > 0) QuestTracker.Instance.yCurrentConvo = yCurrentConvo.currentConvo;
     }
 
     public void CheckAlarm()
@@ -324,6 +338,7 @@ public class QuestManager : MonoBehaviour
         batteries.isOn = QuestTracker.Instance.hasBatteries;
         toolbox.isOn = QuestTracker.Instance.hasToolbox;
     }
+    
     public void CheckTasks()
     {
         if ( taskPanel1.activeSelf )
@@ -385,6 +400,8 @@ public class QuestManager : MonoBehaviour
             }
         }
 
+        if (!QuestTracker.Instance.tasksDone) CheckTasksDone();
+
     }
 
     private void CheckTasksDone()
@@ -402,11 +419,7 @@ public class QuestManager : MonoBehaviour
         )
         {
             QuestTracker.Instance.tasksDone = true;
-            taskPanel1.SetActive(false);
-            taskPanel2.SetActive(false);
-            taskPanel3.SetActive(true);
-            bed.GetComponent<ShowInteractPrompt>().promptText = ">> Go to Bed. <<";
-            bed.GetComponent<LoadLevel>().enabled = true;
+            UpdateTaskPanelThree();
         } 
     }
 
@@ -426,6 +439,12 @@ public class QuestManager : MonoBehaviour
                 loadingscreen.SetTrigger("ShortTimeSkip");
                 yield return new WaitForSeconds(3f);
 
+                pointer1.SetActive(true);
+                smoke.SetActive(true);
+                wireRepairStation.SetActive(false);
+                cardsStation.SetActive(false);
+                shipStation.SetActive(false);
+
                 if (!QuestTracker.Instance.alarmWasTriggered)
                 {
                     FindObjectOfType<AudioManager>().Stop("ChillAmbient");
@@ -434,55 +453,73 @@ public class QuestManager : MonoBehaviour
                     alarm.SetTrigger("WarningOn");
                     QuestTracker.Instance.alarmWasTriggered = true;
                 }
-                
+
                 //move the player in front of the engine room
                 player.position = playerRespawn.position;
                 player.rotation = playerRespawn.rotation;
-
-                // moving yssa to door of the engine room and everyone else to the medroom
-                yssa.position = yssaPosition2.position;
-                yssa.rotation = yssaPosition2.rotation;
-
-                jf.position = jfPosition2.position;
-                jf.rotation = jfPosition2.rotation;
-
-                nmosa.position = nmosaPosition2.position;
-                nmosa.rotation = nmosaPosition2.rotation;
-
-                ixel.position = ixelPosition2.position;
-                ixel.rotation = ixelPosition2.rotation;
+                MovePositionOne();
+                
                 break;
             case 2:
-                yssa.position = yssaPosition3.position;
-                yssa.rotation = yssaPosition3.rotation;
+                smoke.SetActive(false);
+                MovePositionsTwo();
                 break;
             case 3:
                 loadingscreen.SetTrigger("ShortTimeSkip");
+                yield return new WaitForSeconds(1f);
                 player.position = playerRespawn2.position;
                 player.rotation = playerRespawn2.rotation;
-
-                yssa.position = yssaPosition4.position;
-                yssa.rotation = yssaPosition4.rotation;
-
-                jf.position = jfPosition3.position;
-                jf.rotation = jfPosition3.rotation;
-
-                nmosa.position = nmosaPosition3.position;
-                nmosa.rotation = nmosaPosition3.rotation;
-
-                ixel.position = ixelPosition3.position;
-                ixel.rotation = ixelPosition3.rotation;
+                MovePositionsThree();
                 yield return new WaitForSeconds(3f);
                 QuestTracker.Instance.nmosaConvo2isAvailable = true;
                 QuestTracker.Instance.ixelConvo3isAvailable = true;
                 QuestTracker.Instance.jConvo3isAvailable = true;
                 QuestTracker.Instance.yssaConvo3isAvailable = true;
-                //move the player back to the control room
+
+                wireRepairStation.SetActive(true);
+                cardsStation.SetActive(true);
+                shipStation.SetActive(true);
+                questListNotif.SetTrigger("ShowQuestListNotif");
                 break;
         }
         player.gameObject.GetComponent<CharacterController>().enabled = true;
 
     }
 
-    // method for updating items here
+    private void MovePositionsThree()
+    {
+        yssa.position = yssaPosition4.position;
+        yssa.rotation = yssaPosition4.rotation;
+
+        jf.position = jfPosition3.position;
+        jf.rotation = jfPosition3.rotation;
+
+        nmosa.position = nmosaPosition3.position;
+        nmosa.rotation = nmosaPosition3.rotation;
+
+        ixel.position = ixelPosition3.position;
+        ixel.rotation = ixelPosition3.rotation;
+    }
+
+    private void MovePositionsTwo()
+    {
+        yssa.position = yssaPosition3.position;
+        yssa.rotation = yssaPosition3.rotation;
+    }
+
+    private void MovePositionOne()
+    {
+        // moving yssa to door of the engine room and everyone else to the medroom
+        yssa.position = yssaPosition2.position;
+        yssa.rotation = yssaPosition2.rotation;
+
+        jf.position = jfPosition2.position;
+        jf.rotation = jfPosition2.rotation;
+
+        nmosa.position = nmosaPosition2.position;
+        nmosa.rotation = nmosaPosition2.rotation;
+
+        ixel.position = ixelPosition2.position;
+        ixel.rotation = ixelPosition2.rotation;
+    }
 }

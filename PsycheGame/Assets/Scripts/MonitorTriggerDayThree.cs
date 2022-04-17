@@ -43,12 +43,13 @@ public class MonitorTriggerDayThree : MonoBehaviour
     {
         if ( Vector3.Distance ( player.position, this.transform.position ) < radius ) 
         {
-            if ( Input.GetKeyDown( "z" ) && isTyping) letterSpeed = fastSpeed;
+            if ( Input.GetKeyDown( KeyCode.Space ) && isTyping) letterSpeed = fastSpeed;
             // the "z" key acts as the interact button
-            if ( Input.GetKeyDown( "z" ) && !isTyping) 
+            if ( Input.GetKeyDown( KeyCode.Space ) && !isTyping) 
             {
                 if (monitorOn)
                 {
+                    player.gameObject.GetComponent<PlayerMovement>().enabled = false;
                     monitorOn = false;
                     monitorController.SetTrigger("MonitorOff");
                     monitorText.text = "";
@@ -57,6 +58,7 @@ public class MonitorTriggerDayThree : MonoBehaviour
                 }
                 else
                 {
+                    player.gameObject.GetComponent<PlayerMovement>().enabled = false;
                     FindObjectOfType<AudioManager>().Play("OpenMonitor");
                     
                     if ( QuestTracker.Instance.canEndDayThree )

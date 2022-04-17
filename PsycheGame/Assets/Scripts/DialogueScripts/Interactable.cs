@@ -14,7 +14,7 @@ public class Interactable : MonoBehaviour
     public DialogueManager dialogueManager;
 
     private float defaultSpeed = 0.01f;
-    private float fastSpeed = 0.0001f;
+    private float fastSpeed = 0f;
 
     public float radius = 7; // within this radius, the item can be interacted with
     public Transform player; // a reference to the player object
@@ -51,13 +51,13 @@ public class Interactable : MonoBehaviour
         if ( Vector3.Distance ( player.position, this.transform.position ) < radius ) 
         {
             // speed up letterboxing
-            if ( Input.GetKeyDown( "z" ) && dialogueManager.isTyping )
+            if ( Input.GetKeyDown( KeyCode.Space ) && dialogueManager.isTyping )
             {
                 dialogueManager.timeBetweenChars = fastSpeed;
             }
             else
             {
-                if ( Input.GetKeyDown( "z" ) ) 
+                if ( Input.GetKeyDown( KeyCode.Space ) ) 
                 {
                     if ( !convoStarted ) 
                     {
@@ -89,8 +89,6 @@ public class Interactable : MonoBehaviour
                     }
                 }
             }
-
-            // the "z" key acts as the interact button
         }
     }
 

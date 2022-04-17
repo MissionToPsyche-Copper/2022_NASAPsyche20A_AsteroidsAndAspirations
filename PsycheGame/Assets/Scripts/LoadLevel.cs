@@ -16,11 +16,20 @@ public class LoadLevel : MonoBehaviour
         if ( Vector3.Distance ( player.position, this.transform.position ) < radius ) 
         {
             // the "z" key acts as the interact button
-            if ( Input.GetKeyDown( "z" )) 
+            if ( Input.GetKeyDown( KeyCode.Space ))
             {
+                if (QuestTracker.Instance != null) CheckIfLoadingMiniGame();
+
                 FindObjectOfType<AudioManager>().Play("OpenMonitor");
-                SceneTracker.Instance.LoadLevel( levelName );
+                SceneTracker.Instance.LoadLevel(levelName);
             }
         }
+    }
+
+    private void CheckIfLoadingMiniGame()
+    {
+        if (string.Equals(levelName, "WireGame")) QuestTracker.Instance.playedWireGame = true;
+        else if (string.Equals(levelName, "Menu")) QuestTracker.Instance.playedCardGame = true;
+        else if (string.Equals(levelName, "Menu Guide a spacecraft")) QuestTracker.Instance.playedShipGame = true;
     }
 }

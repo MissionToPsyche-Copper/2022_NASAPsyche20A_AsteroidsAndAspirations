@@ -15,9 +15,9 @@ public class EndingSceneManager : MonoBehaviour
     List<EndingFunctions> PlayList;
     private int current = 0;
 
-    private int jfMinPoints = 4;
+    private int jfMinPoints = 3;
     private int yssaMinPoints = 3;
-    private int nixelMinPoints = 8;
+    private int nixelMinPoints = 7;
     private int dogMinPoints = 1;
 
     private int jfPoints, yssaPoints, nixelPoints, dogPoints;
@@ -62,9 +62,9 @@ public class EndingSceneManager : MonoBehaviour
 
     private void HandleInput()
     {
-        if ( Input.GetKeyDown( "z" ) && isTyping) letterSpeed = fastSpeed; 
+        if ( Input.GetKeyDown( KeyCode.Space ) && isTyping) letterSpeed = fastSpeed; 
         
-        if (Input.GetKeyDown("z") && !isTyping && (current < PlayList.Count))
+        if (Input.GetKeyDown(KeyCode.Space) && !isTyping && (current < PlayList.Count))
         {
             foreach (GameObject g in endingList)
             {
@@ -75,7 +75,7 @@ public class EndingSceneManager : MonoBehaviour
             current++;
         }
 
-        if (Input.GetKeyDown("z") && !isTyping && (current >= PlayList.Count))
+        if (Input.GetKeyDown(KeyCode.Space) && !isTyping && (current >= PlayList.Count))
         {
             Debug.Log("Transition to end credits");
             // switch to end credits

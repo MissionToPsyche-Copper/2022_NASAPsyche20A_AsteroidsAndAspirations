@@ -162,7 +162,6 @@ public class DialogueManager : MonoBehaviour
 
         }
         currentSentence = option.nextSentence;
-       
         DisplayDialogue();
     }
 

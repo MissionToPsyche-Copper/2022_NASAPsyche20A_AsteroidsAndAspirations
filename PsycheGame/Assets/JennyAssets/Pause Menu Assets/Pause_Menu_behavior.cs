@@ -6,6 +6,7 @@ public class Pause_Menu_behavior : MonoBehaviour
 {
     public bool gamePaused = false;
     public GameObject player;
+    public GameObject menu;
     private Interactable[] interactables;
     private bool previousPlayerState;
 
@@ -34,7 +35,19 @@ public class Pause_Menu_behavior : MonoBehaviour
         setEnableObjects(true);
         gamePaused = false;
     }
-    void Pause()
+
+    public void Pause()
+    {
+        if ( !menu.activeSelf ) menu.SetActive(true);
+        previousPlayerState = player.GetComponent<PlayerMovement>().enabled;
+        gamePaused = true;
+        GetComponent<Animator>().SetTrigger("FadeIn");
+        setEnableObjects(false);
+        Cursor.visible = true;
+        Cursor.lockState = CursorLockMode.Confined;
+    }
+
+    public void Tutorial()
     {
         previousPlayerState = player.GetComponent<PlayerMovement>().enabled;
         gamePaused = true;

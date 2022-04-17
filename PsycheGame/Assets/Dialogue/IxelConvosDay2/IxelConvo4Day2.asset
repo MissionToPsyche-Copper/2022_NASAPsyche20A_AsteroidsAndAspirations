@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fb7ed1e446ca55847a66c0c3a25691bd, type: 3}
   m_Name: IxelConvo4Day2
   m_EditorClassIdentifier: 
-  startingSentence: {fileID: 0}
+  startingSentence: {fileID: 11400000, guid: eabb56e5b1d07d2468ab0601bd484d16, type: 2}
   isAvailable: 1

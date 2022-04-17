@@ -7,9 +7,20 @@ public class QuestTracker : MonoBehaviour
 {
     public static QuestTracker Instance;
 
+    // ********* Player Respawn Variables *********
+    public bool playedWireGame = false;
+    public bool playedCardGame = false;
+    public bool playedShipGame = false;
+
+    // ********* Day Three Variables ***********
     public bool canEndDayThree = false;
     public bool onDayThree = false;
 
+    // *********** Day Two Variables ***********
+
+    public bool onDayTwo = false;
+
+    // Your progress in NPC dialogue when you switch scenes.
     public int jCurrentConvo = 0;
     public bool jConvo3isAvailable = false;
 
@@ -25,13 +36,16 @@ public class QuestTracker : MonoBehaviour
     public bool yssaConvo2isAvailable = false;
     public bool yssaConvo3isAvailable = false;
 
+    // The location of NPCs when you switch scenes.
     public bool positions1 = false;
     public bool positions2 = false;
     public bool positions3 = false;
 
     public bool alarmWasTriggered = false;
-
     public bool incident = false;
+
+    // Track task progress when switching scenes.
+    // QuestManager manages which task panel is showing.
     public bool task1Complete = false;
     public bool task2Complete = false;
     public bool task3Complete = false;
@@ -43,7 +57,7 @@ public class QuestTracker : MonoBehaviour
     public bool task9Complete = false;
     public bool tasksDone = false;
 
-    // more bools for items here
+    // Track items in inventory when switching scenes. QuestManager does not edit this.
     public bool hasFuel = false;
     public bool hasBatteries = false;
     public bool hasToolbox = false;

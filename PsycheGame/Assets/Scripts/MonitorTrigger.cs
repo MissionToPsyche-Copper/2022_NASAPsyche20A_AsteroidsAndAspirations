@@ -52,10 +52,10 @@ public class MonitorTrigger : MonoBehaviour
         if ( Vector3.Distance ( player.position, this.transform.position ) < radius ) 
         {
             // player presses z while still letterboxing
-            if ( Input.GetKeyDown( "z" ) && isTyping) letterSpeed = fastSpeed;
+            if ( Input.GetKeyDown(KeyCode.Space) && isTyping) letterSpeed = fastSpeed;
 
             // the "z" key acts as the interact button
-            if ( Input.GetKeyDown( "z" ) && !isTyping) 
+            if ( Input.GetKeyDown( KeyCode.Space ) && !isTyping) 
             {
 
                 if (scoreUpdater.talkedTo > 3)
@@ -72,6 +72,7 @@ public class MonitorTrigger : MonoBehaviour
                 }
                 if (monitorOn)
                 {
+                    player.gameObject.GetComponent<PlayerMovement>().enabled = true;
                     monitorOn = false;
                     monitorController.SetTrigger("MonitorOff");
                     //reset letter speed when monitor turns off
@@ -79,6 +80,7 @@ public class MonitorTrigger : MonoBehaviour
                 }
                 else
                 {
+                    player.gameObject.GetComponent<PlayerMovement>().enabled = false;
                     monitorOn = true;
                     monitorController.SetTrigger("MonitorOn");
                     FindObjectOfType<AudioManager>().Play("OpenMonitor");
