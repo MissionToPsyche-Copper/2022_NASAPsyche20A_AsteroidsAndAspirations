@@ -9,36 +9,20 @@ public class ShowRoomTag : MonoBehaviour
     public Text roomUI;
     public string roomTitle;
     public bool inThisRoom = false;
-    public static bool leftFirstRoom = false;
-
-    void Start()
-    {
-        leftFirstRoom = false;
-    }
 
     private void OnTriggerEnter(Collider other)
     {
-        Debug.Log("Player left first room: " + leftFirstRoom);
-        if ( leftFirstRoom )
+        if ( inThisRoom )
         {
-            if ( !inThisRoom )
-            {
-                inThisRoom = true;
-                Debug.Log("Entered " + roomTitle );
-                roomUI.text = roomTitle;
-                roomTagAnimator.SetTrigger("ShowRoomTag");
-            }
-            else
-            {
-                Debug.Log("Left " + roomTitle);
-                inThisRoom = false;
-            }
+            Debug.Log("Left " + roomTitle);
+            inThisRoom = false;
+        }
+        else
+        {
+            inThisRoom = true;
+            Debug.Log("Entered " + roomTitle );
+            roomUI.text = roomTitle;
+            roomTagAnimator.SetTrigger("ShowRoomTag");
         }
     }
-
-    private void OnTriggerExit(Collider other)
-    {
-        if (!leftFirstRoom) leftFirstRoom = true;
-    }
-
 }

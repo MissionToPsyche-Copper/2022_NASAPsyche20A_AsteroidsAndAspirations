@@ -63,7 +63,7 @@ public class MonitorTriggerDayThree : MonoBehaviour
                     
                     if ( QuestTracker.Instance.canEndDayThree )
                     {
-                        letterSpeed = 0.4f;
+                        letterSpeed = 0.1f;
                         type = monitorText2.text;
                         monitorText.text = "";
                     }

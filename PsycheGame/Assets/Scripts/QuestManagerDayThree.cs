@@ -15,6 +15,8 @@ public class QuestManagerDayThree : MonoBehaviour
     public Transform respawnCardGame;
     public Transform respawnShipGame;
 
+    public ShowRoomTag[] roomTags;
+
     //public DialogueTrigger npc;
     public DialogueSO day3Convo2;
 
@@ -54,18 +56,37 @@ public class QuestManagerDayThree : MonoBehaviour
         player.gameObject.GetComponent<CharacterController>().enabled = false;
         if (QuestTracker.Instance.playedWireGame)
         {
+            roomTags[0].inThisRoom = false;
+            roomTags[1].inThisRoom = false;
+            roomTags[2].inThisRoom = false;
+            roomTags[3].inThisRoom = false;
+            roomTags[4].inThisRoom = true;
+
+            Debug.Log("In front of wire station.");
             player.position = respawnWireGame.position;
             player.rotation = respawnWireGame.rotation;
             QuestTracker.Instance.playedWireGame = false;
         }
         if (QuestTracker.Instance.playedCardGame)
         {
+            roomTags[0].inThisRoom = false;
+            roomTags[1].inThisRoom = false;
+            roomTags[2].inThisRoom = true;
+            roomTags[3].inThisRoom = false;
+            roomTags[4].inThisRoom = false;
+
             player.position = respawnCardGame.position;
             player.rotation = respawnCardGame.rotation;
             QuestTracker.Instance.playedCardGame = false;
         }
         if (QuestTracker.Instance.playedShipGame)
         {
+            roomTags[0].inThisRoom = true;
+            roomTags[1].inThisRoom = false;
+            roomTags[2].inThisRoom = false;
+            roomTags[3].inThisRoom = false;
+            roomTags[4].inThisRoom = false;
+
             player.position = respawnShipGame.position;
             player.rotation = respawnShipGame.rotation;
             QuestTracker.Instance.playedShipGame = false;

@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: YssaConversationListDay2
   m_EditorClassIdentifier: 
   conversations:
+  - {fileID: 11400000, guid: eb462763faf2afa449697187f6fa6c05, type: 2}
   - {fileID: 11400000, guid: 091fd0a1036529c49af5805a211d5f1b, type: 2}
   - {fileID: 11400000, guid: 689e9f93c1622df44b2697efd5661178, type: 2}
   - {fileID: 11400000, guid: 3d71ed50e5c029d499af9cffc6eeb4e4, type: 2}

@@ -4171,6 +4171,11 @@ PrefabInstance:
       objectReference: {fileID: 2069965624}
     - target: {fileID: 6034085479779264642, guid: e1630f4f319f5f740ae2506e8696e568,
         type: 3}
+      propertyPath: inThisRoom
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6034085479779264642, guid: e1630f4f319f5f740ae2506e8696e568,
+        type: 3}
       propertyPath: roomTagAnimator
       value: 
       objectReference: {fileID: 40330315}
@@ -4256,6 +4261,66 @@ PrefabInstance:
       objectReference: {fileID: 40330315}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e1630f4f319f5f740ae2506e8696e568, type: 3}
+--- !u!114 &228530676 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6034085481409310321, guid: e1630f4f319f5f740ae2506e8696e568,
+    type: 3}
+  m_PrefabInstance: {fileID: 228530675}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac633629df9106745bcd3e2d2ba53653, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &228530677 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6034085481335302587, guid: e1630f4f319f5f740ae2506e8696e568,
+    type: 3}
+  m_PrefabInstance: {fileID: 228530675}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac633629df9106745bcd3e2d2ba53653, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &228530678 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6034085479313657188, guid: e1630f4f319f5f740ae2506e8696e568,
+    type: 3}
+  m_PrefabInstance: {fileID: 228530675}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac633629df9106745bcd3e2d2ba53653, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &228530679 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6034085479545332101, guid: e1630f4f319f5f740ae2506e8696e568,
+    type: 3}
+  m_PrefabInstance: {fileID: 228530675}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac633629df9106745bcd3e2d2ba53653, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &228530680 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6034085479779264642, guid: e1630f4f319f5f740ae2506e8696e568,
+    type: 3}
+  m_PrefabInstance: {fileID: 228530675}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac633629df9106745bcd3e2d2ba53653, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &234432817
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -13529,6 +13594,12 @@ MonoBehaviour:
   respawnWireGame: {fileID: 409802528}
   respawnCardGame: {fileID: 28550750}
   respawnShipGame: {fileID: 365520817}
+  roomTags:
+  - {fileID: 228530680}
+  - {fileID: 228530679}
+  - {fileID: 228530678}
+  - {fileID: 228530677}
+  - {fileID: 228530676}
   day3Convo2: {fileID: 11400000, guid: 0796c6f81d3303848bcdf9648521d30a, type: 2}
 --- !u!4 &714349914
 Transform:

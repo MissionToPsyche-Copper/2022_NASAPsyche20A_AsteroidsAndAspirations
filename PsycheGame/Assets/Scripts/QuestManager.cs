@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -28,7 +28,6 @@ public class QuestManager : MonoBehaviour
     public DialogueSO yssaConvo3;
 
     [Header("Incident Tracker")]
-    public GameObject preIncidentDialogue;
     public GameObject wireRepairStation;
     public GameObject cardsStation;
     public GameObject shipStation;
@@ -42,6 +41,7 @@ public class QuestManager : MonoBehaviour
     public Transform respawnWireGame;
     public Transform respawnCardGame;
     public Transform respawnShipGame;
+    public ShowRoomTag[] roomTags;
 
     [Header("NPC Position Tracker")]
     public Transform yssa;
@@ -108,6 +108,7 @@ public class QuestManager : MonoBehaviour
 
     void Update()
     {
+
         CheckTasks();
         CheckItems();
 
@@ -122,6 +123,12 @@ public class QuestManager : MonoBehaviour
         player.gameObject.GetComponent<CharacterController>().enabled = false;
         if (QuestTracker.Instance.playedWireGame)
         {
+            roomTags[0].inThisRoom = false;
+            roomTags[1].inThisRoom = false;
+            roomTags[2].inThisRoom = false;
+            roomTags[3].inThisRoom = false;
+            roomTags[4].inThisRoom = true;
+
             Debug.Log("In front of wire station.");
             player.position = respawnWireGame.position;
             player.rotation = respawnWireGame.rotation;
@@ -129,12 +136,24 @@ public class QuestManager : MonoBehaviour
         }
         if (QuestTracker.Instance.playedCardGame)
         {
+            roomTags[0].inThisRoom = false;
+            roomTags[1].inThisRoom = false;
+            roomTags[2].inThisRoom = true;
+            roomTags[3].inThisRoom = false;
+            roomTags[4].inThisRoom = false;
+
             player.position = respawnCardGame.position;
             player.rotation = respawnCardGame.rotation;
             QuestTracker.Instance.playedCardGame = false;
         }
         if (QuestTracker.Instance.playedShipGame)
         {
+            roomTags[0].inThisRoom = true;
+            roomTags[1].inThisRoom = false;
+            roomTags[2].inThisRoom = false;
+            roomTags[3].inThisRoom = false;
+            roomTags[4].inThisRoom = false;
+
             player.position = respawnShipGame.position;
             player.rotation = respawnShipGame.rotation;
             QuestTracker.Instance.playedShipGame = false;
@@ -260,8 +279,6 @@ public class QuestManager : MonoBehaviour
             // enabling convo2 for ixel
             QuestTracker.Instance.ixelConvo2isAvailable = true;
         }
-
-        if (QuestTracker.Instance.incident) preIncidentDialogue.SetActive(false);
     }
 
     private void saveCurrentConversations()
@@ -306,7 +323,7 @@ public class QuestManager : MonoBehaviour
                 }
             }
 
-            if ( yCurrentConvo.currentConvo == 2 )
+            if ( yCurrentConvo.currentConvo == 3 )
             {
                 // update task panel
                 if ( QuestTracker.Instance.alarmWasTriggered )
@@ -369,7 +386,7 @@ public class QuestManager : MonoBehaviour
         }
         else
         {
-            if ( !QuestTracker.Instance.task5Complete && yCurrentConvo.currentConvo > 2 )
+            if ( !QuestTracker.Instance.task5Complete && yCurrentConvo.currentConvo > 3 )
             {
                 QuestTracker.Instance.task5Complete = true;
                 toggletask5.isOn = true;
@@ -381,7 +398,7 @@ public class QuestManager : MonoBehaviour
                 toggletask6.isOn = true;
             }
 
-            if ( !QuestTracker.Instance.task7Complete && yCurrentConvo.currentConvo > 4 )
+            if ( !QuestTracker.Instance.task7Complete && yCurrentConvo.currentConvo > 5 )
             {
                 QuestTracker.Instance.task7Complete = true;
                 toggletask7.isOn = true;
@@ -453,10 +470,20 @@ public class QuestManager : MonoBehaviour
                     alarm.SetTrigger("WarningOn");
                     QuestTracker.Instance.alarmWasTriggered = true;
                 }
-
+                
+                Interactable yssaObj = yssa.gameObject.GetComponentInChildren<Interactable>();
+                yssa.gameObject.GetComponentInChildren<DialogueTrigger>().dialogue = yssaObj.conversationList.conversations[1];
+                yCurrentConvo.currentConvo = 1;
                 //move the player in front of the engine room
+                roomTags[0].inThisRoom = false;
+                roomTags[1].inThisRoom = false;
+                roomTags[2].inThisRoom = false;
+                roomTags[3].inThisRoom = false;
+                roomTags[4].inThisRoom = false;
+
                 player.position = playerRespawn.position;
                 player.rotation = playerRespawn.rotation;
+
                 MovePositionOne();
                 
                 break;
@@ -467,10 +494,16 @@ public class QuestManager : MonoBehaviour
             case 3:
                 loadingscreen.SetTrigger("ShortTimeSkip");
                 yield return new WaitForSeconds(1f);
+                roomTags[0].inThisRoom = true;
+                roomTags[1].inThisRoom = false;
+                roomTags[2].inThisRoom = false;
+                roomTags[3].inThisRoom = false;
+                roomTags[4].inThisRoom = false;
                 player.position = playerRespawn2.position;
                 player.rotation = playerRespawn2.rotation;
                 MovePositionsThree();
                 yield return new WaitForSeconds(3f);
+                
                 QuestTracker.Instance.nmosaConvo2isAvailable = true;
                 QuestTracker.Instance.ixelConvo3isAvailable = true;
                 QuestTracker.Instance.jConvo3isAvailable = true;

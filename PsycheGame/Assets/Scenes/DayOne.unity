@@ -34901,6 +34901,11 @@ PrefabInstance:
       objectReference: {fileID: 1901435050}
     - target: {fileID: 6034085479779264642, guid: e1630f4f319f5f740ae2506e8696e568,
         type: 3}
+      propertyPath: inThisRoom
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6034085479779264642, guid: e1630f4f319f5f740ae2506e8696e568,
+        type: 3}
       propertyPath: roomTagAnimator
       value: 
       objectReference: {fileID: 219966172}
