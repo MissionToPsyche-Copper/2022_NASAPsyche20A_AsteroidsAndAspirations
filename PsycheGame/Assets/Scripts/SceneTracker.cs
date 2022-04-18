@@ -30,6 +30,11 @@ public class SceneTracker : MonoBehaviour
             Debug.Log("SKIPPED TO DAY TWO");
             LoadLevel("DayTwo");
         }
+        if (Input.GetKeyDown("k"))
+        {
+            Debug.Log("SKIPPED TO DAY THREE");
+            LoadLevel("DayThree");
+        }
     }
 
     public void LoadLevel( string levelName )

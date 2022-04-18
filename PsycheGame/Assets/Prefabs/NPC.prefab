@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 8873525720639903034}
   - component: {fileID: 8873525720639903013}
   - component: {fileID: 8873525720639903032}
+  - component: {fileID: 3967224519764111781}
   m_Layer: 0
   m_Name: NPC
   m_TagString: Untagged
@@ -63,9 +64,12 @@ MonoBehaviour:
   dialogueManager: {fileID: 0}
   radius: 7
   player: {fileID: 0}
+  npc: {fileID: 0}
   currentConvo: 0
   convoStarted: 0
   convoEnded: 0
+  TalkedToNPC: {fileID: 0}
+  talkedTo: 0
   conversationList: {fileID: 0}
 --- !u!114 &8873525720639903013
 MonoBehaviour:
@@ -121,3 +125,21 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &3967224519764111781
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7066137027379654699}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 684912d8dce4d9649920365a8d10d789, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animator: {fileID: 0}
+  promptUI: {fileID: 0}
+  promptText: 
+  player: {fileID: 0}
+  radius: 7
+  openPrompt: 0

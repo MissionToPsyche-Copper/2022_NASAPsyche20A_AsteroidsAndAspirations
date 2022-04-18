@@ -49,7 +49,7 @@ public class MonitorTriggerDayThree : MonoBehaviour
             {
                 if (monitorOn)
                 {
-                    player.gameObject.GetComponent<PlayerMovement>().enabled = false;
+                    player.gameObject.GetComponent<PlayerMovement>().enabled = true;
                     monitorOn = false;
                     monitorController.SetTrigger("MonitorOff");
                     monitorText.text = "";

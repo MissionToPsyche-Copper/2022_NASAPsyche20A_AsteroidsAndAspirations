@@ -10,17 +10,24 @@ public class QuestManagerDayThree : MonoBehaviour
     public Toggle toolbox;
     public Animator dayTag;
 
-    public DialogueTrigger npc;
+    public Transform player;
+    public Transform respawnWireGame;
+    public Transform respawnCardGame;
+    public Transform respawnShipGame;
+
+    //public DialogueTrigger npc;
+    public DialogueSO day3Convo2;
 
     // Start is called before the first frame update
     void Start()
     {
+        LoadPlayerPosition();
         if (!QuestTracker.Instance.onDayThree)
         {
-            QuestTracker.Instance.onDayThree = true;
+           QuestTracker.Instance.onDayThree = true;
             dayTag.SetTrigger("ShowDayTag");
         }
-        if (QuestTracker.Instance.canEndDayThree) npc.dialogue.isAvailable = false;
+        if (QuestTracker.Instance.canEndDayThree) FindObjectOfType<DialogueTrigger>().dialogue = day3Convo2;
         CheckItems();
     }
 
@@ -40,6 +47,29 @@ public class QuestManagerDayThree : MonoBehaviour
     public void enableEnd()
     {
         QuestTracker.Instance.canEndDayThree = true;
-        npc.dialogue.isAvailable = false;
+    }
+
+    private void LoadPlayerPosition()
+    {
+        player.gameObject.GetComponent<CharacterController>().enabled = false;
+        if (QuestTracker.Instance.playedWireGame)
+        {
+            player.position = respawnWireGame.position;
+            player.rotation = respawnWireGame.rotation;
+            QuestTracker.Instance.playedWireGame = false;
+        }
+        if (QuestTracker.Instance.playedCardGame)
+        {
+            player.position = respawnCardGame.position;
+            player.rotation = respawnCardGame.rotation;
+            QuestTracker.Instance.playedCardGame = false;
+        }
+        if (QuestTracker.Instance.playedShipGame)
+        {
+            player.position = respawnShipGame.position;
+            player.rotation = respawnShipGame.rotation;
+            QuestTracker.Instance.playedShipGame = false;
+        }
+        player.gameObject.GetComponent<CharacterController>().enabled = true;
     }
 }
