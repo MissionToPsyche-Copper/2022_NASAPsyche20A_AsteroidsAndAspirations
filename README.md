@@ -43,7 +43,7 @@ Any resemblance to actual events or people, living or dead, is purely coincident
 Asteroids and Aspirations is a web-based game sponsored by NASA Psyche Mission Student Collaborations and created by students at Arizona State University.
 
 ### Frameworks
-Created using Unity Version 2019.2.20f1. The main branch of this repo contains a Unity Project built for PC, while the branch WebGLBuild contains a Unity Project built for the web. The game code is written in C#.
+Created using Unity Version 2019.2.20f1. The main branch of this repo contains a Unity Project built for PC, while the branch WebGLBuild contains a Unity Project built for the web. The game code is written in C#. The game is hosted on Github Pages.
 
 ### Team
 Created by NASA Psyche Web-Based Game Group 20A, Spring 2022
