@@ -19,6 +19,9 @@
 * Fullscreen mode is recommended (Click the blue icon at the bottom right of the WebGL container).
 * Headphones are recommended.
 * The game can be restarted or "quit" by refreshing your browser.
+* Debugging Commands:
+ * "L" key - Skip to "Day 2" from any scene
+ * "K" key - Skip to "Day 3" from any scene
 
 ## About
 The game Asteroids and Aspirations is a visual novel with a point-and-click game style. The user views the environment in first person view and has
