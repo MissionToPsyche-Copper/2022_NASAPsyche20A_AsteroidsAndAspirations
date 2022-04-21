@@ -13,7 +13,7 @@
 ![image](https://user-images.githubusercontent.com/59845833/164561558-dbd43d81-44bb-4c32-a568-0ee004536b6f.png)
 
 ## Play Asteroids and Aspirations
-[Click here to play!](https://nfurlage.github.io/PsycheWebGame/)
+[Click here to play!](https://nfurlage.github.io/2022_NASAPsyche20A_AsteroidsAndAspirations/)
 
 ### Notes: 
 * Fullscreen mode is recommended (Click the blue icon at the bottom right of the WebGL container).
