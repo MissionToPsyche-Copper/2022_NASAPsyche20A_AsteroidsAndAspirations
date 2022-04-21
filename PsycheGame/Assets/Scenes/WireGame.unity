@@ -921,10 +921,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 800, y: 600}
+  m_ReferenceResolution: {x: 1920, y: 1080}
   m_ScreenMatchMode: 0
   m_MatchWidthOrHeight: 0
   m_PhysicalUnit: 3
@@ -2242,6 +2242,11 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: -45.1
       objectReference: {fileID: 0}
+    - target: {fileID: 9004300246734320870, guid: b7f1ffea06090fd42bd259db34e14e70,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -18
+      objectReference: {fileID: 0}
     - target: {fileID: 9004300246734320871, guid: b7f1ffea06090fd42bd259db34e14e70,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
@@ -2417,15 +2422,30 @@ PrefabInstance:
       propertyPath: m_Text
       value: Click and drag to match the wires to wires of the same color.
       objectReference: {fileID: 0}
+    - target: {fileID: 9004300247031033176, guid: b7f1ffea06090fd42bd259db34e14e70,
+        type: 3}
+      propertyPath: m_FontData.m_MaxSize
+      value: 224
+      objectReference: {fileID: 0}
+    - target: {fileID: 9004300247031033176, guid: b7f1ffea06090fd42bd259db34e14e70,
+        type: 3}
+      propertyPath: m_FontData.m_FontSize
+      value: 148
+      objectReference: {fileID: 0}
     - target: {fileID: 9004300247031033178, guid: b7f1ffea06090fd42bd259db34e14e70,
         type: 3}
       propertyPath: m_SizeDelta.x
-      value: 2987.876
+      value: 3022.7812
       objectReference: {fileID: 0}
     - target: {fileID: 9004300247031033178, guid: b7f1ffea06090fd42bd259db34e14e70,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 1.2
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9004300247031033178, guid: b7f1ffea06090fd42bd259db34e14e70,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -116
       objectReference: {fileID: 0}
     - target: {fileID: 9004300247336230432, guid: b7f1ffea06090fd42bd259db34e14e70,
         type: 3}
