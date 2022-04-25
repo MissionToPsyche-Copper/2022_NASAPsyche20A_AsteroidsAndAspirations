@@ -13,8 +13,9 @@
 ![image](https://user-images.githubusercontent.com/59845833/164561558-dbd43d81-44bb-4c32-a568-0ee004536b6f.png)
 
 ## Play Asteroids and Aspirations
-[Click here to play! Link 1](https://nfurlage.github.io/2022_NASAPsyche20A_AsteroidsAndAspirations/)
-[Click here to play! Link 2](https://nasapsyche.github.io/2022_NASAPsyche20A_AsteroidsAndAspirations/)
+* Link 1 may be disabled due to the transfer of ownership between our group and NASAPsyche github.
+* [Click here to play! Link 1](https://nfurlage.github.io/2022_NASAPsyche20A_AsteroidsAndAspirations/)
+* [Click here to play! Link 2](https://nasapsyche.github.io/2022_NASAPsyche20A_AsteroidsAndAspirations/)
 
 ### Notes: 
 * Fullscreen mode is recommended (Click the blue icon at the bottom right of the WebGL container).
