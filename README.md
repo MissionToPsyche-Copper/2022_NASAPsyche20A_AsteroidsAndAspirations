@@ -22,6 +22,9 @@
 * Debugging Commands:
   * "L" key - Skip to "Day 2" from any scene
   * "K" key - Skip to "Day 3" from any scene
+* If the Github Pages link doesn't work:
+  * Switch to the "WebGlBuild" Branch and open the index.html at the root of the directory.
+  * Or build/run the game directly from the Unity 2019.2.20f1 editor.
 
 ## About
 The game Asteroids and Aspirations is a visual novel with a point-and-click game style. The user views the environment in first person view and has
